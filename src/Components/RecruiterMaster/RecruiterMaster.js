@@ -93,7 +93,7 @@ const RecruiterMaster = () => {
             </OverlayTrigger>
           </ButtonGroup>
           <ButtonGroup>
-            <Button variant='success'  href='/Filter'><i className="fa fa-search me-2" style={{color:'#fff'}} ></i>Search</Button>
+            <Button variant='success'  href='/Filter'><i className="fa fa-filter me-2" style={{color:'#fff'}} ></i>Filter</Button>
             
           </ButtonGroup>
             </div>
@@ -134,13 +134,13 @@ const RecruiterMaster = () => {
                     <td>82827272828</td>
                     <td>patna</td>
                     <td>n/a</td>
-                    <td onClick={handleShow1} style={{color:'pink', textDecoration:'underline'}}><i class="fa fa-info-circle" aria-hidden="true"></i></td>
-                    <td onClick={handleShow2} style={{color:'red', textDecoration:'underline'}}><i class="fa fa-book" aria-hidden="true"></i></td>
+                    <td onClick={handleShow1} style={{color:'orange', textDecoration:'underline'}}><i class="fa fa-address-book" aria-hidden="true"></i></td>
+                    <td onClick={handleShow2} style={{color:'red', textDecoration:'underline'}}><i class="fa fa-briefcase" aria-hidden="true"></i></td>
                     <td><Button variant='primary'>Edit</Button>
                     <Button variant='primary'>Delete</Button>
                     
                     </td>
-                    <td onClick={handleShow3} style={{color:'green', textDecoration:'underline'}}><i class="fa fa-receipt" aria-hidden="true"></i></td>
+                    <td onClick={handleShow3} style={{color:'green', textDecoration:'underline'}}><i class="fa fa-home" aria-hidden="true"></i></td>
                 </tr>
                 <tr>
                     <td>1</td>
@@ -155,13 +155,13 @@ const RecruiterMaster = () => {
                     <td>82827272828</td>
                     <td>patna</td>
                     <td>n/a</td>
-                    <td onClick={handleShow1} style={{color:'pink', textDecoration:'underline'}}><i class="fa fa-info-circle" aria-hidden="true"></i></td>
-                    <td onClick={handleShow2} style={{color:'red', textDecoration:'underline'}}><i class="fa fa-book" aria-hidden="true"></i></td>
+                    <td onClick={handleShow1} style={{color:'orange', textDecoration:'underline'}}><i class="fa fa-address-book" aria-hidden="true"></i></td>
+                    <td onClick={handleShow2} style={{color:'red', textDecoration:'underline'}}><i class="fa fa-briefcase" aria-hidden="true"></i></td>
                     <td><Button variant='primary'>Edit</Button>
                     <Button variant='primary'>Delete</Button>
                     
                     </td>
-                    <td onClick={handleShow3} style={{color:'green', textDecoration:'underline'}}><i class="fa fa-cheque" aria-hidden="true"></i></td>
+                    <td onClick={handleShow3} style={{color:'green', textDecoration:'underline'}}><i class="fa fa-home" aria-hidden="true"></i></td>
                 </tr>
                 <tr>
                     <td>1</td>
@@ -176,8 +176,8 @@ const RecruiterMaster = () => {
                     <td>82827272828</td>
                     <td>patna</td>
                     <td>n/a</td>
-                    <td onClick={handleShow1} style={{color:'plink', textDecoration:'underline'}}><i class="fa fa-info-circle" aria-hidden="true"></i></td>
-                    <td onClick={handleShow2} style={{color:'red', textDecoration:'underline'}}><i class="fa fa-book" aria-hidden="true"></i></td>
+                    <td onClick={handleShow1} style={{color:'plink', textDecoration:'underline'}}><i class="fa fa-address-book" aria-hidden="true"></i></td>
+                    <td onClick={handleShow2} style={{color:'red', textDecoration:'underline'}}><i class="fa fa-home" aria-hidden="true"></i></td>
                     <td><Button variant='primary'>Edit</Button>
                     <Button variant='primary'>Delete</Button>
                     
@@ -197,13 +197,13 @@ const RecruiterMaster = () => {
                     <td>82827272828</td>
                     <td>patna</td>
                     <td>n/a</td>
-                    <td onClick={handleShow1} style={{color:'pink', textDecoration:'underline'}}><i class="fa fa-info-circle" aria-hidden="true"></i></td>
-                    <td onClick={handleShow2} style={{color:'red', textDecoration:'underline'}}><i class="fa fa-book" aria-hidden="true"></i></td>
+                    <td onClick={handleShow1} style={{color:'orange', textDecoration:'underline'}}><i class="fa fa-address-book" aria-hidden="true"></i></td>
+                    <td onClick={handleShow2} style={{color:'red', textDecoration:'underline'}}><i class="fa fa-briefcase" aria-hidden="true"></i></td>
                     <td><Button variant='primary'>Edit</Button>
                     <Button variant='primary'>Delete</Button>
                     
                     </td>
-                    <td onClick={handleShow3} style={{color:'green', textDecoration:'underline'}}><i class="fa fa-receipt" aria-hidden="true"></i></td>
+                    <td onClick={handleShow3} style={{color:'green', textDecoration:'underline'}}><i class="fa fa-home" aria-hidden="true"></i></td>
                 </tr>
                 <tr>
                     <td>1</td>
@@ -218,8 +218,8 @@ const RecruiterMaster = () => {
                     <td>82827272828</td>
                     <td>patna</td>
                     <td>n/a</td>
-                    <td onClick={handleShow1} style={{color:'pink', textDecoration:'underline'}}><i class="fa fa-info-circle" aria-hidden="true"></i></td>
-                    <td onClick={handleShow2} style={{color:'red', textDecoration:'underline'}}><i class="fa fa-book" aria-hidden="true"></i></td>
+                    <td onClick={handleShow1} style={{color:'orange', textDecoration:'underline'}}><i class="fa fa-address-book" aria-hidden="true"></i></td>
+                    <td onClick={handleShow2} style={{color:'red', textDecoration:'underline'}}><i class="fa fa-home" aria-hidden="true"></i></td>
                     <td><Button variant='primary'>Edit</Button>
                     <Button variant='primary'>Delete</Button>
                     

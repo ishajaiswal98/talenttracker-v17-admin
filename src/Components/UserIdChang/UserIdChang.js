@@ -6,6 +6,7 @@ import { Form  , Container , Row , Col , Button ,Table} from 'react-bootstrap';
 import './UserId.css'
 
 const UserIdChang = () => {
+    
     // const [show, setShow]=useState(false);
     // const handleShow = () => setShow(!show);
   return (
@@ -48,6 +49,7 @@ const UserIdChang = () => {
                 <th>Allow user to remove candidate’s mobile number from the tracker sheet</th>
                 <th>Allow user to write special remarks, comments in the tracker shee</th>
                 <th>Admin can make it compulsory for user to use own / our database</th>
+                <th>Don't allow user to edit the status</th>
                </tr>
                </thead>
                <tbody>
@@ -59,7 +61,8 @@ const UserIdChang = () => {
                        <td>yes</td>
                        <td>657899</td>
                        <td>NO</td>
-                       <td></td>
+                       <td>YES</td>
+                       <td>yes</td>
                    </tr>
                </tbody>
                </Table>

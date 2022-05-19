@@ -7,6 +7,7 @@ import { ToastContainer, toast } from 'react-toastify';
 import { FaStar } from "react-icons/fa";
 import {  Radio, Rating } from "./RatingStyles";
 import './MyProfile.css'
+import { Link } from 'react-router-dom';
 const RecruiterMaster = () => {
   const [rate, setRate] = useState(0);
     const [show, setShow] = useState(false);
@@ -44,10 +45,7 @@ const RecruiterMaster = () => {
         <ToastContainer />
         <Container>
           <div className='top-button'>
-        <div className='d-flex text'>
-            <p>No of jd (123)</p><span className='mx-3'>|</span>
-            <p >No of contacts (23)</p>
-            </div>
+       
             <div className='mb-2'>
             <ButtonGroup className="btn btn-light">
             <OverlayTrigger placement='bottom' overlay={<Tooltip id="tooltip-disabled">Save Jd</Tooltip>}>
@@ -93,7 +91,7 @@ const RecruiterMaster = () => {
             </OverlayTrigger>
           </ButtonGroup>
           <ButtonGroup>
-            <Button variant='success'  href='/Filter'><i className="fa fa-filter me-2" style={{color:'#fff'}} ></i>Filter</Button>
+            <Button variant='success'  as={Link} to='/Filter'><i className="fa fa-filter me-2" style={{color:'#fff'}} ></i>Filter</Button>
             
           </ButtonGroup>
             </div>

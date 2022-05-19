@@ -42,6 +42,7 @@ const ClientAgreement = () => {
             
                     <Button Variant='primary' className='mr-3 my-3 mx-3'>Save</Button>
                     <Button Variant='primary' className='ml-3 my-3 mx-3'>Close</Button>
+                    <Button variant='danger' ><i className=' ml-3 fa fa-download'></i></Button>   
                 
                 </form>
                 </Container>

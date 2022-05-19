@@ -3,7 +3,7 @@ import NavbarMenu from '../NavbarMenu/NavbarMenu'
 import Sidebar from '../Sidebar/Sidebar'
 import { ToastContainer } from 'react-bootstrap'
 import { Container, Table, Button,ButtonGroup, Form ,Dropdown, Tooltip,OverlayTrigger } from 'react-bootstrap'
-
+import { Link } from 'react-router-dom'
 const Report = () => {
     function refreshPage(){ 
         window.location.reload(); 
@@ -15,10 +15,7 @@ const Report = () => {
         <ToastContainer />
         <Container>
           <div className='top-button'>
-        <div className='d-flex text'>
-            <p>No of jd (123)</p><span className='mx-3'>|</span>
-            <p >No of contacts (23)</p>
-            </div>
+       
             <div className='mb-2'>
             <ButtonGroup className="btn btn-light">
             <OverlayTrigger placement='bottom' overlay={<Tooltip id="tooltip-disabled">Save Jd</Tooltip>}>
@@ -64,13 +61,13 @@ const Report = () => {
             </OverlayTrigger>
           </ButtonGroup>
           <ButtonGroup>
-            <Button variant='success'  href='/report-filter'><i className="fa fa-filter me-2" style={{color:'#fff'}} ></i>Filter</Button>
+            <Button variant='success' as={Link} to='/report-filter'><i className="fa fa-filter me-2" style={{color:'#fff'}} ></i>Filter</Button>
             <Button variant='danger' style={{marginLeft:'40rem'}}><i className='fa fa-download'></i></Button>
           </ButtonGroup>
             </div>
             </div>
        <Container className='myprofile-cont'>
-        <Table >
+        <Table responsive>
             <thead>
                 <tr>
                     <th></th>

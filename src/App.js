@@ -21,6 +21,10 @@ import Freelance from "./Components/Freelance/Freelence";
 import FilterReport from "./Components/Report/FilterReport";
 import Report from "./Components/Report/Report";
 import CreateEmail from "./Components/CreateEmail/CreateEmail";
+import Invoicing from "./Components/Invoicing/Invoicing";
+import ListOfCandi from "./Components/ListOfCandi/ListOfCandi";
+import FilterOfCandi from "./Components/ListOfCandi/FilterOfCandi";
+
 function App() {
 
   return (
@@ -44,6 +48,10 @@ function App() {
       <Route path="/report-filter" element={<FilterReport/>}/>
       <Route path="/report" element={<Report/>}/>
       <Route path="/create-email" element={<CreateEmail/>}/>
+      <Route path="/invoicing" element={<Invoicing/>}/>
+      <Route path="/list-of-candidate" element={<ListOfCandi/>}/>
+      <Route path="/filter-of-candidate" element={<FilterOfCandi/>}/>
+      
     </Routes>
   </BrowserRouter>
     </>

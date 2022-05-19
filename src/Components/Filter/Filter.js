@@ -40,11 +40,13 @@ const Filter = () => {
                 </Col>
                 <Col xs={6}>
                 <Form.Label  className='fw-bold mb-3 mt-3'>User’s location</Form.Label>
+                <Form.Control type='text'/>
                 </Col>
             </Row>
             <Row>
             <Col xs={6}>
                 <Form.Label  className='fw-bold mb-3 mt-3'>User's Name</Form.Label>
+                <Form.Control type='text'/>
                 </Col>
                 <Col xs={6}>
                 <Form.Label  className='fw-bold mb-3 mt-3'>User Category</Form.Label>
@@ -59,11 +61,11 @@ const Filter = () => {
             <Row>
                 <Col xs={6}>
                 <Form.Label  className='fw-bold mb-3 mt-3'>Exclusivity</Form.Label>
-
+                <Form.Control type='text'/>
                 </Col>
                 <Col xs={6}>
                 <Form.Label  className='fw-bold mb-3 mt-3'>User ID</Form.Label>
-                 
+                <Form.Control type='text'/>
                 </Col>
             </Row>
             <Row>

@@ -41,7 +41,7 @@ const UserDashboard = () => {
                     </Container>
                        
             <Container >
-                <Table responsive>
+                <Table >
                     <thead>
                         <tr>
                             <th></th>
@@ -73,7 +73,7 @@ const UserDashboard = () => {
                        <td>6</td>
                        <td>yh</td>
                        <td>8</td>
-                       <td>8</td>
+                       <td>8 </td>
                        <td>4</td>
                        <td>6</td>
                        <td>5</td>

@@ -25,6 +25,7 @@ const Freelance = () => {
                 <Row>
                 <Col xs={6}>
                 <Form.Label  className='fw-bold mb-3 mt-3'>Date of agreement </Form.Label>
+                <Form.Control type='date'/>
                 
                 </Col>
                 <Col xs={6}>
@@ -34,6 +35,8 @@ const Freelance = () => {
                 </Row>
                 <Button Variant='primary' className='mr-3 my-3 mx-3'>Save</Button>
                     <Button Variant='primary' className='ml-3 my-3 mx-3'>Close</Button>
+                    <Button variant='danger' ><i className=' ml-3 fa fa-download'></i></Button>
+                    
                 </form>
                 </Container>
     </div>

@@ -343,7 +343,7 @@ const JdMaster = () => {
       </Modal>
       <Modal show={show3} onHide={handleClose3} size='xl'>
         <Modal.Header closeButton>
-          <Modal.Title> <i className="fas fa-info-circle me-3" ></i>Offer Details</Modal.Title>
+          <Modal.Title> <i className="fas fa-info-circle me-3" ></i>JD Acceptance</Modal.Title>
         </Modal.Header>
         <Modal.Body>
             <Row>
@@ -371,7 +371,7 @@ const JdMaster = () => {
       </Modal>
       <Modal show={show4} onHide={handleClose4} size='xl'>
         <Modal.Header closeButton>
-          <Modal.Title> <i className="fas fa-info-circle me-3" ></i>Offer Details</Modal.Title>
+          <Modal.Title> <i className="fas fa-info-circle me-3" ></i>Company</Modal.Title>
         </Modal.Header>
         <Modal.Body>
             <Row>
@@ -392,7 +392,7 @@ const JdMaster = () => {
       </Modal>
       <Modal show={show5} onHide={handleClose5} size='xl'>
         <Modal.Header closeButton>
-          <Modal.Title> <i className="fas fa-info-circle me-3" ></i>Offer Details</Modal.Title>
+          <Modal.Title> <i className="fas fa-info-circle me-3" >Terms Of JD</i></Modal.Title>
         </Modal.Header>
         <Modal.Body>
             <Row>

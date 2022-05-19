@@ -56,7 +56,7 @@ const Sidebar = () => {
                <Link to='/report'>Reports- chat transcripts- history</Link> 
               </MenuItem>
               <MenuItem active={true} icon={<MdEmail />} onMouseEnter={()=>setMenuCollapse(false)} onMouseLeave={()=>setMenuCollapse(true)}>
-               <Link to='/'>Email Cpanel</Link> 
+               <Link to='/cpanel.com'>Email Cpanel</Link> 
               </MenuItem>
               <MenuItem active={true} icon={<AiFillDashboard />} onMouseEnter={()=>setMenuCollapse(false)} onMouseLeave={()=>setMenuCollapse(true)}>
                <Link to='/freelance'>Freelance contract agreement filling</Link> 
@@ -74,7 +74,7 @@ const Sidebar = () => {
                <Link to='/'>user adhar card/GST registration certificate database</Link> 
               </MenuItem>
               <MenuItem active={true} icon={<AiFillDashboard />} onMouseEnter={()=>setMenuCollapse(false)} onMouseLeave={()=>setMenuCollapse(true)}>
-               <Link to='/'>List of candidates</Link> 
+               <Link to='/list-of-candidate'>List of candidates</Link> 
               </MenuItem>
               <MenuItem active={true} icon={<AiFillDashboard />} onMouseEnter={()=>setMenuCollapse(false)} onMouseLeave={()=>setMenuCollapse(true)}>
                <Link to='/create-email'>Create templates for sending emails</Link> 

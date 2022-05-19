@@ -32,15 +32,15 @@ const CreateEmail = () => {
                
                 </Row>
                 <Row>
-                    <Col xs={4}>
+                    
                         <Button variant='primary'>Save</Button>
-                    </Col>
-                    <Col xs={4}>
-                        <Button variant='info'>Edit</Button>
-                    </Col>
-                    <Col xs={4}>
-                        <Button variant='Danger'>Delete</Button>
-                    </Col>
+                    
+                    
+                        <Button variant='success'>Edit</Button>
+                    
+                    
+                        <Button variant='danger'>Delete</Button>
+                    
                 </Row>
                 </form>
                 </Container>

@@ -17,7 +17,8 @@ const Client = () => {
         <NavbarMenu />
         <ToastContainer />  
         <Container className='myprofile'>
-            <Button variant='primary' onClick={handleShow}>Add Client</Button>
+            <Button variant='primary' onClick={handleShow}>Add Client</Button>&nbsp;
+            <Button variant='danger ' className='mx-5'><i className='fa fa-download'></i></Button>
         </Container>
         <Container className='myprofile'>
         <Table responsive>

@@ -40,7 +40,7 @@ const UserDashboard = () => {
                     </Form>
                     </Container>
                        
-            <Container >
+            <Container className='myprofile'>
                 <Table >
                     <thead>
                         <tr>

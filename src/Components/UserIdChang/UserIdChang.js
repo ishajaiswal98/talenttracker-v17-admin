@@ -2,13 +2,13 @@ import React from 'react'
 import NavbarMenu from '../NavbarMenu/NavbarMenu'
 import Sidebar from '../Sidebar/Sidebar'
 import { ToastContainer } from 'react-toastify';
-import { Form  , Container , Row , Col , Button ,Table} from 'react-bootstrap';
+import { Form  , Container , Row , Col , Button ,Table } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 import './UserId.css'
 
 const UserIdChang = () => {
     
-    // const [show, setShow]=useState(false);
-    // const handleShow = () => setShow(!show);
+    
   return (
     <div>
          <Sidebar />
@@ -21,20 +21,20 @@ const UserIdChang = () => {
                 <Form.Label  className='fw-bold mb-3 mt-3'>User ID </Form.Label>
                 <Form.Control type='text' placeholder='Enter User ID'/>
                 <Button variant='primary' >Search</Button>
+                <Button variant='danger' ><i className='fa fa-download'></i></Button>
                 </Col>
                 <Col xs={4}>
                 <Form.Label  className='fw-bold mb-3 mt-3'>User Name </Form.Label>
                 <Form.Control type='text' placeholder='Enter User ID'/>
                 
                 </Col>
-                <Col xs={4}>
-                    <Button variant='danger' ><i className='fa fa-download'></i></Button>
-                </Col>
+                
+            
                 </Row>
                     </Form>
                     </Container>
                     {/* <div className={show? 'show2':'show'}>      */}
-            <Container>
+            <Container className='myprofile'>
                 <Table responsive>
                     <thead>
                         <tr>
@@ -43,13 +43,14 @@ const UserIdChang = () => {
                 
                 <th>How many JDs a user can unlock in a day?</th>
                 <th>CVs quality check required for this user ID? </th>
-                <th>Detail JD (doc, pdf file sent by client) to be shown to a particular user even if he or she is not accepting the JD?  </th>
+                <th>Detail JD (doc, pdf file sent by client) to be shown to a particular user even if he or she is  accepting the JD?  </th>
                 <th>Password</th>
-                <th>Unsubscribe</th>
+                <th>Suspension of user account</th>
                 <th>Allow user to remove candidate’s mobile number from the tracker sheet</th>
                 <th>Allow user to write special remarks, comments in the tracker shee</th>
                 <th>Admin can make it compulsory for user to use own / our database</th>
                 <th>Don't allow user to edit the status</th>
+                <th>Action</th>
                </tr>
                </thead>
                <tbody>
@@ -60,13 +61,17 @@ const UserIdChang = () => {
                        <td>yes</td>
                        <td>yes</td>
                        <td>657899</td>
-                       <td>NO</td>
+                       <td  >yes</td>
                        <td>YES</td>
                        <td>yes</td>
+                       <td>na</td>
+                       <td>Na</td>
+                       <td><Button as={Link} to='/edit-user-id-level' variant='primary'>Edit</Button></td>
                    </tr>
                </tbody>
                </Table>
                </Container>
+               
                {/* </div> */}
             </div>    
   )

@@ -53,7 +53,7 @@ const Sidebar = () => {
                <Link to='/landing-page'>CMS/Landing page edit/content edit </Link> 
               </MenuItem>
               <MenuItem active={true} icon={<AiFillDashboard />} onMouseEnter={()=>setMenuCollapse(false)} onMouseLeave={()=>setMenuCollapse(true)}>
-               <Link to='/report'>Reports- chat transcripts- history</Link> 
+               <Link to='/report'>Offer tracking Sheet</Link> 
               </MenuItem>
               <MenuItem active={true} icon={<MdEmail />} onMouseEnter={()=>setMenuCollapse(false)} onMouseLeave={()=>setMenuCollapse(true)}>
                <Link to='/cpanel.com'>Email Cpanel</Link> 

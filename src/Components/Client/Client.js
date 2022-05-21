@@ -2,6 +2,7 @@ import React,{useState} from 'react'
 import Sidebar from '../Sidebar/Sidebar'
 import NavbarMenu from '../NavbarMenu/NavbarMenu'
 import { Container, Row, Col,Form , Button,Table , Modal} from 'react-bootstrap'
+import Select from 'react-select'
 import { ToastContainer,toast  } from 'react-toastify'
 
 const Client = () => {
@@ -10,6 +11,26 @@ const Client = () => {
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
     const notify = () => toast.success("saved");
+    const options = [
+        { value: 'Services', label: 'Services' },
+        { value: 'Manufacturing', label: 'Manufacturing' },
+        { value: 'IT- Information Technology', label: 'IT- Information Technology' },
+        { value: 'Education', label: 'Education' },
+        { value: 'Real estate/Construction', label: 'Real estate/Construction' },
+        { value: 'Finance/BFSI', label: 'Finance/BFSI' },
+        { value: 'Healthcare/Pharm', label: 'Healthcare/Pharm' },
+        { value: 'Retail', label: 'Retail' },
+        { value: 'Hospitality', label: 'Hospitality' },
+        { value: 'Public Sector/Philonthropy/Associations', label: 'Public Sector/Philonthropy/Associations' },
+        { value: 'FMCG', label: 'FMCG' },
+        { value: 'Textile', label: 'Textile' },
+        { value: 'Telecom', label: 'Telecom' },
+        { value: 'logistics/supply chain', label: 'logistics/supply chain' },
+        { value: 'Media/Publishing/Entertainment', label: 'Media/Publishing/Entertainment' },
+        { value: 'Others', label: 'Others' },
+        { value: 'Create', label: 'Create' }
+      
+      ]
     
   return (
     <div>
@@ -162,7 +183,7 @@ const Client = () => {
             <Form>
               <Row>
                 <Col xs={6}>
-                <Form.Label  className='fw-bold mb-3 mt-3'>User ID</Form.Label>
+                <Form.Label  className='fw-bold mb-3 mt-3'>Client ID</Form.Label>
                 <Form.Control type='text' value='23456765'/>
                 </Col>
                 <Col xs={6}>
@@ -177,7 +198,7 @@ const Client = () => {
                 </Col>
                 <Col xs={6}>
                 <Form.Label  className='fw-bold mb-3 mt-3'>Client industry </Form.Label>
-                <Form.Control type='text' placeholder=''/>
+                <Select isMulti options={options} />
                 </Col>
                 </Row>
                 <Row>
@@ -222,22 +243,79 @@ const Client = () => {
                 <Row>
                 <Col xs={6}>
                 <Form.Label  className='fw-bold mb-3 mt-3'>Agreed sign up rate </Form.Label>
-                <Form.Control type='text' placeholder=''/>
+                <Form.Select aria-label="Default select example">
+                    <option>create</option>
+                    <option value="1">- 8.33%</option>
+                    <option value="2">7.5%</option>
+                    <option value="3">7%</option>
+                    <option value="4">10%</option>
+                    <option value="5">6%</option>
+                    <option value="6">12%</option>
+                    </Form.Select>
                 </Col>
                 <Col xs={6}>
                 <Form.Label  className='fw-bold mb-3 mt-3'>Agreed payment terms</Form.Label>
-                <Form.Control type='text' placeholder=''/>
+                <Form.Select aria-label="Default 30days example">
+                    <option>select</option>
+                    <option value="1">Immediate</option>
+                    <option value="1">30 days</option>
+                    <option value="2">45 days</option>
+                    <option value="1">60 days</option>
+                    <option value="2">90 days</option>
+                    </Form.Select>
+
+                    
                 </Col>
                 </Row>
                 <Row>
                 <Col xs={6}>
                 <Form.Label  className='fw-bold mb-3 mt-3'>Agreed replacement period</Form.Label>
-                <Form.Control type='text' placeholder=''/>
+                <Form.Select aria-label="Default select example">
+                    <option>3 months</option>
+                    <option value="1">3 months</option>
+                    <option value="2">6 months</option>
+                    </Form.Select>
                 </Col>
                 <Col xs={6}>
                 <Form.Label  className='fw-bold mb-3 mt-3'>Admin comments/remarks </Form.Label>
                 <Form.Control type='text' placeholder=''/>
                 </Col>
+                </Row>
+                <Row>
+                <Col xs={6}>
+                <Form.Label  className='fw-bold mb-3 mt-3'>Company Address </Form.Label>
+                <Form.Control type='text' placeholder=''/>
+                </Col>
+                <Col xs={6}>
+                <Form.Label  className='fw-bold mb-3 mt-3'>List Of preferred companies to source candidate </Form.Label>
+                <Form.Control type='text' placeholder=''/>
+                </Col>
+                </Row>
+                <Row>
+                <Col xs={6}>
+                <Form.Label  className='fw-bold mb-3 mt-3'>Client Company Website </Form.Label>
+                <Form.Control type='text' placeholder=''/>
+                </Col>
+                <Col xs={6}>
+                <Form.Label  className='fw-bold mb-3 mt-3'>Client Company Linkedin URL </Form.Label>
+                <Form.Control type='text' placeholder=''/>
+                </Col>
+                </Row>
+                <Row>
+                    <Col xs={6}>
+                <Form.Label  className='fw-bold mb-3 mt-3'>Company Size </Form.Label>
+                <Form.Select aria-label="Default select Company Size example">
+                    <option>select Company Size</option>
+                    <option value="0-1">0-1</option>
+                    <option value="2-10">2-10</option>
+                    <option value="11-50">11-50</option>
+                    <option value="51-200">51-200</option>
+                    <option value="201-500">201-500</option>
+                    <option value="501-1000">501-1000</option>
+                    <option value="1001-5000">1001-5000</option>
+                    <option value="10000+">10000+</option>
+                    </Form.Select>
+                    </Col>
                 </Row>
                 </Form>
                 </Modal.Body>

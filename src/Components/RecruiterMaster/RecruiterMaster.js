@@ -1,6 +1,6 @@
 import React, {useState} from 'react'
 import { Container, Table, Modal, Button, Form, Row, Col } from 'react-bootstrap'
-import {  ButtonGroup, Dropdown, Tooltip,OverlayTrigger } from 'react-bootstrap';
+import {  ButtonGroup} from 'react-bootstrap';
 import NavbarMenu from '../NavbarMenu/NavbarMenu'
 import Sidebar from '../Sidebar/Sidebar'
 import { ToastContainer, toast } from 'react-toastify';
@@ -35,9 +35,7 @@ const RecruiterMaster = () => {
 
     const handleClose4 = () => setShow4(false);
     const handleShow4 = () => setShow4(true);
-    function refreshPage(){ 
-      window.location.reload(); 
-  }
+   
   return (
     <div>
         <Sidebar />
@@ -47,49 +45,7 @@ const RecruiterMaster = () => {
           <div className='top-button'>
        
             <div className='mb-2'>
-            <ButtonGroup className="btn btn-light">
-            <OverlayTrigger placement='bottom' overlay={<Tooltip id="tooltip-disabled">Save Jd</Tooltip>}>
-            <Dropdown>
-            <Dropdown.Toggle variant="light" id="dropdown-basic">
-            <i className="far fa-save"></i>
-  </Dropdown.Toggle>
-
-  <Dropdown.Menu>
-
-  </Dropdown.Menu>
-            </Dropdown>
-            </OverlayTrigger>
-            <OverlayTrigger placement='bottom' overlay={<Tooltip id="tooltip-disabled">Add List</Tooltip>}>
-            <Dropdown className='mx-2'>
-            <Dropdown.Toggle variant="light" id="dropdown-basic">
-            <i className="fas fa-plus"></i>
-  </Dropdown.Toggle>
-
-  <Dropdown.Menu>
-    <h5 className='mt-3 mb-3 text-center'>Add JDs List</h5>
-    <Form>
-      <Form.Group className='mb-3'>
-        <Form.Control placeholder='Title'type='text' name="title"/>
-      </Form.Group>
-      <Form.Group className='mb-3'>
-        <Form.Control placeholder='Industry' type='text' name="industry"/>
-      </Form.Group>
-      <Form.Group className='mb-3'>
-        <Form.Control placeholder='Client Name' type='text' name="client"/>
-      </Form.Group>
-      <div className='d-flex justify-content-center'>
-      <Button>Save</Button>
-      
-      
-      </div>
-    </Form>
-  </Dropdown.Menu>
-            </Dropdown>
-            </OverlayTrigger>
-            <OverlayTrigger placement='bottom' overlay={<Tooltip id="tooltip-disabled">Reload Page</Tooltip>}>
-            <Button className="btn btn-light mx-2" onClick={refreshPage}><i className="fas fa-redo-alt"></i></Button>
-            </OverlayTrigger>
-          </ButtonGroup>
+            
           <ButtonGroup>
             <Button variant='success'  as={Link} to='/Filter'><i className="fa fa-filter me-2" style={{color:'#fff'}} ></i>Filter</Button>
             
@@ -100,6 +56,7 @@ const RecruiterMaster = () => {
         <Table >
             <thead>
                 <tr>
+                  <th></th>
                     <th>User Id</th>
                     <th>User name</th>
                     <th>Date Of adddition User</th>
@@ -114,12 +71,14 @@ const RecruiterMaster = () => {
                     <th>Prefrence It/n On It</th>
                     <th>Personal Information</th>
                     <th>Work Information</th>
-                    <th>Action</th>
+                    
                     <th>Bank Details</th>
+                    <th>Action</th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
+                  <td><Form.Check type='checkbox'/></td>
                     <td>1</td>
                     <td>Prashant</td>
                     <td>2</td>
@@ -134,13 +93,15 @@ const RecruiterMaster = () => {
                     <td>n/a</td>
                     <td onClick={handleShow1} style={{color:'orange', textDecoration:'underline'}}><i class="fa fa-address-book" aria-hidden="true"></i></td>
                     <td onClick={handleShow2} style={{color:'red', textDecoration:'underline'}}><i class="fa fa-briefcase" aria-hidden="true"></i></td>
-                    <td><Button variant='primary'>Edit</Button>
+                    <td onClick={handleShow3} style={{color:'green', textDecoration:'underline'}}><i class="fa fa-home" aria-hidden="true"></i></td>
+                    <td><Button variant='primary' as={Link} to='/filter'>Edit</Button>
                     <Button variant='primary'>Delete</Button>
                     
                     </td>
-                    <td onClick={handleShow3} style={{color:'green', textDecoration:'underline'}}><i class="fa fa-home" aria-hidden="true"></i></td>
+                   
                 </tr>
                 <tr>
+                <td><Form.Check type='checkbox'/></td>
                     <td>1</td>
                     <td>Prashant</td>
                     <td>2</td>
@@ -155,13 +116,14 @@ const RecruiterMaster = () => {
                     <td>n/a</td>
                     <td onClick={handleShow1} style={{color:'orange', textDecoration:'underline'}}><i class="fa fa-address-book" aria-hidden="true"></i></td>
                     <td onClick={handleShow2} style={{color:'red', textDecoration:'underline'}}><i class="fa fa-briefcase" aria-hidden="true"></i></td>
-                    <td><Button variant='primary'>Edit</Button>
+                    <td onClick={handleShow3} style={{color:'green', textDecoration:'underline'}}><i class="fa fa-home" aria-hidden="true"></i></td>
+                    <td><Button variant='primary' as={Link} to='/filter'>Edit</Button>
                     <Button variant='primary'>Delete</Button>
                     
                     </td>
-                    <td onClick={handleShow3} style={{color:'green', textDecoration:'underline'}}><i class="fa fa-home" aria-hidden="true"></i></td>
                 </tr>
                 <tr>
+                <td><Form.Check type='checkbox'/></td>
                     <td>1</td>
                     <td>Prashant</td>
                     <td>2</td>
@@ -176,13 +138,14 @@ const RecruiterMaster = () => {
                     <td>n/a</td>
                     <td onClick={handleShow1} style={{color:'plink', textDecoration:'underline'}}><i class="fa fa-address-book" aria-hidden="true"></i></td>
                     <td onClick={handleShow2} style={{color:'red', textDecoration:'underline'}}><i class="fa fa-home" aria-hidden="true"></i></td>
-                    <td><Button variant='primary'>Edit</Button>
+                    <td onClick={handleShow3} style={{color:'green', textDecoration:'underline'}}><i class="fa fa-home" aria-hidden="true"></i></td>
+                    <td><Button variant='primary' as={Link} to='/filter'>Edit</Button>
                     <Button variant='primary'>Delete</Button>
                     
                     </td>
-                    <td onClick={handleShow3} style={{color:'green', textDecoration:'underline'}}><i class="fa fa-receipt" aria-hidden="true"></i></td>
                 </tr>
                 <tr>
+                <td><Form.Check type='checkbox'/></td>
                     <td>1</td>
                     <td>Prashant</td>
                     <td>2</td>
@@ -197,13 +160,14 @@ const RecruiterMaster = () => {
                     <td>n/a</td>
                     <td onClick={handleShow1} style={{color:'orange', textDecoration:'underline'}}><i class="fa fa-address-book" aria-hidden="true"></i></td>
                     <td onClick={handleShow2} style={{color:'red', textDecoration:'underline'}}><i class="fa fa-briefcase" aria-hidden="true"></i></td>
-                    <td><Button variant='primary'>Edit</Button>
+                    
+                    <td onClick={handleShow3} style={{color:'green', textDecoration:'underline'}}><i class="fa fa-home" aria-hidden="true"></i></td><td><Button variant='primary' as={Link} to='/filter'>Edit</Button>
                     <Button variant='primary'>Delete</Button>
                     
                     </td>
-                    <td onClick={handleShow3} style={{color:'green', textDecoration:'underline'}}><i class="fa fa-home" aria-hidden="true"></i></td>
                 </tr>
                 <tr>
+                <td><Form.Check type='checkbox'/></td>
                     <td>1</td>
                     <td>Prashant</td>
                     <td>2</td>
@@ -218,13 +182,14 @@ const RecruiterMaster = () => {
                     <td>n/a</td>
                     <td onClick={handleShow1} style={{color:'orange', textDecoration:'underline'}}><i class="fa fa-address-book" aria-hidden="true"></i></td>
                     <td onClick={handleShow2} style={{color:'red', textDecoration:'underline'}}><i class="fa fa-home" aria-hidden="true"></i></td>
-                    <td><Button variant='primary'>Edit</Button>
+                    
+                    <td onClick={handleShow3} style={{color:'green', textDecoration:'underline'}}><i class="fa fa-home" aria-hidden="true"></i></td><td><Button variant='primary' as={Link} to='/filter'>Edit</Button>
                     <Button variant='primary'>Delete</Button>
                     
                     </td>
-                    <td onClick={handleShow3} style={{color:'green', textDecoration:'underline'}}><i class="fa fa-receipt" aria-hidden="true"></i></td>
                 </tr>
                 <tr>
+                <td><Form.Check type='checkbox'/></td>
                     <td>1</td>
                     <td>Prashant</td>
                     <td>2</td>
@@ -239,13 +204,14 @@ const RecruiterMaster = () => {
                     <td>n/a</td>
                     <td onClick={handleShow1} style={{color:'blue', textDecoration:'underline'}}>n/a</td>
                     <td onClick={handleShow2} style={{color:'blue', textDecoration:'underline'}}>n/a</td>
-                    <td><Button variant='primary'>Edit</Button>
+                    <td onClick={handleShow3} style={{color:'green', textDecoration:'underline'}}><i class="fa fa-home" aria-hidden="true"></i></td>
+                    <td><Button variant='primary' as={Link} to='/filter'>Edit</Button>
                     <Button variant='primary'>Delete</Button>
                     
                     </td>
-                    <td onClick={handleShow3} style={{color:'blue', textDecoration:'underline'}}>n/a</td>
                 </tr>
                 <tr>
+                <td><Form.Check type='checkbox'/></td>
                     <td>1</td>
                     <td>Prashant</td>
                     <td>2</td>
@@ -260,13 +226,14 @@ const RecruiterMaster = () => {
                     <td>n/a</td>
                     <td onClick={handleShow1} style={{color:'blue', textDecoration:'underline'}}>n/a</td>
                     <td onClick={handleShow2} style={{color:'blue', textDecoration:'underline'}}>n/a</td>
-                    <td><Button variant='primary'>Edit</Button>
+                    <td onClick={handleShow3} style={{color:'green', textDecoration:'underline'}}><i class="fa fa-home" aria-hidden="true"></i></td>
+                    <td><Button variant='primary' as={Link} to='/filter'>Edit</Button>
                     <Button variant='primary'>Delete</Button>
                     
                     </td>
-                    <td onClick={handleShow3} style={{color:'blue', textDecoration:'underline'}}>n/a</td>
                 </tr>
                 <tr>
+                <td><Form.Check type='checkbox'/></td>
                     <td>1</td>
                     <td>Prashant</td>
                     <td>2</td>
@@ -281,13 +248,14 @@ const RecruiterMaster = () => {
                     <td>n/a</td>
                     <td onClick={handleShow1} style={{color:'blue', textDecoration:'underline'}}>n/a</td>
                     <td onClick={handleShow2} style={{color:'blue', textDecoration:'underline'}}>n/a</td>
-                    <td><Button variant='primary'>Edit</Button>
+                    <td onClick={handleShow3} style={{color:'green', textDecoration:'underline'}}><i class="fa fa-home" aria-hidden="true"></i></td>
+                    <td><Button variant='primary' as={Link} to='/filter'>Edit</Button>
                     <Button variant='primary'>Delete</Button>
                     
                     </td>
-                    <td onClick={handleShow3} style={{color:'blue', textDecoration:'underline'}}>n/a</td>
                 </tr>
                 <tr>
+                <td><Form.Check type='checkbox'/></td>
                     <td>1</td>
                     <td>Prashant</td>
                     <td>2</td>
@@ -303,7 +271,7 @@ const RecruiterMaster = () => {
                     <td onClick={handleShow1} style={{color:'blue', textDecoration:'underline'}}>n/a</td>
                     <td onClick={handleShow2} style={{color:'blue', textDecoration:'underline'}}>n/a</td>
                    
-                    <td><Button variant='primary'>Edit</Button>
+                    <td><Button variant='primary' as={Link} to='/filter'>Edit</Button>
                     <Button variant='primary'>Delete</Button>
                     
                     </td> <td onClick={handleShow3} style={{color:'blue', textDecoration:'underline'}}>n/a</td>
@@ -311,6 +279,7 @@ const RecruiterMaster = () => {
                 
             </tbody>
         </Table>
+        <Button variant='danger' className='mx-5'><i className='fa fa-download'></i></Button>
         </Container>
         <Modal
         show={show}
@@ -439,8 +408,8 @@ const RecruiterMaster = () => {
           </Row>
           <Row>
             <Col xs={6}>
-            <Form.Label className='fw-bold mb-3 mt-3'>Current Location</Form.Label>
-          <Form.Control type='text' value='patna'/>
+            <Form.Label className='fw-bold mb-3 mt-3'>Current Location-City,State</Form.Label>
+          <Form.Control type='text' value='patna , Bihar'/>
           </Col>
           </Row>
           </Container>
@@ -480,19 +449,16 @@ const RecruiterMaster = () => {
             </Row>
             <Row>
               <Col xs={6}>
-              <Form.Label className='fw-bold mb-3 mt-3'>No. of Years Recruitment</Form.Label>
+              <Form.Label className='fw-bold mb-3 mt-3'>No. of Years Recruitment Experience (india/International)</Form.Label>
         <Form.Control type='text' value='4'/>
               </Col>
               <Col xs={6}>
-              <Form.Label className='fw-bold mb-3 mt-3'>Experience (india/International)</Form.Label>
-        <Form.Control type='text' value='India'/>
+              <Form.Label className='fw-bold mb-3 mt-3'>preferred sectors to JDs? - IT/non IT/ Both</Form.Label>
+        <Form.Control type='text' value='IT'/>
               </Col>
             </Row>
             <Row>
-              <Col xs={6}>
-              <Form.Label className='fw-bold mb-3 mt-3'>Prefrence-IT/Non IT</Form.Label>
-        <Form.Control type='text' value='IT'/>
-              </Col>
+              
               <Col xs={6}>
               <Form.Label className='fw-bold mb-3 mt-3'>Currently employed for some organization as a full time employee?</Form.Label>
         <Form.Control type='text' value='YES'/>

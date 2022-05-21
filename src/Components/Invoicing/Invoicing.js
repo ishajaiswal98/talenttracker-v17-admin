@@ -3,6 +3,7 @@ import { Container,Row, Col, Form ,Modal,Button, Table} from 'react-bootstrap'
 import Sidebar from '../Sidebar/Sidebar'
 import NavbarMenu from '../NavbarMenu/NavbarMenu'
 import { ToastContainer,toast } from 'react-toastify'
+import { Link } from 'react-router-dom'
 
 const Invoicing = () => {
   const [show, setShow] = useState(false);
@@ -47,6 +48,8 @@ const Invoicing = () => {
                 <th>IGST</th>
                 <th>Total invoice value </th>
                 <th>Amount in words </th>
+                <th>Action</th>
+                <th></th>
                </tr>
                </thead>
                <tbody>
@@ -58,7 +61,10 @@ const Invoicing = () => {
                        <td>yes</td>
                        <td>657899</td>
                        <td>NO</td>
-                       <td></td>
+                       <td>na</td>
+                       <td><td><Button variant='success' as={Link} to='/'>Edit Invoice</Button></td>
+                       <td><Button variant='primary' as={Link} to='/'> save</Button></td></td>
+                       <td><Button variant='primary' as={Link} to='/'>Create Invoices</Button></td>
                    </tr>
                    </tbody>
                </Table>
@@ -82,9 +88,25 @@ const Invoicing = () => {
                 <Form.Control type='number' placeholder=''></Form.Control>
                 </Col>
                 <Col xs={6}>
-                <Form.Label  className='fw-bold mb-3 mt-3'>Invoice Number</Form.Label>
+                <Form.Label  className='fw-bold mb-3 mt-3'>Invoice Date</Form.Label>
                  <Form.Control type="date" />
                 </Col>
+                </Row>
+                <Row>
+                  <Col xs={6}>
+                  <Form.Label  className='fw-bold mb-3 mt-3'>User ID</Form.Label>
+                <Form.Control type='number' placeholder=''></Form.Control>
+                  </Col>
+                  <Col xs={6}>
+                  <Form.Label  className='fw-bold mb-3 mt-3'>Candidate  ID</Form.Label>
+                <Form.Control type='number' placeholder=''></Form.Control>
+                  </Col>
+                </Row>
+                <Row>
+                <Col xs={6}>
+                  <Form.Label  className='fw-bold mb-3 mt-3'>JD Number</Form.Label>
+                <Form.Control type='number' placeholder=''></Form.Control>
+                  </Col>
                 </Row>
                 <Row>
                 <Col xs={6}>

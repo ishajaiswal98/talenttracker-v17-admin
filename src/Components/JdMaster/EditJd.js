@@ -1,137 +1,55 @@
-import React, {useState} from 'react'
+import React,{useState} from 'react'
 import Sidebar from '../Sidebar/Sidebar'
 import NavbarMenu from '../NavbarMenu/NavbarMenu'
-import { Container, Row, Col,Form , Button} from 'react-bootstrap'
+import { Container, Row, Col,Form , Button , InputGroup,Modal ,FormControl} from 'react-bootstrap'
 import { ToastContainer  } from 'react-toastify';
 import Select from 'react-select'
-import {Link} from 'react-router-dom'
+import { Link } from 'react-router-dom';
 
-import "./Dashboard.css";
-const Dashboard = () => {
-  const [checked, Setchecked]=useState(false)
-  const handleCheck = () => Setchecked(!checked)
-  const [checked1, Setchecked1]=useState(false)
-  const handleCheck1 = () => Setchecked1(!checked1)
-  const [checked2, Setchecked2]=useState(false)
-  const handleCheck2 = () => Setchecked2(!checked2)
-  const [checked3, Setchecked3]=useState(false)
-  const handleCheck3 = () => Setchecked3(!checked3)
-  const options = [
-    { value: 'Services', label: 'Services' },
-    { value: 'Manufacturing', label: 'Manufacturing' },
-    { value: 'IT- Information Technology', label: 'IT- Information Technology' },
-    { value: 'Education', label: 'Education' },
-    { value: 'Real estate/Construction', label: 'Real estate/Construction' },
-    { value: 'Finance/BFSI', label: 'Finance/BFSI' },
-    { value: 'Healthcare/Pharm', label: 'Healthcare/Pharm' },
-    { value: 'Retail', label: 'Retail' },
-    { value: 'Hospitality', label: 'Hospitality' },
-    { value: 'Public Sector/Philonthropy/Associations', label: 'Public Sector/Philonthropy/Associations' },
-    { value: 'FMCG', label: 'FMCG' },
-    { value: 'Textile', label: 'Textile' },
-    { value: 'Telecom', label: 'Telecom' },
-    { value: 'logistics/supply chain', label: 'logistics/supply chain' },
-    { value: 'Media/Publishing/Entertainment', label: 'Media/Publishing/Entertainment' },
-    { value: 'Others', label: 'Others' },
-    { value: 'Create', label: 'Create' }
-  
-  ]
-  
+
+const EditJd = () => {
+    
+    const [show6, setShow6] = useState(false);
+
+    const handleClose6 = () => setShow6(false);
+    const handleShow6 = () => setShow6(true);
+    const [checked, Setchecked]=useState(false)
+    const handleCheck = () => Setchecked(!checked)
+    const [checked1, Setchecked1]=useState(false)
+    const handleCheck1 = () => Setchecked1(!checked1)
+    const [checked2, Setchecked2]=useState(false)
+    const handleCheck2 = () => Setchecked2(!checked2)
+    const [checked3, Setchecked3]=useState(false)
+    const handleCheck3 = () => Setchecked3(!checked3)
+    const options = [
+      { value: 'Services', label: 'Services' },
+      { value: 'Manufacturing', label: 'Manufacturing' },
+      { value: 'IT- Information Technology', label: 'IT- Information Technology' },
+      { value: 'Education', label: 'Education' },
+      { value: 'Real estate/Construction', label: 'Real estate/Construction' },
+      { value: 'Finance/BFSI', label: 'Finance/BFSI' },
+      { value: 'Healthcare/Pharm', label: 'Healthcare/Pharm' },
+      { value: 'Retail', label: 'Retail' },
+      { value: 'Hospitality', label: 'Hospitality' },
+      { value: 'Public Sector/Philonthropy/Associations', label: 'Public Sector/Philonthropy/Associations' },
+      { value: 'FMCG', label: 'FMCG' },
+      { value: 'Textile', label: 'Textile' },
+      { value: 'Telecom', label: 'Telecom' },
+      { value: 'logistics/supply chain', label: 'logistics/supply chain' },
+      { value: 'Media/Publishing/Entertainment', label: 'Media/Publishing/Entertainment' },
+      { value: 'Others', label: 'Others' },
+      { value: 'Create', label: 'Create' }
+    
+    ]
   return (
-    <div className='dashboard'>
+    <div>
+        <div className='dashboard'>
       <Sidebar />
       <NavbarMenu />
       <ToastContainer/>
       <Container className="jd-cont">
-            <form>
-              <Row>
-                <Col xs={6}>
-                <Form.Label  className='fw-bold mb-3 mt-3'>Client ID  </Form.Label>
-                <Form.Control type='text' placeholder='   '/>
-                </Col>
-                <Col xs={6}>
-                <Form.Label  className='fw-bold mb-3 mt-3'>Company Name </Form.Label>
-                <Form.Control type='text' value=' pvt ltd  '/>
-                </Col>
-              </Row>
-              <Row>
-                <Col xs={6}>
-                <Form.Label  className='fw-bold mb-3 mt-3'>List of preferred companies to source candidate  </Form.Label>
-                <Form.Control type='text' value='talenttracker'/>
-                </Col>
-                <Col xs={6}>
-                <Form.Label  className='fw-bold mb-3 mt-3'>Client company website</Form.Label>
-                <Form.Control type='text' value=' www.talenttracker.com '/>
-                </Col>
-              </Row>
-              <Row>
-                <Col xs={6}>
-                <Form.Label  className='fw-bold mb-3 mt-3'>Client company linkedin URL </Form.Label>
-                <Form.Control type='text' value='https://talenttracker.linkedin'/>
-                </Col>
-                <Col xs={6}>
-                <Form.Label  className='fw-bold mb-3 mt-3'>sign up rate with client</Form.Label>
-                <Form.Control type='text' value=' 8% '/>
-                </Col>
-              </Row>
-              <Row>
-                <Col xs={6}>
-                <Form.Label  className='fw-bold mb-3 mt-3'> Replacement period</Form.Label>
-                <Form.Control type='text' value='30 days'/>
-                </Col>
-                <Col xs={6}>
-                <Form.Label  className='fw-bold mb-3 mt-3'>Payment Terms</Form.Label>
-                <Form.Control type='text' value=' 30 days '/>
-                </Col>
-              </Row>
-              <Row>
-                <Col xs={6}>
-                <Form.Label  className='fw-bold mb-3 mt-3'>client company address </Form.Label>
-                <Form.Control type='text' value='patna'/>
-                </Col>
-                <Col xs={6}>
-                <Form.Label  className='fw-bold mb-3 mt-3'>Industry</Form.Label>
-                <Form.Control type='text' value=' services '/>
-                </Col>
-              </Row>
-              <Row>
-                <Col xs={6}>
-                <Form.Label  className='fw-bold mb-3 mt-3'> Company type</Form.Label>
-                <Form.Control type='text' value='Startup'/>
-                </Col>
-                <Col xs={6}>
-                <Form.Label  className='fw-bold mb-3 mt-3'>Company Size</Form.Label>
-                <Form.Control type='text' value=' Na'/>
-                </Col>
-              </Row>
-              <Row>
-                <Col xs={6}>
-                <Form.Label  className='fw-bold mb-3 mt-3'>Client company spoc name</Form.Label>
-                <Form.Control type='text' value='john'/>
-                </Col>
-                <Col xs={6}>
-                <Form.Label  className='fw-bold mb-3 mt-3'>Client company spoc Email</Form.Label>
-                <Form.Control type='text' value=' jhinhg@gmail.com '/>
-                </Col>
-              </Row>
-              <Row>
-                <Col xs={6}>
-                <Form.Label  className='fw-bold mb-3 mt-3'>Client company spoc mobile number </Form.Label>
-                <Form.Control type='text' value='8767876545'/>
-                </Col>
-               
-              </Row>
-            <Row>
-                <Col xs={6}>
-                <Form.Label  className='fw-bold mb-3 mt-3'>JD number  </Form.Label>
-                <Form.Control type='text' placeholder=' Number  '/>
-                </Col>
-                <Col xs={6}>
-                <Form.Label  className='fw-bold mb-3 mt-3'>Client company name to be disclosed to the candidate? </Form.Label>
-                <Form.Control type='text' placeholder=' 1'/>
-                </Col>
-              </Row>
-              <Row>
+          <Form>
+          <Row>
                 <Col xs={6}>
                 <Form.Label  className='fw-bold mb-3 mt-3'> JD should be shown to which User Category?</Form.Label>
                 <Form.Select aria-label="Default A example">
@@ -361,11 +279,70 @@ const Dashboard = () => {
                     </Form.Select> 
                     <Button variant='primary'>Create</Button>
                     </Col>
+                   
+                
+              </Row>
+              <Row>
+                <Col xs={6}>
+                <Form.Label  className='fw-bold mb-3 mt-3'>Client company spoc name</Form.Label>
+                <Form.Control type='text' value='john'/>
+                </Col>
+                <Col xs={6}>
+                <Form.Label  className='fw-bold mb-3 mt-3'>Client company spoc Email</Form.Label>
+                <Form.Control type='text' value=' jhinhg@gmail.com '/>
+                </Col>
+              </Row>
+              <Row>
+                <Col xs={6}>
+                <Form.Label  className='fw-bold mb-3 mt-3'>Client company spoc mobile number </Form.Label>
+                <Form.Control type='text' value='8767876545'/>
+                </Col>
+                <Col xs={6}>
+                <Form.Label  className='fw-bold mb-3 mt-3'>List of preferred companies to source candidate  </Form.Label>
+                <Form.Control type='text' value='talenttracker'/>
+                </Col>
+              </Row>
+              <Row>
+              
+                <Col xs={6}>
+                <Form.Label  className='fw-bold mb-3 mt-3'>Company Size</Form.Label>
+                <Form.Select aria-label="Default select Company Size example">
+                    <option>select Company Size</option>
+                    <option value="0-1">0-1</option>
+                    <option value="2-10">2-10</option>
+                    <option value="11-50">11-50</option>
+                    <option value="51-200">51-200</option>
+                    <option value="201-500">201-500</option>
+                    <option value="501-1000">501-1000</option>
+                    <option value="1001-5000">1001-5000</option>
+                    <option value="10000+">10000+</option>
+                    </Form.Select>
+                    </Col>
                     <Col xs={6}>
-                    <Form.Label className='fw-bold mb-3 mt-3'>  Admin spoc (single point of contact)</Form.Label>
-                    <Form.Control type='text' placeholder=' Name of the spoc '/>
-                    <Form.Control type='text' placeholder=' Email ID '/>
-                    <Form.Control type='text' placeholder=' Mobile Number '/>
+                    <Form.Label className='fw-bold mb-3 mt-3' onClick={handleShow6} style={{color:'blue' ,textDecoration:'underline'}}><i className='fa fa-user'></i>  Admin spoc (single point of contact)</Form.Label>
+                    
+                    </Col>
+                </Row>
+                <Row>
+                    <Col xs={6}>
+                        <Form.Label  className='fw-bold mb-3 mt-3'> Client Email List</Form.Label>
+                        <Row>
+                            <Col xs={6}>
+
+                          
+                        <InputGroup className="mb-2">
+        <InputGroup.Text>To</InputGroup.Text>
+        <FormControl id="inlineFormInputGroup" placeholder=" Email" />
+      </InputGroup>
+      </Col>
+      <Col xs={6}>
+      <InputGroup className="mb-2">
+        <InputGroup.Text>CC</InputGroup.Text>
+        <FormControl id="inlineFormInputGroup" placeholder=" Email" />
+      </InputGroup>
+      
+      </Col>
+                        </Row>
                     </Col>
                 </Row>
                 <Row>
@@ -381,7 +358,7 @@ const Dashboard = () => {
                     </Col>
                     <Col xs={6}>
                     <Form.Label className='fw-bold mb-3 mt-3'> Assured delivery time required by client (TAT)</Form.Label>
-                    
+                    <Form.Control type="date" ></Form.Control>
                     </Col>
                 </Row>
                 <Row>
@@ -406,7 +383,13 @@ const Dashboard = () => {
                  
                   <Col xs={6}>
                   <Form.Label className='fw-bold mb-3 mt-3'>Sign Up Rate </Form.Label>
-                  <Form.Select aria-label="Default select example">
+                    <Form.Control type="text" placeholder=''></Form.Control>
+                    </Col>
+                    </Row>
+                    <Row>
+                      <Col xs={6}>
+                    
+                    <Form.Select aria-label="Default select example">
                     <option>create</option>
                     <option value="1">- 8.33%</option>
                     <option value="2">7.5%</option>
@@ -415,10 +398,7 @@ const Dashboard = () => {
                     <option value="5">6%</option>
                     <option value="6">12%</option>
                     </Form.Select>
-                    </Col>
-                    </Row>
-                    <Row>
-                      
+                  </Col>
                   <Col xs={6}>
                     <Form.Group className="mt-3">
                       <Form.Label className="fw-bold">Audio JD</Form.Label>
@@ -446,23 +426,73 @@ const Dashboard = () => {
                   </Col>
                 </Row>
                 <Row>
-                  <Col xs={12}>
+                  <Col xs={6}>
                     <Form.Group className="mt-3">
                       <Form.Label className="fw-bold">Client Company Address.</Form.Label>
                       <Form.Control as='textarea' />
                     </Form.Group>
                   </Col>
+                  <Col xs={6}>
+                    <Form.Group className="mt-3">
+                      <Form.Label className="fw-bold">CVs Quality Approval</Form.Label>
+                      <Form.Select aria-label="Default select example">
+                    <option>create</option>
+                    <option value="Approved">Approved</option>
+                    <option value="Non-Approved">Non-Approved</option>
+                    </Form.Select>
+                    </Form.Group>
+                  </Col>
                 </Row>
-                <Button variant="primary" className="mt-3">Add a JD</Button>
-                <Button variant="primary" className="mt-3">Reset</Button>
-                <Button variant="primary" className="mt-3">
+                <Button variant="success" className="mt-3 mx-5">Edit</Button>
+                <Button variant="danger" className="mt-3 mx-5">Close</Button>
+                <Button variant="primary" className="mt-3 mx-5">
             <i className="fas fa-save me-3"></i>Save 
-          &nbsp;&nbsp;</Button> 
+          &nbsp;&nbsp;</Button>
+          </Form>
+      </Container>
+      <Modal show={show6} onHide={handleClose6} size='lg'>
+        <Modal.Header closeButton>
+          <Modal.Title> <i className="fas fa-info-circle me-3" ></i>Admin Spoc</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>
+          <Form>
+            <Row>
+            <Col xs={6}>
+               <Form.Label className=''>Admin Spoc Name</Form.Label>  
+               <Form.Control type='text'/>        
+          
+            
+            </Col>
+            </Row>
+            <Row>
+            <Col xs={6}>
+               <Form.Label className=''>Admin Spoc Email</Form.Label>  
+               <Form.Control type='text'/>        
+          
+            
+            </Col>
+            </Row>
+            <Row>
+            <Col xs={6}>
+               <Form.Label className=''>Admin Spoc Mobile Number</Form.Label>  
+               <Form.Control type='text'/>        
+          
+            
+            </Col>
+            </Row>
+            </Form>
+        </Modal.Body>
+        <Modal.Footer>
+          <Button variant="secondary" onClick={handleClose6}>
+            Close
+          </Button>
+        </Modal.Footer>
+      </Modal>
 
-            </form>
-        </Container>
+      </div>
+    
     </div>
   )
 }
 
-export default Dashboard
+export default EditJd

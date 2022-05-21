@@ -31,17 +31,17 @@ const CreateEmail = () => {
                
                
                 </Row>
-                <Row>
+                
                     
-                        <Button variant='primary'>Save</Button>
-                    
-                    
-                        <Button variant='success'>Edit</Button>
+                        <Button variant='primary' className='mx-5'>Save</Button>
                     
                     
-                        <Button variant='danger'>Delete</Button>
+                        <Button variant='success' className='mx-5'>Edit</Button>
                     
-                </Row>
+                    
+                        <Button variant='danger' className='mx-5'>Delete</Button>
+                    
+                
                 </form>
                 </Container>
     </div>

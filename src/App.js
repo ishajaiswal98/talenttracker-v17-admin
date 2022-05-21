@@ -24,6 +24,9 @@ import CreateEmail from "./Components/CreateEmail/CreateEmail";
 import Invoicing from "./Components/Invoicing/Invoicing";
 import ListOfCandi from "./Components/ListOfCandi/ListOfCandi";
 import FilterOfCandi from "./Components/ListOfCandi/FilterOfCandi";
+import FilterJdMaster from "./Components/JdMaster/FilterJdMaster";
+import EditJd from "./Components/JdMaster/EditJd";
+import EditUser from "./Components/UserIdChang/EditUser";
 
 function App() {
 
@@ -51,6 +54,9 @@ function App() {
       <Route path="/invoicing" element={<Invoicing/>}/>
       <Route path="/list-of-candidate" element={<ListOfCandi/>}/>
       <Route path="/filter-of-candidate" element={<FilterOfCandi/>}/>
+      <Route path="/filter-jd-master" element={<FilterJdMaster/>}/>
+      <Route path="/edit-jd-master" element={<EditJd/>}/>
+      <Route path="/edit-user-id-level" element={<EditUser/>}/>
       
     </Routes>
   </BrowserRouter>

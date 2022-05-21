@@ -105,26 +105,28 @@ const Filter = () => {
                     </Col>
             </Row>
             <Row>
+            <Col xs={6}>
+                    <Form.Label  className='fw-bold mb-3 mt-3'>Own Portal available? </Form.Label>
+                    <Form.Control type='text' placeholder='Naukari,Monster,Etc'/>
+                    </Col>
+            </Row>
+            <Row>
             <Col xs={3} className=' mb-3 mt-3'>
             <Button variant="secondary" href='/'>
-            Reset
+            Apply Filter
           </Button> 
             </Col>
             <Col xs={3} className=' mb-3 mt-3'>
             <Button variant="danger" href='/'>
-            Search
+            Close
           </Button> 
             </Col>
              <Col xs={3} className=' mb-3 mt-3'>
             <Button variant="info" href='/'>
-            Saved Search
+            Reset
           </Button> 
             </Col>
-            <Col xs={3} className=' mb-3 mt-3'>
-            <Button variant="warning" href='/'>
-            Freezes
-          </Button> 
-          </Col>
+           
           </Row>
             </Form>
         </Container>

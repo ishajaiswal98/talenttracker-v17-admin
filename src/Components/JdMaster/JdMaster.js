@@ -5,8 +5,52 @@ import Sidebar from '../Sidebar/Sidebar'
 import { ToastContainer } from 'react-toastify';
 import { Link } from 'react-router-dom';
 
+import {CSVLink} from "react-csv"
+import './JdMaster.css'
+
+
 
 const JdMaster = () => {
+  // const csvData = [
+  //   ["	JD number", "Assured Delivery Date-Time", "Client details", "JD status", "User name who accepted the JD", "Category", "Force to use our database?", "Exclusivity", "Cvs quality check", "priority tag(P)", "JD details", "Company", "Job description", "Terms of JD	", "remarks/comments", "Client Coordination", "Admin spoc", "Allow one candidate submission by user?", "JD Acceptance", "Submission Date", "Feedback from client updated by user", "Feedback from admin", "Cvs quality approval", "Status as per User	" ,"Offer", "JD upload date-time"],
+  //   ["1232456", "5-5-22", "yes", "na", "isha", "A", "yes","yes", "na","na","na","na","yes","na","na","na","na","na","na","na"]
+  // ];
+  const Studentlist = [
+    {id:1, Date:"2", Clientname:"prashant Kumar",JDtitle:"Automobile",JDlocation:"Patna",RecruiterID:"A",Candidatename:"yes", Currentdesignation:"n/a",Currentsalary:"null", LastAppraisal:"18-may-2022"},
+    {id:2, Date:"003", Clientname:"neeraj Kumar", JDtitle:"Automobile",JDlocation:"Ranchi", RecruiterID:"B",Candidatename:"no", Currentdesignation:"n/a", Currentsalary:"null",LastAppraisal:"19-may-2022"},
+    {id:3, Date:"33", Clientname:"prashant Kumar", JDtitle:"Automobile",JDlocation:"Haryana",RecruiterID:"C", Candidatename:"yes", Currentdesignation:"n/a", Currentsalary:"null", LastAppraisal:"20-may-2022"},
+    {id:4, Date:"33", Clientname:"dd Kumar", JDtitle:"Automobile",JDlocation:"Delhi", RecruiterID:"in-house", Candidatename:"yes", Currentdesignation:"n/a",Currentsalary:"null",LastAppraisal:"21-may-2022"}
+]
+const headers = [
+    {lable:"JD number ", key:"id"},
+    {label:"Assured Delivery Date-Time ", key:"Date"},
+    {label:"Client details", key:"Clientname"},
+    {label:"JD status", key:"JDtitle"},
+    {label:"User name who accepted the JD", key:"JDlocation"},
+    {label:"Category", key:"RecruiterID"},
+    {label:"Force to use our database?", key:"Candidatename"},
+    {label:"Exclusivity", key:"Currentdesignation"},
+    {label:"Cvs quality check", key:"Currentsalary"},
+    {label:"priority tag(P", key:"priority tag(P"},
+    {label:"remarks", key:"remarks"},
+    {label:"Job description", key:"Jobdescription"},
+    {label:"Client cordination", key:"clientcordination"},
+    {label:"Allow one candidate submission by user?", key:"Allow one candidate submission by user?"},
+    {label:"Submission Date", key:"SubmissionDate"},
+    {label:"Feedback from client updated by user", key:"jdtitle"},
+    {label:"Feedback from admin", key:""},
+    {label:"Cvs quality approval", key:""},
+    {label:"Status as per User", key:""},
+    {label:"JD upload date-time", key:"Date"}
+   
+
+]
+const csvReport = {
+  filename: 'Studentlist.csv',
+  headers: headers,
+  data: Studentlist
+}
+  
   const [show1, setShow1] = useState(false);
 
   const handleClose1 = () => setShow1(false);
@@ -38,10 +82,12 @@ const JdMaster = () => {
         <Sidebar />
         <NavbarMenu />
         <ToastContainer />
+        
         <Container className='myprofile' >
           <Button variant='success' as={Link} to='/filter-jd-master'><i className='fa fa-filter'>Filter</i></Button>
-          <Button variant='danger'><i className='fa fa-download'></i></Button>
-        <Table>
+          <Button className='mb-2 mx-5' variant='danger'><CSVLink {...csvReport} style={{textDecoration:"none", color:"white"}}><i className='fas fa-download' /></CSVLink></Button>
+          <div className='jd-wraper' >
+        <Table responsive className='data-table' hover >
             <thead>
                 <tr>
                   <th></th>
@@ -92,22 +138,22 @@ const JdMaster = () => {
                     <td>na</td>
                       <td>na</td>
                       <td>Na</td>
-                    <td  onClick={handleShow1} style={{color:'blue', textDecoration:'underline'}}><i className='fa fa-briefcase'></i></td>
-                    <td  onClick={handleShow4} style={{color:'blue', textDecoration:'underline'}}> <td className='position'> <span > 
+                    <td  onClick={handleShow1} style={{color:'green', textDecoration:'underline'}}><i className='fa fa-briefcase'></i></td>
+                    <td  onClick={handleShow4} style={{color:'blue', textDecoration:'none'}}> company Name<td className='absolute'> <span > 
             
-            <i className="fas fa-building me-2"  ></i> | <i className="fas fa-user ms-2"></i> | <i className="fas fa-user ms-2"></i>  </span></td></td>
+            <i className="fas fa-globe me-2"  ></i> | <i className="fab fa-linkedin ms-2"></i> | <i className="fas fa-info-circle ms-2"></i>  </span></td></td>
                     
                    
                     <td >n/a</td>
-                    <td onClick={handleShow5} style={{color:'blue', textDecoration:'underline'}}><i className='fa fa-info-circle'></i></td>
+                    <td onClick={handleShow5} style={{color:'orange', textDecoration:'underline'}}><i className='fa fa-eye'></i></td>
                    
                     <td>n/a</td>
                     
                     
                     <td>Indivisual</td>
-                    <td onClick={handleShow6} style={{color:'blue' ,textDecoration:'underline'}}><i className='fa fa-user'></i></td>
+                    <td onClick={handleShow6} style={{color:'brown' ,textDecoration:'underline'}}><i className='fa fa-user'></i></td>
                     <td>patna</td>
-                    <td  onClick={handleShow3} style={{color:'blue', textDecoration:'underline'}}><i className='fa fa-info-circle'></i></td>
+                    <td  onClick={handleShow3} style={{color:'red', textDecoration:'underline'}}><i className='fa fa-info-circle'></i></td>
                     <td >n/a</td>
                     <td >n/a</td>
                     <td >na</td>
@@ -115,9 +161,9 @@ const JdMaster = () => {
                     <td>na</td>
                     <td  onClick={handleShow2} style={{color:'blue', textDecoration:'underline'}}><i className='fa fa-info-circle'></i></td>
                     <td>Na</td>
-                    <td><Button variant='primary' as={Link} to='/edit-jd-master'>Edit</Button>
-                    <Button variant='primary'>Save</Button>              
-                      <Button variant='danger'>Delete</Button></td>               
+                    <td>  <Button variant='primary' as={Link} to='/edit-jd-master'><i className='fa fa-edit'></i></Button>
+                    
+                    <Button variant='danger'><i className='fa fa-trash'></i></Button></td>    
                 </tr>
                 <tr>
                    <td><Form.Check type='checkbox'></Form.Check></td>
@@ -131,19 +177,19 @@ const JdMaster = () => {
                     <td>na</td>
                       <td>na</td>
                       <td>Na</td>
-                    <td  onClick={handleShow1} style={{color:'blue', textDecoration:'underline'}}><i className='fa fa-briefcase'></i></td>
+                    <td  onClick={handleShow1} style={{color:'green', textDecoration:'underline'}}><i className='fa fa-briefcase'></i></td>
                     <td  onClick={handleShow4} style={{color:'blue', textDecoration:'underline'}}><i className='fa fa-briefcase'></i></td>
                    
                     <td >n/a</td>
-                    <td onClick={handleShow5} style={{color:'blue', textDecoration:'underline'}}><i className='fa fa-info-circle'></i></td>
+                    <td onClick={handleShow5} style={{color:'orange', textDecoration:'underline'}}><i className='fa fa-eye'></i></td>
                    
                     <td>n/a</td>
                     
                     
                     <td>Indivisual</td>
-                    <td onClick={handleShow6} style={{color:'blue' ,textDecoration:'underline'}}><i className='fa fa-user'></i></td>
+                    <td onClick={handleShow6} style={{color:'brown' ,textDecoration:'underline'}}><i className='fa fa-user'></i></td>
                     <td>patna</td>
-                    <td  onClick={handleShow3} style={{color:'blue', textDecoration:'underline'}}><i className='fa fa-info-circle'></i></td>
+                    <td  onClick={handleShow3} style={{color:'red', textDecoration:'underline'}}><i className='fa fa-info-circle'></i></td>
                     <td >n/a</td>
                     <td >n/a</td>
                     <td >na</td>
@@ -151,9 +197,9 @@ const JdMaster = () => {
                     <td>na</td>
                     <td  onClick={handleShow2} style={{color:'blue', textDecoration:'underline'}}><i className='fa fa-info-circle'></i></td>
                     <td>Na</td>
-                    <td><Button variant='primary' as={Link} to='/edit-jd-master'>Edit</Button>
-                    <Button variant='primary'>Save</Button>
-                    <Button variant='danger'>Delete</Button></td>               
+                    <td><Button variant='primary' as={Link} to='/edit-jd-master'><i className='fa fa-edit'></i></Button>
+                    
+                    <Button variant='danger'><i className='fa fa-trash'></i></Button></td>               
                 </tr>
                 <tr>
                    <td><Form.Check type='checkbox'></Form.Check></td>
@@ -167,19 +213,19 @@ const JdMaster = () => {
                     <td>na</td>
                       <td>na</td>
                       <td>Na</td>
-                    <td  onClick={handleShow1} style={{color:'blue', textDecoration:'underline'}}><i className='fa fa-briefcase'></i></td>
+                    <td  onClick={handleShow1} style={{color:'green', textDecoration:'underline'}}><i className='fa fa-briefcase'></i></td>
                     <td  onClick={handleShow4} style={{color:'blue', textDecoration:'underline'}}><i className='fa fa-briefcase'></i></td>
                    
                     <td >n/a</td>
-                    <td onClick={handleShow5} style={{color:'blue', textDecoration:'underline'}}><i className='fa fa-info-circle'></i></td>
+                    <td onClick={handleShow5} style={{color:'orange', textDecoration:'underline'}}><i className='fa fa-eye'></i></td>
                    
                     <td>n/a</td>
                     
                     
                     <td>Indivisual</td>
-                    <td onClick={handleShow6} style={{color:'blue' ,textDecoration:'underline'}}><i className='fa fa-user'></i></td>
+                    <td onClick={handleShow6} style={{color:'brown' ,textDecoration:'underline'}}><i className='fa fa-user'></i></td>
                     <td>patna</td>
-                    <td  onClick={handleShow3} style={{color:'blue', textDecoration:'underline'}}><i className='fa fa-info-circle'></i></td>
+                    <td  onClick={handleShow3} style={{color:'red', textDecoration:'underline'}}><i className='fa fa-info-circle'></i></td>
                     <td >n/a</td>
                     <td >n/a</td>
                     <td >na</td>
@@ -187,9 +233,9 @@ const JdMaster = () => {
                     <td>na</td>
                     <td  onClick={handleShow2} style={{color:'blue', textDecoration:'underline'}}><i className='fa fa-info-circle'></i></td>
                     <td>Na</td>
-                    <td><Button variant='primary' as={Link} to='/edit-jd-master'>Edit</Button>
-                    <Button variant='primary'>Save</Button>
-                    <Button variant='danger'>Delete</Button></td>               
+                    <td><Button variant='primary' as={Link} to='/edit-jd-master'><i className='fa fa-edit'></i></Button>
+                    
+                    <Button variant='danger'><i className='fa fa-trash'></i></Button></td>               
                 </tr>
                 <tr>
                    <td><Form.Check type='checkbox'></Form.Check></td>
@@ -203,19 +249,19 @@ const JdMaster = () => {
                     <td>na</td>
                       <td>na</td>
                       <td>Na</td>
-                    <td  onClick={handleShow1} style={{color:'blue', textDecoration:'underline'}}><i className='fa fa-briefcase'></i></td>
+                    <td  onClick={handleShow1} style={{color:'green', textDecoration:'underline'}}><i className='fa fa-briefcase'></i></td>
                     <td  onClick={handleShow4} style={{color:'blue', textDecoration:'underline'}}><i className='fa fa-briefcase'></i></td>
                    
                     <td >n/a</td>
-                    <td onClick={handleShow5} style={{color:'blue', textDecoration:'underline'}}><i className='fa fa-info-circle'></i></td>
+                    <td onClick={handleShow5} style={{color:'orange', textDecoration:'underline'}}><i className='fa fa-eye'></i></td>
                    
                     <td>n/a</td>
                     
                     
                     <td>Indivisual</td>
-                    <td onClick={handleShow6} style={{color:'blue' ,textDecoration:'underline'}}><i className='fa fa-user'></i></td>
+                    <td onClick={handleShow6} style={{color:'brown' ,textDecoration:'underline'}}><i className='fa fa-user'></i></td>
                     <td>patna</td>
-                    <td  onClick={handleShow3} style={{color:'blue', textDecoration:'underline'}}><i className='fa fa-info-circle'></i></td>
+                    <td  onClick={handleShow3} style={{color:'red', textDecoration:'underline'}}><i className='fa fa-info-circle'></i></td>
                     <td >n/a</td>
                     <td >n/a</td>
                     <td >na</td>
@@ -223,9 +269,9 @@ const JdMaster = () => {
                     <td>na</td>
                     <td  onClick={handleShow2} style={{color:'blue', textDecoration:'underline'}}><i className='fa fa-info-circle'></i></td>
                     <td>Na</td>
-                    <td><Button variant='primary' as={Link} to='/edit-jd-master'>Edit</Button>
-                    <Button variant='primary'>Save</Button>
-                    <Button variant='danger'>Delete</Button></td>               
+                    <td><Button variant='primary' as={Link} to='/edit-jd-master'><i className='fa fa-edit'></i></Button>
+                    
+                    <Button variant='danger'><i className='fa fa-trash'></i></Button></td>               
                 </tr>
                 <tr>
                    <td><Form.Check type='checkbox'></Form.Check></td>
@@ -239,19 +285,19 @@ const JdMaster = () => {
                     <td>na</td>
                       <td>na</td>
                       <td>Na</td>
-                    <td  onClick={handleShow1} style={{color:'blue', textDecoration:'underline'}}><i className='fa fa-briefcase'></i></td>
+                    <td  onClick={handleShow1} style={{color:'green', textDecoration:'underline'}}><i className='fa fa-briefcase'></i></td>
                     <td  onClick={handleShow4} style={{color:'blue', textDecoration:'underline'}}><i className='fa fa-briefcase'></i></td>
                    
                     <td >n/a</td>
-                    <td onClick={handleShow5} style={{color:'blue', textDecoration:'underline'}}><i className='fa fa-info-circle'></i></td>
+                    <td onClick={handleShow5} style={{color:'orange', textDecoration:'underline'}}><i className='fa fa-eye'></i></td>
                    
                     <td>n/a</td>
                     
                     
                     <td>Indivisual</td>
-                    <td onClick={handleShow6} style={{color:'blue' ,textDecoration:'underline'}}><i className='fa fa-user'></i></td>
+                    <td onClick={handleShow6} style={{color:'brown' ,textDecoration:'underline'}}><i className='fa fa-user'></i></td>
                     <td>patna</td>
-                    <td  onClick={handleShow3} style={{color:'blue', textDecoration:'underline'}}><i className='fa fa-info-circle'></i></td>
+                    <td  onClick={handleShow3} style={{color:'red', textDecoration:'underline'}}><i className='fa fa-info-circle'></i></td>
                     <td >n/a</td>
                     <td >n/a</td>
                     <td >na</td>
@@ -259,9 +305,9 @@ const JdMaster = () => {
                     <td>na</td>
                     <td  onClick={handleShow2} style={{color:'blue', textDecoration:'underline'}}><i className='fa fa-info-circle'></i></td>
                     <td>Na</td>
-                    <td><Button variant='primary' as={Link} to='/edit-jd-master'>Edit</Button>
-                    <Button variant='primary'>Save</Button>
-                    <Button variant='danger'>Delete</Button></td>               
+                    <td><Button variant='primary' as={Link} to='/edit-jd-master'><i className='fa fa-edit'></i></Button>
+                    
+                    <Button variant='danger'><i className='fa fa-trash'></i></Button></td>               
                 </tr>
                 <tr>
                    <td><Form.Check type='checkbox'></Form.Check></td>
@@ -275,19 +321,19 @@ const JdMaster = () => {
                     <td>na</td>
                       <td>na</td>
                       <td>Na</td>
-                    <td  onClick={handleShow1} style={{color:'blue', textDecoration:'underline'}}><i className='fa fa-briefcase'></i></td>
+                    <td  onClick={handleShow1} style={{color:'green', textDecoration:'underline'}}><i className='fa fa-briefcase'></i></td>
                     <td  onClick={handleShow4} style={{color:'blue', textDecoration:'underline'}}><i className='fa fa-briefcase'></i></td>
                    
                     <td >n/a</td>
-                    <td onClick={handleShow5} style={{color:'blue', textDecoration:'underline'}}><i className='fa fa-info-circle'></i></td>
+                    <td onClick={handleShow5} style={{color:'orange', textDecoration:'underline'}}><i className='fa fa-eye'></i></td>
                    
                     <td>n/a</td>
                     
                     
                     <td>Indivisual</td>
-                    <td onClick={handleShow6} style={{color:'blue' ,textDecoration:'underline'}}><i className='fa fa-user'></i></td>
+                    <td onClick={handleShow6} style={{color:'brown' ,textDecoration:'underline'}}><i className='fa fa-user'></i></td>
                     <td>patna</td>
-                    <td  onClick={handleShow3} style={{color:'blue', textDecoration:'underline'}}><i className='fa fa-info-circle'></i></td>
+                    <td  onClick={handleShow3} style={{color:'red', textDecoration:'underline'}}><i className='fa fa-info-circle'></i></td>
                     <td >n/a</td>
                     <td >n/a</td>
                     <td >na</td>
@@ -295,9 +341,9 @@ const JdMaster = () => {
                     <td>na</td>
                     <td  onClick={handleShow2} style={{color:'blue', textDecoration:'underline'}}><i className='fa fa-info-circle'></i></td>
                     <td>Na</td>
-                    <td><Button variant='primary' as={Link} to='/edit-jd-master'>Edit</Button>
-                    <Button variant='primary'>Save</Button>
-                    <Button variant='danger'>Delete</Button></td>               
+                    <td><Button variant='primary' as={Link} to='/edit-jd-master'><i className='fa fa-edit'></i></Button>
+                    
+                    <Button variant='danger'><i className='fa fa-trash'></i></Button></td>               
                 </tr>
                 <tr>
                    <td><Form.Check type='checkbox'></Form.Check></td>
@@ -311,19 +357,19 @@ const JdMaster = () => {
                     <td>na</td>
                       <td>na</td>
                       <td>Na</td>
-                    <td  onClick={handleShow1} style={{color:'blue', textDecoration:'underline'}}><i className='fa fa-briefcase'></i></td>
+                    <td  onClick={handleShow1} style={{color:'green', textDecoration:'underline'}}><i className='fa fa-briefcase'></i></td>
                     <td  onClick={handleShow4} style={{color:'blue', textDecoration:'underline'}}><i className='fa fa-briefcase'></i></td>
                    
                     <td >n/a</td>
-                    <td onClick={handleShow5} style={{color:'blue', textDecoration:'underline'}}><i className='fa fa-info-circle'></i></td>
+                    <td onClick={handleShow5} style={{color:'orange', textDecoration:'underline'}}><i className='fa fa-eye'></i></td>
                    
                     <td>n/a</td>
                     
                     
                     <td>Indivisual</td>
-                    <td onClick={handleShow6} style={{color:'blue' ,textDecoration:'underline'}}><i className='fa fa-user'></i></td>
+                    <td onClick={handleShow6} style={{color:'brown' ,textDecoration:'underline'}}><i className='fa fa-user'></i></td>
                     <td>patna</td>
-                    <td  onClick={handleShow3} style={{color:'blue', textDecoration:'underline'}}><i className='fa fa-info-circle'></i></td>
+                    <td  onClick={handleShow3} style={{color:'red', textDecoration:'underline'}}><i className='fa fa-info-circle'></i></td>
                     <td >n/a</td>
                     <td >n/a</td>
                     <td >na</td>
@@ -331,12 +377,13 @@ const JdMaster = () => {
                     <td>na</td>
                     <td  onClick={handleShow2} style={{color:'blue', textDecoration:'underline'}}><i className='fa fa-info-circle'></i></td>
                     <td>Na</td>
-                    <td><Button variant='primary' as={Link} to='/edit-jd-master'>Edit</Button>
-                    <Button variant='primary'>Save</Button>
-                    <Button variant='danger'>Delete</Button></td>               
+                    <td><Button variant='primary' as={Link} to='/edit-jd-master'><i className='fa fa-edit'></i></Button>
+                    
+                    <Button variant='danger'><i className='fa fa-trash'></i></Button></td>               
                 </tr>
             </tbody>
             </Table>
+            </div>
             </Container>
             <Modal show={show1} onHide={handleClose1} size='xl'>
         <Modal.Header closeButton>

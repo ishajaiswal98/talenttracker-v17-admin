@@ -5,10 +5,35 @@ import { ToastContainer } from 'react-toastify';
 import { Form  , Container , Row , Col , Button ,Table } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import './UserId.css'
+import {CSVLink} from "react-csv"
 
 const UserIdChang = () => {
-    
-    
+    const Studentlist = [
+        {id:1, Date:"2", Clientname:"prashant Kumar",JDtitle:"Automobile",JDlocation:"Patna",RecruiterID:"A",Candidatename:"yes", Currentdesignation:"n/a",Currentsalary:"null", LastAppraisal:"18-may-2022"},
+        {id:2, Date:"003", Clientname:"neeraj Kumar", JDtitle:"Automobile",JDlocation:"Ranchi", RecruiterID:"B",Candidatename:"no", Currentdesignation:"n/a", Currentsalary:"null",LastAppraisal:"19-may-2022"},
+        {id:3, Date:"33", Clientname:"prashant Kumar", JDtitle:"Automobile",JDlocation:"Haryana",RecruiterID:"C", Candidatename:"yes", Currentdesignation:"n/a", Currentsalary:"null", LastAppraisal:"20-may-2022"},
+        {id:4, Date:"33", Clientname:"dd Kumar", JDtitle:"Automobile",JDlocation:"Delhi", RecruiterID:"in-house", Candidatename:"yes", Currentdesignation:"n/a",Currentsalary:"null",LastAppraisal:"21-may-2022"}
+    ]
+    const headers = [
+       
+        {label:"User name who accepted the JD", key:"JDlocation"},
+        {label:"User Category", key:"RecruiterID"},
+        {label:"How many JDs a user can unlock in a day?", key:"id"},
+        {label:"Detail JD (doc, pdf file sent by client) to be shown to a particular user even if he or she is accepting the JD?", key:"Candidatename"},
+        {label:"Cvs quality check", key:"Candidatename"},
+        {label:"Password", key:"Date"},
+        {label:"Suspension of user account", key:"candidatename"},
+        {label:"Allow user to remove candidate’s mobile number from the tracker sheet", key:"candidatename"},
+        {label:"Allow user to write special remarks, comments in the tracker shee", key:"candidatename"},
+        {label:"Admin can make it compulsory for user to use own / our database", key:"candidatename"},
+        {label:"Don't allow user to edit the status", key:"candidatename"}
+      
+    ]
+    const csvReport = {
+        filename: 'Studentlist.csv',
+        headers: headers,
+        data: Studentlist
+      }
   return (
     <div>
          <Sidebar />
@@ -21,7 +46,7 @@ const UserIdChang = () => {
                 <Form.Label  className='fw-bold mb-3 mt-3'>User ID </Form.Label>
                 <Form.Control type='text' placeholder='Enter User ID'/>
                 <Button variant='primary' >Search</Button>
-                <Button variant='danger' ><i className='fa fa-download'></i></Button>
+                <Button variant='danger' className='mx-5' ><CSVLink {...csvReport} style={{textDecoration:"none", color:"white"}}><i className='fa fa-download'></i></CSVLink></Button>
                 </Col>
                 <Col xs={4}>
                 <Form.Label  className='fw-bold mb-3 mt-3'>User Name </Form.Label>
@@ -34,8 +59,9 @@ const UserIdChang = () => {
                     </Form>
                     </Container>
                     {/* <div className={show? 'show2':'show'}>      */}
-            <Container className='myprofile'>
-                <Table responsive>
+                    <div className='jd-wraper' >
+            <Container className='table-data'>
+                <Table  responsive className='data-table' hover>
                     <thead>
                         <tr>
                             <th></th>
@@ -71,6 +97,7 @@ const UserIdChang = () => {
                </tbody>
                </Table>
                </Container>
+               </div>
                
                {/* </div> */}
             </div>    

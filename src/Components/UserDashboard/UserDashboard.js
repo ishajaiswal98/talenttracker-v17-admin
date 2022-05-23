@@ -40,8 +40,10 @@ const UserDashboard = () => {
                     </Form>
                     </Container>
                        
-            <Container className='myprofile'>
-                <Table >
+            
+            <div className='jd-wraper' >
+            <Container  className='table-data' >
+                <Table responsive className='data-table' hover>
                     <thead>
                         <tr>
                             <th></th>
@@ -150,6 +152,9 @@ const UserDashboard = () => {
                </tbody>
                </Table>
                </Container>
+               </div>
+              
+
                
             
     

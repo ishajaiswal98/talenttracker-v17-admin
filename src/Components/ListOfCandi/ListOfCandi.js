@@ -17,8 +17,9 @@ const ListOfCandi = () => {
           <Button variant='success' as={Link} to='/filter-of-candidate'><i className='fa fa-filter'></i>Filter</Button>
           <Button variant='danger' as={Link} to='/' className='mx-5'><i className=' fa fa-download'></i></Button>
       </Container>
-      <Container>
-                <Table responsive>
+      <div className='jd-wraper' >
+      <Container className='table-data'>
+                <Table responsive  className='data-table' hover>
                     <thead>
                         <tr>
                             <th></th>
@@ -218,6 +219,7 @@ const ListOfCandi = () => {
                </tbody>
                </Table>
                </Container>
+               </div>
 
     </div>
   )

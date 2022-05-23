@@ -20,8 +20,9 @@ const Invoicing = () => {
             <Button variant='primary' onClick={handleShow}>Add Invoice </Button>&nbsp;
             <Button variant='danger'><i className='fa fa-download'></i></Button>
         </Container>
-        <Container className='myprofile'>
-        <Table >
+        <div className='jd-wraper' >
+        <Container className='table-data' >
+        <Table responsive className='data-table' hover>
                     <thead>
                         <tr>
                             <th></th>
@@ -69,6 +70,7 @@ const Invoicing = () => {
                    </tbody>
                </Table>
             </Container> 
+            </div>
             <Modal
         show={show}
         size="lg"

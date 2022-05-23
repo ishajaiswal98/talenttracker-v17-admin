@@ -52,8 +52,9 @@ const RecruiterMaster = () => {
           </ButtonGroup>
             </div>
             </div>
-       <Container className='myprofile-cont'>
-        <Table >
+            <div className='jd-wraper' >
+       <Container>
+        <Table responsive className='data-table' hover >
             <thead>
                 <tr>
                   <th></th>
@@ -94,10 +95,7 @@ const RecruiterMaster = () => {
                     <td onClick={handleShow1} style={{color:'orange', textDecoration:'underline'}}><i class="fa fa-address-book" aria-hidden="true"></i></td>
                     <td onClick={handleShow2} style={{color:'red', textDecoration:'underline'}}><i class="fa fa-briefcase" aria-hidden="true"></i></td>
                     <td onClick={handleShow3} style={{color:'green', textDecoration:'underline'}}><i class="fa fa-home" aria-hidden="true"></i></td>
-                    <td><Button variant='primary' as={Link} to='/filter'>Edit</Button>
-                    <Button variant='primary'>Delete</Button>
                     
-                    </td>
                    
                 </tr>
                 <tr>
@@ -117,10 +115,7 @@ const RecruiterMaster = () => {
                     <td onClick={handleShow1} style={{color:'orange', textDecoration:'underline'}}><i class="fa fa-address-book" aria-hidden="true"></i></td>
                     <td onClick={handleShow2} style={{color:'red', textDecoration:'underline'}}><i class="fa fa-briefcase" aria-hidden="true"></i></td>
                     <td onClick={handleShow3} style={{color:'green', textDecoration:'underline'}}><i class="fa fa-home" aria-hidden="true"></i></td>
-                    <td><Button variant='primary' as={Link} to='/filter'>Edit</Button>
-                    <Button variant='primary'>Delete</Button>
                     
-                    </td>
                 </tr>
                 <tr>
                 <td><Form.Check type='checkbox'/></td>
@@ -139,10 +134,7 @@ const RecruiterMaster = () => {
                     <td onClick={handleShow1} style={{color:'plink', textDecoration:'underline'}}><i class="fa fa-address-book" aria-hidden="true"></i></td>
                     <td onClick={handleShow2} style={{color:'red', textDecoration:'underline'}}><i class="fa fa-home" aria-hidden="true"></i></td>
                     <td onClick={handleShow3} style={{color:'green', textDecoration:'underline'}}><i class="fa fa-home" aria-hidden="true"></i></td>
-                    <td><Button variant='primary' as={Link} to='/filter'>Edit</Button>
-                    <Button variant='primary'>Delete</Button>
-                    
-                    </td>
+                   
                 </tr>
                 <tr>
                 <td><Form.Check type='checkbox'/></td>
@@ -161,10 +153,7 @@ const RecruiterMaster = () => {
                     <td onClick={handleShow1} style={{color:'orange', textDecoration:'underline'}}><i class="fa fa-address-book" aria-hidden="true"></i></td>
                     <td onClick={handleShow2} style={{color:'red', textDecoration:'underline'}}><i class="fa fa-briefcase" aria-hidden="true"></i></td>
                     
-                    <td onClick={handleShow3} style={{color:'green', textDecoration:'underline'}}><i class="fa fa-home" aria-hidden="true"></i></td><td><Button variant='primary' as={Link} to='/filter'>Edit</Button>
-                    <Button variant='primary'>Delete</Button>
-                    
-                    </td>
+                   
                 </tr>
                 <tr>
                 <td><Form.Check type='checkbox'/></td>
@@ -183,10 +172,7 @@ const RecruiterMaster = () => {
                     <td onClick={handleShow1} style={{color:'orange', textDecoration:'underline'}}><i class="fa fa-address-book" aria-hidden="true"></i></td>
                     <td onClick={handleShow2} style={{color:'red', textDecoration:'underline'}}><i class="fa fa-home" aria-hidden="true"></i></td>
                     
-                    <td onClick={handleShow3} style={{color:'green', textDecoration:'underline'}}><i class="fa fa-home" aria-hidden="true"></i></td><td><Button variant='primary' as={Link} to='/filter'>Edit</Button>
-                    <Button variant='primary'>Delete</Button>
-                    
-                    </td>
+                   
                 </tr>
                 <tr>
                 <td><Form.Check type='checkbox'/></td>
@@ -205,10 +191,7 @@ const RecruiterMaster = () => {
                     <td onClick={handleShow1} style={{color:'blue', textDecoration:'underline'}}>n/a</td>
                     <td onClick={handleShow2} style={{color:'blue', textDecoration:'underline'}}>n/a</td>
                     <td onClick={handleShow3} style={{color:'green', textDecoration:'underline'}}><i class="fa fa-home" aria-hidden="true"></i></td>
-                    <td><Button variant='primary' as={Link} to='/filter'>Edit</Button>
-                    <Button variant='primary'>Delete</Button>
-                    
-                    </td>
+                   
                 </tr>
                 <tr>
                 <td><Form.Check type='checkbox'/></td>
@@ -227,10 +210,7 @@ const RecruiterMaster = () => {
                     <td onClick={handleShow1} style={{color:'blue', textDecoration:'underline'}}>n/a</td>
                     <td onClick={handleShow2} style={{color:'blue', textDecoration:'underline'}}>n/a</td>
                     <td onClick={handleShow3} style={{color:'green', textDecoration:'underline'}}><i class="fa fa-home" aria-hidden="true"></i></td>
-                    <td><Button variant='primary' as={Link} to='/filter'>Edit</Button>
-                    <Button variant='primary'>Delete</Button>
-                    
-                    </td>
+                   
                 </tr>
                 <tr>
                 <td><Form.Check type='checkbox'/></td>
@@ -249,10 +229,7 @@ const RecruiterMaster = () => {
                     <td onClick={handleShow1} style={{color:'blue', textDecoration:'underline'}}>n/a</td>
                     <td onClick={handleShow2} style={{color:'blue', textDecoration:'underline'}}>n/a</td>
                     <td onClick={handleShow3} style={{color:'green', textDecoration:'underline'}}><i class="fa fa-home" aria-hidden="true"></i></td>
-                    <td><Button variant='primary' as={Link} to='/filter'>Edit</Button>
-                    <Button variant='primary'>Delete</Button>
-                    
-                    </td>
+                   
                 </tr>
                 <tr>
                 <td><Form.Check type='checkbox'/></td>
@@ -281,6 +258,7 @@ const RecruiterMaster = () => {
         </Table>
         <Button variant='danger' className='mx-5'><i className='fa fa-download'></i></Button>
         </Container>
+        </div>
         <Modal
         show={show}
         size="lg"

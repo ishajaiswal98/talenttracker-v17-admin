@@ -23,8 +23,9 @@ const Report = () => {
           </ButtonGroup>
             </div>
             </div>
-       <Container className='jd-cont'>
-        <Table responsive>
+            <div className='jd-wraper' >
+       <Container className='table-data'>
+        <Table responsive  className='data-table' hover>
             <thead>
                 <tr>
                     <th></th>
@@ -79,6 +80,7 @@ const Report = () => {
                    </tbody>
         </Table>
         </Container>
+        </div>
 
         </Container>
     </div>

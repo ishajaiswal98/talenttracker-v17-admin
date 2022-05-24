@@ -50,10 +50,14 @@ const RecruiterMaster = () => {
             <Button variant='success'  as={Link} to='/Filter'><i className="fa fa-filter me-2" style={{color:'#fff'}} ></i>Filter</Button>
             
           </ButtonGroup>
+         
+          <Button variant='danger' className='mx-5'><i className='fa fa-download'></i></Button>
             </div>
             </div>
-            <div className='jd-wraper' >
-       <Container>
+            </Container>
+            <div className='jd-wraper' >  
+       <Container fluid className='table-data'>
+       
         <Table responsive className='data-table' hover >
             <thead>
                 <tr>
@@ -256,9 +260,12 @@ const RecruiterMaster = () => {
                 
             </tbody>
         </Table>
-        <Button variant='danger' className='mx-5'><i className='fa fa-download'></i></Button>
-        </Container>
-        </div>
+        
+       
+       
+         </Container>
+         </div>
+       
         <Modal
         show={show}
         size="lg"
@@ -388,6 +395,10 @@ const RecruiterMaster = () => {
             <Col xs={6}>
             <Form.Label className='fw-bold mb-3 mt-3'>Current Location-City,State</Form.Label>
           <Form.Control type='text' value='patna , Bihar'/>
+          </Col>
+          <Col xs={6}>
+          <Form.Label className='fw-bold mb-3 mt-3'>Password</Form.Label>
+          <Form.Control type='password' value='7654328965'/>
           </Col>
           </Row>
           </Container>
@@ -608,7 +619,7 @@ const RecruiterMaster = () => {
           
         </Modal.Footer>
       </Modal>
-        </Container>
+        
     </div>
   )
 }

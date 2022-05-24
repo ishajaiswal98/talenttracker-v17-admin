@@ -38,16 +38,16 @@ const Client = () => {
         <NavbarMenu />
         <ToastContainer />  
         <Container className='myprofile'>
-            <Button variant='primary' onClick={handleShow}>Add Client</Button>&nbsp;
-            <Button variant='danger ' className='mx-5'><i className='fa fa-download'></i></Button>
+            <Button variant='primary' onClick={handleShow} className='mx-5 mb-3 mt-3'>Add Client</Button>&nbsp;
+            <Button variant='danger ' className='mx-5 mb-3 mt-3'><i className='fa fa-download'></i></Button>
         </Container>
         <div className='jd-wraper' >
-        <Container className='table-data'>
+        <Container fluid className='table-data'>
         <Table responsive className='data-table' hover>
                     <thead>
                         <tr>
                             <th></th>
-                <th>User ID</th>
+                <th>Client ID</th>
                 
                 <th>Client Name</th>
                 <th>Client Location </th>
@@ -73,7 +73,16 @@ const Client = () => {
                        <td>yes</td>
                        <td>657899</td>
                        <td>NO</td>
-                       <td></td>
+                       <td>na</td>
+                       <td>na</td>
+                       <td>na</td>
+                       <td>na</td>
+                       <td>na</td>
+                       <td>na</td>
+                       <td>na</td>
+                       <td>na</td>
+                       <td>na</td>
+                       <td>na</td>
                    </tr>
                    <tr>
                        <td><Form.Check type='checkbox'></Form.Check></td>
@@ -83,7 +92,16 @@ const Client = () => {
                        <td>yes</td>
                        <td>657899</td>
                        <td>NO</td>
-                       <td></td>
+                       <td>na</td>
+                       <td>na</td>
+                       <td>na</td>
+                       <td>na</td>
+                       <td>na</td>
+                       <td>na</td>
+                       <td>na</td>
+                       <td>na</td>
+                       <td>na</td>
+                       <td>na</td>
                    </tr>
                    <tr>
                        <td><Form.Check type='checkbox'></Form.Check></td>
@@ -93,7 +111,16 @@ const Client = () => {
                        <td>yes</td>
                        <td>657899</td>
                        <td>NO</td>
-                       <td></td>
+                       <td>na</td>
+                       <td>na</td>
+                       <td>na</td>
+                       <td>na</td>
+                       <td>na</td>
+                       <td>na</td>
+                       <td>na</td>
+                       <td>na</td>
+                       <td>na</td>
+                       <td>na</td>
                    </tr>
                    <tr>
                        <td><Form.Check type='checkbox'></Form.Check></td>
@@ -103,7 +130,16 @@ const Client = () => {
                        <td>yes</td>
                        <td>657899</td>
                        <td>NO</td>
-                       <td></td>
+                       <td>na</td>
+                       <td>na</td>
+                       <td>na</td>
+                       <td>na</td>
+                       <td>na</td>
+                       <td>na</td>
+                       <td>na</td>
+                       <td>na</td>
+                       <td>na</td>
+                       <td>na</td>
                    </tr>
                    <tr>
                        <td><Form.Check type='checkbox'></Form.Check></td>
@@ -113,7 +149,16 @@ const Client = () => {
                        <td>yes</td>
                        <td>657899</td>
                        <td>NO</td>
-                       <td></td>
+                       <td>na</td>
+                       <td>na</td>
+                       <td>na</td>
+                       <td>na</td>
+                       <td>na</td>
+                       <td>na</td>
+                       <td>na</td>
+                       <td>na</td>
+                       <td>na</td>
+                       <td>na</td>
                    </tr>
                    <tr>
                        <td><Form.Check type='checkbox'></Form.Check></td>
@@ -123,7 +168,16 @@ const Client = () => {
                        <td>yes</td>
                        <td>657899</td>
                        <td>NO</td>
-                       <td></td>
+                       <td>na</td>
+                       <td>na</td>
+                       <td>na</td>
+                       <td>na</td>
+                       <td>na</td>
+                       <td>na</td>
+                       <td>na</td>
+                       <td>na</td>
+                       <td>na</td>
+                       <td>na</td>
                    </tr>
                    <tr>
                        <td><Form.Check type='checkbox'></Form.Check></td>
@@ -133,7 +187,16 @@ const Client = () => {
                        <td>yes</td>
                        <td>657899</td>
                        <td>NO</td>
-                       <td></td>
+                       <td>na</td>
+                       <td>na</td>
+                       <td>na</td>
+                       <td>na</td>
+                       <td>na</td>
+                       <td>na</td>
+                       <td>na</td>
+                       <td>na</td>
+                       <td>na</td>
+                       <td>na</td>
                    </tr>
                    <tr>
                        <td><Form.Check type='checkbox'></Form.Check></td>
@@ -143,7 +206,16 @@ const Client = () => {
                        <td>yes</td>
                        <td>657899</td>
                        <td>NO</td>
-                       <td></td>
+                       <td>na</td>
+                       <td>na</td>
+                       <td>na</td>
+                       <td>na</td>
+                       <td>na</td>
+                       <td>na</td>
+                       <td>na</td>
+                       <td>na</td>
+                       <td>na</td>
+                       <td>na</td>
                    </tr>
                    <tr>
                        <td><Form.Check type='checkbox'></Form.Check></td>
@@ -153,7 +225,16 @@ const Client = () => {
                        <td>yes</td>
                        <td>657899</td>
                        <td>NO</td>
-                       <td></td>
+                       <td>na</td>
+                       <td>na</td>
+                       <td>na</td>
+                       <td>na</td>
+                       <td>na</td>
+                       <td>na</td>
+                       <td>na</td>
+                       <td>na</td>
+                       <td>na</td>
+                       <td>na</td>
                    </tr>
                    <tr>
                        <td><Form.Check type='checkbox'></Form.Check></td>
@@ -163,7 +244,16 @@ const Client = () => {
                        <td>yes</td>
                        <td>657899</td>
                        <td>NO</td>
-                       <td></td>
+                       <td>na</td>
+                       <td>na</td>
+                       <td>na</td>
+                       <td>na</td>
+                       <td>na</td>
+                       <td>na</td>
+                       <td>na</td>
+                       <td>na</td>
+                       <td>na</td>
+                       <td>na</td>
                    </tr>
                </tbody>
                </Table>

@@ -4,8 +4,48 @@ import Sidebar from '../Sidebar/Sidebar'
 import NavbarMenu from '../NavbarMenu/NavbarMenu'
 import { ToastContainer,toast } from 'react-toastify'
 import { Link } from 'react-router-dom'
+import {CSVLink} from "react-csv"
 
 const Invoicing = () => {
+  const invoice = [
+    {id:1, Date:"2-02-22", Clientname:"prashant Kumar",JDtitle:"Automobile",JDlocation:"Patna",RecruiterID:"A",Candidatename:"yes", Currentdesignation:"n/a",Currentsalary:"null", LastAppraisal:"18-may-2022"},
+    {id:2, Date:"03-02-22", Clientname:"neeraj Kumar", JDtitle:"Automobile",JDlocation:"Ranchi", RecruiterID:"B",Candidatename:"no", Currentdesignation:"n/a", Currentsalary:"null",LastAppraisal:"19-may-2022"},
+    {id:3, Date:"12-02-22", Clientname:"prashant Kumar", JDtitle:"Automobile",JDlocation:"Haryana",RecruiterID:"C", Candidatename:"yes", Currentdesignation:"n/a", Currentsalary:"null", LastAppraisal:"20-may-2022"},
+    {id:4, Date:"22-02-22", Clientname:"dd Kumar", JDtitle:"Automobile",JDlocation:"Delhi", RecruiterID:"in-house", Candidatename:"yes", Currentdesignation:"n/a",Currentsalary:"null",LastAppraisal:"21-may-2022"}
+]
+const headers = [
+    {lable:"invoice Number ", key:"id"},
+    {label:" Date ", key:"Date"},
+    {label:"Client Name", key:"Clientname"},
+    {label:"Client address", key:"JDlocation"},
+    {label:"Client Address Line1", key:"JDlocation"},
+    {label:"Client Address Line2", key:"JDlocation"},
+    {label:"Client Address City", key:"JDlocation"},
+    {label:"Client Address State", key:"Jdlocation"},
+    {label:"Client Gst", key:"Currentsalary"},
+    {label:"kind attn", key:"RecuriterID"},
+    {label:"Candidate Name", key:"Clientename"},
+    {label:"Designation", key:"Currentdesignation"},
+    {label:"Date of joining", key:"Date"},
+    {label:"Sign up rate", key:"Currentdesignation"},
+    {label:"Submission Date", key:"SubmissionDate"},
+    {label:"CTC", key:"Currentdesignation"},
+    {label:"Invoice base value", key:"Currentdesignation"},
+    {label:"Subtotal", key:"Currentdesignation"},
+    {label:"CGST", key:"Currentdesignation"},
+    {label:"SGST", key:"Currentdesignation"},
+    {label:"IGST", key:"Currentdesignation"},
+    {label:"Total invoice value", key:"Currentdesignation"},
+    {label:"Amount in words", key:"Currentdesignation"}
+   
+
+]
+const csvReport = {
+  filename: 'invoice.csv',
+  headers: headers,
+  data: invoice
+}
+
   const [show, setShow] = useState(false);
 
     const handleClose = () => setShow(false);
@@ -17,11 +57,11 @@ const Invoicing = () => {
       <NavbarMenu />
       <ToastContainer/>
       <Container className='myprofile'>
-            <Button variant='primary' onClick={handleShow}>Add Invoice </Button>&nbsp;
-            <Button variant='danger'><i className='fa fa-download'></i></Button>
+            <Button variant='primary' onClick={handleShow} className='mb-2 mx-5'>Add Invoice </Button>&nbsp;
+            <Button variant='danger'className='mb-2 mx-5'><CSVLink {...csvReport} style={{textDecoration:"none", color:"white"}}><i className='fa fa-download'></i></CSVLink></Button>
         </Container>
         <div className='jd-wraper' >
-        <Container className='table-data' >
+        <Container fluid className='table-data' >
         <Table responsive className='data-table' hover>
                     <thead>
                         <tr>
@@ -63,9 +103,139 @@ const Invoicing = () => {
                        <td>657899</td>
                        <td>NO</td>
                        <td>na</td>
-                       <td><td><Button variant='success' as={Link} to='/'>Edit Invoice</Button></td>
-                       <td><Button variant='primary' as={Link} to='/'> save</Button></td></td>
-                       <td><Button variant='primary' as={Link} to='/'>Create Invoices</Button></td>
+                       <td>na</td>
+                       <td>na</td>
+                       <td>na</td>
+                       <td>na</td>
+                       <td>na</td>
+                       <td>na</td>
+                       <td>na</td>
+                       <td>na</td>
+                       <td>na</td>
+                       <td>na</td>
+                       <td>na</td>
+                       <td>na</td>
+                       <td>na</td>
+                       <td>na</td>
+                       <td>na</td>
+                       
+                       <td><Button variant='success' as={Link} to='/invoice-edit' className='mx-2'><i className='fa fa-edit'></i> </Button></td>
+                      
+                      
+                   </tr>
+                   <tr>
+                       <td><Form.Check type='checkbox'></Form.Check></td>
+                       <td>A</td>
+                       <td>8</td>
+                       <td>yes</td>
+                       <td>yes</td>
+                       <td>657899</td>
+                       <td>NO</td>
+                       <td>na</td>
+                       <td>na</td>
+                       <td>na</td>
+                       <td>na</td>
+                       <td>na</td>
+                       <td>na</td>
+                       <td>na</td>
+                       <td>na</td>
+                       <td>na</td>
+                       <td>na</td>
+                       <td>na</td>
+                       <td>na</td>
+                       <td>na</td>
+                       <td>na</td>
+                       <td>na</td>
+                       <td>na</td>
+                       
+                       <td><Button variant='success' as={Link} to='/invoice-edit' className='mx-2'><i className='fa fa-edit'></i> </Button></td>
+                       
+                      
+                   </tr>
+                   <tr>
+                       <td><Form.Check type='checkbox'></Form.Check></td>
+                       <td>A</td>
+                       <td>8</td>
+                       <td>yes</td>
+                       <td>yes</td>
+                       <td>657899</td>
+                       <td>NO</td>
+                       <td>na</td>
+                       <td>na</td>
+                       <td>na</td>
+                       <td>na</td>
+                       <td>na</td>
+                       <td>na</td>
+                       <td>na</td>
+                       <td>na</td>
+                       <td>na</td>
+                       <td>na</td>
+                       <td>na</td>
+                       <td>na</td>
+                       <td>na</td>
+                       <td>na</td>
+                       <td>na</td>
+                       <td>na</td>
+                       
+                       <td><Button variant='success' as={Link} to='/invoice-edit' className='mx-2'><i className='fa fa-edit'></i> </Button></td>
+                       </tr>
+                      
+                   <tr>
+                       <td><Form.Check type='checkbox'></Form.Check></td>
+                       <td>A</td>
+                       <td>8</td>
+                       <td>yes</td>
+                       <td>yes</td>
+                       <td>657899</td>
+                       <td>NO</td>
+                       <td>na</td>
+                       <td>na</td>
+                       <td>na</td>
+                       <td>na</td>
+                       <td>na</td>
+                       <td>na</td>
+                       <td>na</td>
+                       <td>na</td>
+                       <td>na</td>
+                       <td>na</td>
+                       <td>na</td>
+                       <td>na</td>
+                       <td>na</td>
+                       <td>na</td>
+                       <td>na</td>
+                       <td>na</td>
+                       
+                       <td><Button variant='success' as={Link} to='/invoice-edit' className='mx-2'><i className='fa fa-edit'></i> </Button></td>
+                       </tr>
+                      
+                   <tr>
+                       <td><Form.Check type='checkbox'></Form.Check></td>
+                       <td>A</td>
+                       <td>8</td>
+                       <td>yes</td>
+                       <td>yes</td>
+                       <td>657899</td>
+                       <td>NO</td>
+                       <td>na</td>
+                       <td>na</td>
+                       <td>na</td>
+                       <td>na</td>
+                       <td>na</td>
+                       <td>na</td>
+                       <td>na</td>
+                       <td>na</td>
+                       <td>na</td>
+                       <td>na</td>
+                       <td>na</td>
+                       <td>na</td>
+                       <td>na</td>
+                       <td>na</td>
+                       <td>na</td>
+                       <td>na</td>
+                      
+                       <td><Button variant='success' as={Link} to='/invoice-edit' className='mx-2'><i className='fa fa-edit'></i> </Button></td>
+                                            
+                   
                    </tr>
                    </tbody>
                </Table>

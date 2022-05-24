@@ -3,9 +3,11 @@ import NavbarMenu from '../NavbarMenu/NavbarMenu'
 import Sidebar from '../Sidebar/Sidebar'
 import { ToastContainer } from 'react-toastify';
 import { Form  , Container , Row , Col , Button ,Table} from 'react-bootstrap';
+import './UserDashboard.css'
 
 const UserDashboard = () => {
-   
+   const [hide, sethide] = React.useState(false);
+   const HandleHide = () => sethide(!hide);
   return (
     <div>
          <Sidebar />
@@ -25,7 +27,8 @@ const UserDashboard = () => {
                 <Col xs={4}>
                 <Form.Label  className='fw-bold mb-3 mt-3'>User ID </Form.Label>
                 <Form.Control type='text' placeholder='Enter User ID'/>
-                <Button variant='primary' >Search</Button>
+                <Button variant='primary' onClick={HandleHide} className='mx-5 mb-3 mt-3'>Search</Button>
+                <Button variant='danger' className='mx-5 mb-3 mt-3' ><i className='fa fa-download'></i></Button>
                 </Col>
                 <Col xs={4}>
                 <Form.Label  className='fw-bold mb-3 mt-3'>User Name </Form.Label>
@@ -34,15 +37,15 @@ const UserDashboard = () => {
                 </Col>
                 <Col xs={4}>
                 
-                <Button variant='danger' ><i className='fa fa-download'></i></Button>
+               
                 </Col>
                 </Row>
                     </Form>
                     </Container>
                        
-            
+           <div className={hide? 'hide1': 'hide'}>
             <div className='jd-wraper' >
-            <Container  className='table-data' >
+            <Container  fluid className='table-data' >
                 <Table responsive className='data-table' hover>
                     <thead>
                         <tr>
@@ -153,7 +156,7 @@ const UserDashboard = () => {
                </Table>
                </Container>
                </div>
-              
+               </div> 
 
                
             

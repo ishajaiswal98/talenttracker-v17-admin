@@ -28,6 +28,8 @@ import FilterJdMaster from "./Components/JdMaster/FilterJdMaster";
 import EditJd from "./Components/JdMaster/EditJd";
 import EditUser from "./Components/UserIdChang/EditUser";
 
+import EditInvoice from "./Components/Invoicing/EditInvoice";
+
 function App() {
 
   return (
@@ -57,6 +59,7 @@ function App() {
       <Route path="/filter-jd-master" element={<FilterJdMaster/>}/>
       <Route path="/edit-jd-master" element={<EditJd/>}/>
       <Route path="/edit-user-id-level" element={<EditUser/>}/>
+      <Route path="/invoice-edit" element={<EditInvoice/>}/>
       
     </Routes>
   </BrowserRouter>

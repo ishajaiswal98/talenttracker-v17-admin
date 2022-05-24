@@ -86,7 +86,11 @@ const csvReport = {
         <Container className='myprofile' >
           <Button variant='success' as={Link} to='/filter-jd-master'><i className='fa fa-filter'>Filter</i></Button>
           <Button className='mb-2 mx-5' variant='danger'><CSVLink {...csvReport} style={{textDecoration:"none", color:"white"}}><i className='fas fa-download' /></CSVLink></Button>
-          <div className='jd-wraper' >
+         </Container>
+         
+         <div className='jd-wraper' >  
+       <Container fluid className='table-data'>
+       
         <Table responsive className='data-table' hover >
             <thead>
                 <tr>
@@ -139,9 +143,9 @@ const csvReport = {
                       <td>na</td>
                       <td>Na</td>
                     <td  onClick={handleShow1} style={{color:'green', textDecoration:'underline'}}><i className='fa fa-briefcase'></i></td>
-                    <td  onClick={handleShow4} style={{color:'blue', textDecoration:'none'}}> company Name<td className='absolute'> <span > 
+                    <td  onClick={handleShow4} className='position'> company Name<td className='absolute'> <span className='d-flex'> 
             
-            <i className="fas fa-globe me-2"  ></i> | <i className="fab fa-linkedin ms-2"></i> | <i className="fas fa-info-circle ms-2"></i>  </span></td></td>
+            <i className="fas fa-globe me-2"  ></i> | <i className="fab fa-linkedin ms-2 me-2"></i> | <i className="fas fa-info-circle ms-2"></i>  </span></td></td>
                     
                    
                     <td >n/a</td>
@@ -161,9 +165,9 @@ const csvReport = {
                     <td>na</td>
                     <td  onClick={handleShow2} style={{color:'blue', textDecoration:'underline'}}><i className='fa fa-info-circle'></i></td>
                     <td>Na</td>
-                    <td>  <Button variant='primary' as={Link} to='/edit-jd-master'><i className='fa fa-edit'></i></Button>
+                    <td>  <Button variant='primary' as={Link} to='/edit-jd-master'><i className='fa fa-edit'></i></Button></td>
                     
-                    <Button variant='danger'><i className='fa fa-trash'></i></Button></td>    
+                   <td> <Button variant='danger'><i className='fa fa-trash'></i></Button></td>    
                 </tr>
                 <tr>
                    <td><Form.Check type='checkbox'></Form.Check></td>
@@ -197,9 +201,9 @@ const csvReport = {
                     <td>na</td>
                     <td  onClick={handleShow2} style={{color:'blue', textDecoration:'underline'}}><i className='fa fa-info-circle'></i></td>
                     <td>Na</td>
-                    <td><Button variant='primary' as={Link} to='/edit-jd-master'><i className='fa fa-edit'></i></Button>
+                    <td><Button variant='primary' as={Link} to='/edit-jd-master'><i className='fa fa-edit'></i></Button></td>
                     
-                    <Button variant='danger'><i className='fa fa-trash'></i></Button></td>               
+                    <td><Button variant='danger'><i className='fa fa-trash'></i></Button></td>               
                 </tr>
                 <tr>
                    <td><Form.Check type='checkbox'></Form.Check></td>
@@ -233,9 +237,9 @@ const csvReport = {
                     <td>na</td>
                     <td  onClick={handleShow2} style={{color:'blue', textDecoration:'underline'}}><i className='fa fa-info-circle'></i></td>
                     <td>Na</td>
-                    <td><Button variant='primary' as={Link} to='/edit-jd-master'><i className='fa fa-edit'></i></Button>
+                    <td><Button variant='primary' as={Link} to='/edit-jd-master'><i className='fa fa-edit'></i></Button></td>
                     
-                    <Button variant='danger'><i className='fa fa-trash'></i></Button></td>               
+                    <td><Button variant='danger'><i className='fa fa-trash'></i></Button></td>               
                 </tr>
                 <tr>
                    <td><Form.Check type='checkbox'></Form.Check></td>
@@ -269,9 +273,9 @@ const csvReport = {
                     <td>na</td>
                     <td  onClick={handleShow2} style={{color:'blue', textDecoration:'underline'}}><i className='fa fa-info-circle'></i></td>
                     <td>Na</td>
-                    <td><Button variant='primary' as={Link} to='/edit-jd-master'><i className='fa fa-edit'></i></Button>
+                    <td><Button variant='primary' as={Link} to='/edit-jd-master'><i className='fa fa-edit'></i></Button></td>
                     
-                    <Button variant='danger'><i className='fa fa-trash'></i></Button></td>               
+                    <td><Button variant='danger'><i className='fa fa-trash'></i></Button></td>               
                 </tr>
                 <tr>
                    <td><Form.Check type='checkbox'></Form.Check></td>
@@ -305,9 +309,9 @@ const csvReport = {
                     <td>na</td>
                     <td  onClick={handleShow2} style={{color:'blue', textDecoration:'underline'}}><i className='fa fa-info-circle'></i></td>
                     <td>Na</td>
-                    <td><Button variant='primary' as={Link} to='/edit-jd-master'><i className='fa fa-edit'></i></Button>
+                    <td><Button variant='primary' as={Link} to='/edit-jd-master'><i className='fa fa-edit'></i></Button></td>
                     
-                    <Button variant='danger'><i className='fa fa-trash'></i></Button></td>               
+                    <td><Button variant='danger'><i className='fa fa-trash'></i></Button></td>               
                 </tr>
                 <tr>
                    <td><Form.Check type='checkbox'></Form.Check></td>
@@ -341,9 +345,10 @@ const csvReport = {
                     <td>na</td>
                     <td  onClick={handleShow2} style={{color:'blue', textDecoration:'underline'}}><i className='fa fa-info-circle'></i></td>
                     <td>Na</td>
-                    <td><Button variant='primary' as={Link} to='/edit-jd-master'><i className='fa fa-edit'></i></Button>
+                    <td><Button variant='primary' as={Link} to='/edit-jd-master'><i className='fa fa-edit'></i>
+                    </Button></td>
                     
-                    <Button variant='danger'><i className='fa fa-trash'></i></Button></td>               
+                    <td><Button variant='danger'><i className='fa fa-trash'></i></Button></td>               
                 </tr>
                 <tr>
                    <td><Form.Check type='checkbox'></Form.Check></td>
@@ -377,14 +382,17 @@ const csvReport = {
                     <td>na</td>
                     <td  onClick={handleShow2} style={{color:'blue', textDecoration:'underline'}}><i className='fa fa-info-circle'></i></td>
                     <td>Na</td>
-                    <td><Button variant='primary' as={Link} to='/edit-jd-master'><i className='fa fa-edit'></i></Button>
+                    <td><Button variant='primary' as={Link} to='/edit-jd-master'><i className='fa fa-edit'></i></Button></td>
                     
-                    <Button variant='danger'><i className='fa fa-trash'></i></Button></td>               
+                    <td><Button variant='danger'><i className='fa fa-trash'></i></Button></td>               
                 </tr>
             </tbody>
             </Table>
-            </div>
+            
+            
+            
             </Container>
+            </div>
             <Modal show={show1} onHide={handleClose1} size='xl'>
         <Modal.Header closeButton>
           <Modal.Title> <i className="fas fa-suitcase me-3" ></i>Jd Details</Modal.Title>

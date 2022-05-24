@@ -232,9 +232,9 @@ const FilterJdMaster = () => {
                     </Form.Group>
                   </Col>
                 </Row>
-                <Button variant="success" className="mt-3">Apply filter</Button>
-                <Button variant="primary" className="mt-3">Reset</Button>
-                <Button variant="danger" className="mt-3">
+                <Button variant="success" className="mt-4 mx-5 mb-4">Apply filter</Button>
+                <Button variant="primary" className="mt-4 mx-5 mb-4">Reset</Button>
+                <Button variant="danger" className="mt-4 mx-5 mb-4">
             <i className="fas fa-close me-3"></i>Close 
           &nbsp;&nbsp;</Button> 
 

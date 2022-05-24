@@ -56,25 +56,101 @@ const Report = () => {
                 <tr>
                 <td><Form.Check type='checkbox'></Form.Check></td>
                     <td>1</td>
-                    
+                    <td>na</td>
+                    <td>na</td>
+                    <td>na</td>
+                    <td>na</td>
+                    <td>na</td>
+                    <td>na</td>
+                    <td>na</td>
+                    <td>na</td>
+                    <td>na</td>
+                    <td>na</td>
+                    <td>na</td>
+                    <td>na</td>
+                    <td>na</td>
+                    <td>na</td>
+                    <td>na</td>
+
+                    <td>na</td>
+                    <td>na</td>
+                    <td>na</td>
+                    <td>na</td>
                    
                    </tr>
                    <tr>
                 <td><Form.Check type='checkbox'></Form.Check></td>
                     <td>1</td>
-                    
+                    <td>na</td>
+                    <td>na</td>
+                    <td>na</td>
+                    <td>na</td>
+                    <td>na</td>
+                    <td>na</td>
+                    <td>na</td>
+                    <td>na</td>
+                    <td>na</td>
+                    <td>na</td>
+                    <td>na</td>
+                    <td>na</td>
+                    <td>na</td>
+                    <td>na</td>
+                    <td>na</td>
+
+                    <td>na</td>
+                    <td>na</td>
+                    <td>na</td>
+                    <td>na</td>
                    
                    </tr>
                    <tr>
                 <td><Form.Check type='checkbox'></Form.Check></td>
                     <td>1</td>
-                    
+                    <td>na</td>
+                    <td>na</td>
+                    <td>na</td>
+                    <td>na</td>
+                    <td>na</td>
+                    <td>na</td>
+                    <td>na</td>
+                    <td>na</td>
+                    <td>na</td>
+                    <td>na</td>
+                    <td>na</td>
+                    <td>na</td>
+                    <td>na</td>
+                    <td>na</td>
+                    <td>na</td>
+
+                    <td>na</td>
+                    <td>na</td>
+                    <td>na</td>
+                    <td>na</td>
                    
                    </tr>
                    <tr>
                 <td><Form.Check type='checkbox'></Form.Check></td>
                     <td>1</td>
-                    
+                    <td>na</td>
+                    <td>na</td>
+                    <td>na</td>
+                    <td>na</td>
+                    <td>na</td>
+                    <td>na</td>
+                    <td>na</td>
+                    <td>na</td>
+                    <td>na</td>
+                    <td>na</td>
+                    <td>na</td>
+                    <td>na</td>
+                    <td>na</td>
+                    <td>na</td>
+                    <td>na</td>
+
+                    <td>na</td>
+                    <td>na</td>
+                    <td>na</td>
+                    <td>na</td>
                    
                    </tr>
                    </tbody>

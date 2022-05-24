@@ -8,6 +8,8 @@ import './UserId.css'
 import {CSVLink} from "react-csv"
 
 const UserIdChang = () => {
+    const [hide, sethide] = React.useState(false);
+    const HandleHide = () => sethide(!hide);
     const Studentlist = [
         {id:1, Date:"2", Clientname:"prashant Kumar",JDtitle:"Automobile",JDlocation:"Patna",RecruiterID:"A",Candidatename:"yes", Currentdesignation:"n/a",Currentsalary:"null", LastAppraisal:"18-may-2022"},
         {id:2, Date:"003", Clientname:"neeraj Kumar", JDtitle:"Automobile",JDlocation:"Ranchi", RecruiterID:"B",Candidatename:"no", Currentdesignation:"n/a", Currentsalary:"null",LastAppraisal:"19-may-2022"},
@@ -45,8 +47,8 @@ const UserIdChang = () => {
                 <Col xs={4}>
                 <Form.Label  className='fw-bold mb-3 mt-3'>User ID </Form.Label>
                 <Form.Control type='text' placeholder='Enter User ID'/>
-                <Button variant='primary' >Search</Button>
-                <Button variant='danger' className='mx-5' ><CSVLink {...csvReport} style={{textDecoration:"none", color:"white"}}><i className='fa fa-download'></i></CSVLink></Button>
+                <Button variant='primary' onClick={HandleHide} className='mb-3 mt-3'>Search</Button>
+                <Button variant='danger' className='mx-5 mb-3 mt-3' ><CSVLink {...csvReport} style={{textDecoration:"none", color:"white"}}><i className='fa fa-download'></i></CSVLink></Button>
                 </Col>
                 <Col xs={4}>
                 <Form.Label  className='fw-bold mb-3 mt-3'>User Name </Form.Label>
@@ -59,8 +61,9 @@ const UserIdChang = () => {
                     </Form>
                     </Container>
                     {/* <div className={show? 'show2':'show'}>      */}
+                    <div className={hide? 'hide1': 'hide'}>
                     <div className='jd-wraper' >
-            <Container className='table-data'>
+            <Container fluid className='table-data'>
                 <Table  responsive className='data-table' hover>
                     <thead>
                         <tr>
@@ -97,6 +100,7 @@ const UserIdChang = () => {
                </tbody>
                </Table>
                </Container>
+               </div>
                </div>
                
                {/* </div> */}

@@ -162,6 +162,7 @@ const EditJd = () => {
               <Row>
                 <Col xs={6}>
                 <Form.Label  className='fw-bold mb-3 mt-3'>work location of JD  </Form.Label>
+                <Form.Control type='text'/>
                 <Form.Select aria-label="Default  example">
                     
                     <option value="1">Delhi</option>

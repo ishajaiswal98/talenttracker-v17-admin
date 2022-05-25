@@ -143,9 +143,9 @@ const csvReport = {
                       <td>na</td>
                       <td>Na</td>
                     <td  onClick={handleShow1} style={{color:'green', textDecoration:'underline'}}><i className='fa fa-briefcase'></i></td>
-                    <td  onClick={handleShow4} className='position'> company Name<td className='absolute'> <span className='d-flex'> 
+                    <td   className='position'> company Name<td className='absolute'> <span className='d-flex'> 
             
-            <i className="fas fa-globe me-2"  ></i> | <i className="fab fa-linkedin ms-2 me-2"></i> | <i className="fas fa-info-circle ms-2"></i>  </span></td></td>
+            <i className="fas fa-globe me-2" as={Link} to="'/www.talenttracker.com" ></i> | <i className="fab fa-linkedin ms-2 me-2" as={Link} to='/'></i> | <i className="fas fa-info-circle ms-2" onClick={handleShow4}></i>  </span></td></td>
                     
                    
                     <td >n/a</td>
@@ -499,9 +499,9 @@ const csvReport = {
             <Row>
                 <Col xs={6}>
                          
-            <h6 className='fw-bold mt-5 mb-5 mx-3'> <i className="fas fa-file-csv me-2"></i> Tittle :<span className='text-muted'> 100</span></h6>
-            <h6 className='fw-bold mt-5 mb-5 mx-3'> <i className="fas fa-user me-2"></i>  Client Name: <span className='text-muted'> Delhi</span></h6>
-            <h6 className='fw-bold mt-5 mb-5 mx-3'> <i className="fas fa-browser me-2"></i>Client Company Website : <span className='text-muted'> 20,000</span></h6>
+            <h6 className='fw-bold mt-5 mb-5 mx-3'> <i className="fas fa-file-csv me-2"></i> Tittle :<span className='text-muted'> Talent</span></h6>
+            <h6 className='fw-bold mt-5 mb-5 mx-3'> <i className="fas fa-user me-2"></i>  Industry: <span className='text-muted'> Services</span></h6>
+            <h6 className='fw-bold mt-5 mb-5 mx-3'> <i className="fas fa-browser me-2"></i>Client Name : <span className='text-muted'> Isha</span></h6>
             
             </Col>
             </Row>

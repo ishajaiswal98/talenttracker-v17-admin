@@ -8,7 +8,40 @@ import { FaStar } from "react-icons/fa";
 import {  Radio, Rating } from "./RatingStyles";
 import './MyProfile.css'
 import { Link } from 'react-router-dom';
+import {CSVLink} from "react-csv"
+
 const RecruiterMaster = () => {
+  const Studentlist = [
+    {id:1, Date:"2", Clientname:"prashant Kumar",JDtitle:"Automobile",JDlocation:"Patna",RecruiterID:"A",Candidatename:"yes", Currentdesignation:"n/a",Currentsalary:"null", LastAppraisal:"18-may-2022"},
+    {id:2, Date:"003", Clientname:"neeraj Kumar", JDtitle:"Automobile",JDlocation:"Ranchi", RecruiterID:"B",Candidatename:"no", Currentdesignation:"n/a", Currentsalary:"null",LastAppraisal:"19-may-2022"},
+    {id:3, Date:"33", Clientname:"prashant Kumar", JDtitle:"Automobile",JDlocation:"Haryana",RecruiterID:"C", Candidatename:"yes", Currentdesignation:"n/a", Currentsalary:"null", LastAppraisal:"20-may-2022"},
+    {id:4, Date:"33", Clientname:"dd Kumar", JDtitle:"Automobile",JDlocation:"Delhi", RecruiterID:"in-house", Candidatename:"yes", Currentdesignation:"n/a",Currentsalary:"null",LastAppraisal:"21-may-2022"}
+]
+const headers = [
+    {lable:"User Id ", key:"id"},
+    {label:"User Name ", key:"Clientname"},
+    {label:"Date of addition", key:"LastAppraisal"},
+    {label:"User Category", key:"RecuriterID"},
+    {label:"How many Jd's", key:"id"},
+    {label:"Cv quality check", key:"Candidatename"},
+    {label:"Admin assigned information", key:"Candidatename"},
+    {label:"Rating", key:"id"},
+    {label:"Consultancy or Individual", key:"Candidatename"},
+    {label:"Mobile No.", key:"candidatename"},
+    {label:"Current location", key:"JDlocation"},
+    {label:"Prefrence IT/non-IT", key:"candidatename"},
+    {label:"Personal Information", key:"candidatename"},
+    {label:"Work information", key:"candidatename"},
+    {label:"Bank Details", key:"candidatename"}
+   
+
+]
+const csvReport = {
+  filename: 'Studentlist.csv',
+  headers: headers,
+  data: Studentlist
+}
+
   const [rate, setRate] = useState(0);
     const [show, setShow] = useState(false);
 
@@ -47,11 +80,11 @@ const RecruiterMaster = () => {
             <div className='mb-2'>
             
           <ButtonGroup>
-            <Button variant='success'  as={Link} to='/Filter'><i className="fa fa-filter me-2" style={{color:'#fff'}} ></i>Filter</Button>
+            <Button variant='success'  as={Link} to='/Filter' className='mx-5 mb-3 mt-3'><i className="fa fa-filter me-2" style={{color:'#fff'}} ></i>Filter</Button>
             
           </ButtonGroup>
          
-          <Button variant='danger' className='mx-5'><i className='fa fa-download'></i></Button>
+          <Button variant='danger' className='mx-5 mb-3 mt-3'><CSVLink {...csvReport} style={{textDecoration:"none", color:"white"}}><i className='fa fa-download'></i></CSVLink></Button>
             </div>
             </div>
             </Container>
@@ -64,21 +97,21 @@ const RecruiterMaster = () => {
                   <th></th>
                     <th>User Id</th>
                     <th>User name</th>
-                    <th>Date Of adddition User</th>
-                    <th>Category</th>
-                    <th>How Many JS's</th>
+                    <th>Date Of adddition </th>
+                    <th>User Category</th>
+                    <th>How Many JD's</th>
                     <th>Cv Quality Check</th>
                     <th>Admin Assigned Information</th>
                     <th>Rating</th>
                     <th>Consultancy or Indivisual</th>
                     <th>Mobile No.</th>
                     <th>Current Location</th>
-                    <th>Prefrence It/n On It</th>
+                    <th>Prefrence IT/NON-IT</th>
                     <th>Personal Information</th>
                     <th>Work Information</th>
                     
                     <th>Bank Details</th>
-                    <th>Action</th>
+                    
                 </tr>
             </thead>
             <tbody>
@@ -252,10 +285,7 @@ const RecruiterMaster = () => {
                     <td onClick={handleShow1} style={{color:'blue', textDecoration:'underline'}}>n/a</td>
                     <td onClick={handleShow2} style={{color:'blue', textDecoration:'underline'}}>n/a</td>
                    
-                    <td><Button variant='primary' as={Link} to='/filter'>Edit</Button>
-                    <Button variant='primary'>Delete</Button>
-                    
-                    </td> <td onClick={handleShow3} style={{color:'blue', textDecoration:'underline'}}>n/a</td>
+                    <td onClick={handleShow3} style={{color:'blue', textDecoration:'underline'}}>n/a</td>
                 </tr>
                 
             </tbody>

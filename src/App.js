@@ -29,6 +29,8 @@ import EditJd from "./Components/JdMaster/EditJd";
 import EditUser from "./Components/UserIdChang/EditUser";
 
 import EditInvoice from "./Components/Invoicing/EditInvoice";
+import ViewInvoice from "./Components/Invoicing/ViewInvoice";
+import EditClientmaster from "./Components/Client/EditClientmaster";
 
 function App() {
 
@@ -60,6 +62,8 @@ function App() {
       <Route path="/edit-jd-master" element={<EditJd/>}/>
       <Route path="/edit-user-id-level" element={<EditUser/>}/>
       <Route path="/invoice-edit" element={<EditInvoice/>}/>
+      <Route path="/view-invoice" element={<ViewInvoice/>}/>
+      <Route path="/edit-client-master" element={<EditClientmaster/>}/>
       
     </Routes>
   </BrowserRouter>

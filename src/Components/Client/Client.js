@@ -4,6 +4,7 @@ import NavbarMenu from '../NavbarMenu/NavbarMenu'
 import { Container, Row, Col,Form , Button,Table , Modal} from 'react-bootstrap'
 import Select from 'react-select'
 import { ToastContainer,toast  } from 'react-toastify'
+import {Link} from 'react-router-dom'
 
 const Client = () => {
     const [show, setShow] = useState(false);
@@ -62,6 +63,7 @@ const Client = () => {
                 <th>Agreed payment terms</th>
                 <th>Agreed replacement period</th>
                 <th>Admin comments/remarks</th>
+                <th>Action</th>
                </tr>
                </thead>
                <tbody>
@@ -81,8 +83,7 @@ const Client = () => {
                        <td>na</td>
                        <td>na</td>
                        <td>na</td>
-                       <td>na</td>
-                       <td>na</td>
+                       <td><Button variant="success" as={Link} to='/edit-client-master'><i className='fa fa-edit'></i></Button></td>
                    </tr>
                    <tr>
                        <td><Form.Check type='checkbox'></Form.Check></td>
@@ -100,8 +101,7 @@ const Client = () => {
                        <td>na</td>
                        <td>na</td>
                        <td>na</td>
-                       <td>na</td>
-                       <td>na</td>
+                       <td><Button variant="success" as={Link} to='/edit-client-master'><i className='fa fa-edit'></i></Button></td>
                    </tr>
                    <tr>
                        <td><Form.Check type='checkbox'></Form.Check></td>
@@ -119,8 +119,7 @@ const Client = () => {
                        <td>na</td>
                        <td>na</td>
                        <td>na</td>
-                       <td>na</td>
-                       <td>na</td>
+                       <td><Button variant="success" as={Link} to='/edit-client-master'><i className='fa fa-edit'></i></Button></td>
                    </tr>
                    <tr>
                        <td><Form.Check type='checkbox'></Form.Check></td>
@@ -138,8 +137,7 @@ const Client = () => {
                        <td>na</td>
                        <td>na</td>
                        <td>na</td>
-                       <td>na</td>
-                       <td>na</td>
+                       <td><Button variant="success" as={Link} to='/edit-client-master'><i className='fa fa-edit'></i></Button></td>
                    </tr>
                    <tr>
                        <td><Form.Check type='checkbox'></Form.Check></td>
@@ -157,8 +155,7 @@ const Client = () => {
                        <td>na</td>
                        <td>na</td>
                        <td>na</td>
-                       <td>na</td>
-                       <td>na</td>
+                       <td><Button variant="success" as={Link} to='/edit-client-master'><i className='fa fa-edit'></i></Button></td>
                    </tr>
                    <tr>
                        <td><Form.Check type='checkbox'></Form.Check></td>
@@ -176,8 +173,7 @@ const Client = () => {
                        <td>na</td>
                        <td>na</td>
                        <td>na</td>
-                       <td>na</td>
-                       <td>na</td>
+                       <td><Button variant="success" as={Link} to='/edit-client-master'><i className='fa fa-edit'></i></Button></td>
                    </tr>
                    <tr>
                        <td><Form.Check type='checkbox'></Form.Check></td>
@@ -195,8 +191,7 @@ const Client = () => {
                        <td>na</td>
                        <td>na</td>
                        <td>na</td>
-                       <td>na</td>
-                       <td>na</td>
+                       <td><Button variant="success" as={Link} to='/edit-client-master'><i className='fa fa-edit'></i></Button></td>
                    </tr>
                    <tr>
                        <td><Form.Check type='checkbox'></Form.Check></td>
@@ -214,8 +209,7 @@ const Client = () => {
                        <td>na</td>
                        <td>na</td>
                        <td>na</td>
-                       <td>na</td>
-                       <td>na</td>
+                       <td><Button variant="success" as={Link} to='/edit-client-master'><i className='fa fa-edit'></i></Button></td>
                    </tr>
                    <tr>
                        <td><Form.Check type='checkbox'></Form.Check></td>
@@ -233,8 +227,7 @@ const Client = () => {
                        <td>na</td>
                        <td>na</td>
                        <td>na</td>
-                       <td>na</td>
-                       <td>na</td>
+                       <td><Button variant="success" as={Link} to='/edit-client-master'><i className='fa fa-edit'></i></Button></td>
                    </tr>
                    <tr>
                        <td><Form.Check type='checkbox'></Form.Check></td>
@@ -252,8 +245,7 @@ const Client = () => {
                        <td>na</td>
                        <td>na</td>
                        <td>na</td>
-                       <td>na</td>
-                       <td>na</td>
+                       <td><Button variant="success" as={Link} to='/edit-client-master'><i className='fa fa-edit'></i></Button></td>
                    </tr>
                </tbody>
                </Table>
@@ -335,7 +327,7 @@ const Client = () => {
                 <Row>
                 <Col xs={6}>
                 <Form.Label  className='fw-bold mb-3 mt-3'>Agreed sign up rate </Form.Label>
-                <Form.Select aria-label="Default select example">
+                <Form.Select aria-label="Default 8.33% example">
                     <option>create</option>
                     <option value="1">- 8.33%</option>
                     <option value="2">7.5%</option>
@@ -348,7 +340,7 @@ const Client = () => {
                 <Col xs={6}>
                 <Form.Label  className='fw-bold mb-3 mt-3'>Agreed payment terms</Form.Label>
                 <Form.Select aria-label="Default 30days example">
-                    <option>select</option>
+                    
                     <option value="1">Immediate</option>
                     <option value="1">30 days</option>
                     <option value="2">45 days</option>
@@ -362,7 +354,7 @@ const Client = () => {
                 <Row>
                 <Col xs={6}>
                 <Form.Label  className='fw-bold mb-3 mt-3'>Agreed replacement period</Form.Label>
-                <Form.Select aria-label="Default select example">
+                <Form.Select aria-label="Default 3 months example">
                     <option>3 months</option>
                     <option value="1">3 months</option>
                     <option value="2">6 months</option>

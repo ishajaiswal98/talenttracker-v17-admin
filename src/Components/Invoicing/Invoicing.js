@@ -70,7 +70,7 @@ const csvReport = {
                 
                 <th>Date</th>
                 <th>Client Name </th>
-                <th>Client Address</th>
+                
                 <th>Client Address-Line 1</th>
                 <th>Client Address-Line 2</th>
                 <th>Client Address - City</th>
@@ -91,149 +91,160 @@ const csvReport = {
                 <th>Amount in words </th>
                 <th>Action</th>
                 <th></th>
+              
                </tr>
                </thead>
                <tbody>
                    <tr>
                        <td><Form.Check type='checkbox'></Form.Check></td>
-                       <td>A</td>
-                       <td>8</td>
-                       <td>yes</td>
-                       <td>yes</td>
-                       <td>657899</td>
-                       <td>NO</td>
-                       <td>na</td>
-                       <td>na</td>
-                       <td>na</td>
-                       <td>na</td>
-                       <td>na</td>
-                       <td>na</td>
-                       <td>na</td>
-                       <td>na</td>
-                       <td>na</td>
-                       <td>na</td>
-                       <td>na</td>
-                       <td>na</td>
-                       <td>na</td>
-                       <td>na</td>
-                       <td>na</td>
-                       <td>na</td>
+                       <td>AC/029/2022</td>
+                       <td>15/03/2022</td>
+                       <td>Ashiyana Housing Limited</td>
+                       <td>4th Floor,Ashiana village </td>
+                       <td>Vasundhara Nagar,Bhiwadi-301019</td>
+                       <td>Alwar Rajasthan</td>
+                       <td>India</td>
+                       <td>08AADCA9093</td>
+                       <td>Varsha</td>
+                       <td>Brijesh Singh Bhadoriya </td>
+                       <td>Assistant manager sales</td>
+                       <td>01/03/2022</td>
+                       <td>8.33%</td>
+                       <td>1000000</td>
+                       <td>83300</td>
+                       <td>83300</td>
+                       <td></td>
+                       <td></td>
+                       <td>14994</td>
+                       <td>98294</td>
+                       <td>Ninety eight thousand two hundred and ninety eight</td>
                        
-                       <td><Button variant='success' as={Link} to='/invoice-edit' className='mx-2'><i className='fa fa-edit'></i> </Button></td>
+                       
+                       <td><Button variant='success' as={Link} to='/invoice-edit' ><i className='fa fa-edit'></i> </Button></td>
+                      
+                       <td><Button variant="warning"  as={Link} to="/view-invoice"><i className='fa fa-eye'></i></Button></td>
                       
                       
                    </tr>
                    <tr>
                        <td><Form.Check type='checkbox'></Form.Check></td>
-                       <td>A</td>
-                       <td>8</td>
-                       <td>yes</td>
-                       <td>yes</td>
-                       <td>657899</td>
-                       <td>NO</td>
-                       <td>na</td>
-                       <td>na</td>
-                       <td>na</td>
-                       <td>na</td>
-                       <td>na</td>
-                       <td>na</td>
-                       <td>na</td>
-                       <td>na</td>
-                       <td>na</td>
-                       <td>na</td>
-                       <td>na</td>
-                       <td>na</td>
-                       <td>na</td>
-                       <td>na</td>
-                       <td>na</td>
-                       <td>na</td>
+                       <td>AC/029/2022</td>
+                       <td>15/03/2022</td>
+                       <td>Ashiyana Housing Limited</td>
+                       <td>4th Floor,Ashiana village </td>
+                       <td>Vasundhara Nagar,Bhiwadi-301019</td>
+                       <td>Alwar Rajasthan</td>
+                       <td>India</td>
+                       <td>08AADCA9093</td>
+                       <td>Varsha</td>
+                       <td>Brijesh Singh Bhadoriya </td>
+                       <td>Assistant manager sales</td>
+                       <td>01/03/2022</td>
+                       <td>8.33%</td>
+                       <td>1000000</td>
+                       <td>83300</td>
+                       <td>83300</td>
+                       <td></td>
+                       <td></td>
+                       <td>14994</td>
+                       <td>98294</td>
+                       <td>Ninety eight thousand two hundred and ninety eight</td>
                        
-                       <td><Button variant='success' as={Link} to='/invoice-edit' className='mx-2'><i className='fa fa-edit'></i> </Button></td>
+                       
+                       <td><Button variant='success' as={Link} to='/invoice-edit' ><i className='fa fa-edit'></i> </Button></td>
+                       
+                     <td>  <Button variant="warning"  as={Link} to="/view-invoice" className='mx-2'><i className='fa fa-eye'></i></Button></td>
                        
                       
                    </tr>
                    <tr>
                        <td><Form.Check type='checkbox'></Form.Check></td>
-                       <td>A</td>
-                       <td>8</td>
-                       <td>yes</td>
-                       <td>yes</td>
-                       <td>657899</td>
-                       <td>NO</td>
-                       <td>na</td>
-                       <td>na</td>
-                       <td>na</td>
-                       <td>na</td>
-                       <td>na</td>
-                       <td>na</td>
-                       <td>na</td>
-                       <td>na</td>
-                       <td>na</td>
-                       <td>na</td>
-                       <td>na</td>
-                       <td>na</td>
-                       <td>na</td>
-                       <td>na</td>
-                       <td>na</td>
-                       <td>na</td>
+                       <td>AC/029/2022</td>
+                       <td>15/03/2022</td>
+                       <td>Ashiyana Housing Limited</td>
+                       <td>4th Floor,Ashiana village </td>
+                       <td>Vasundhara Nagar,Bhiwadi-301019</td>
+                       <td>Alwar Rajasthan</td>
+                       <td>India</td>
+                       <td>08AADCA9093</td>
+                       <td>Varsha</td>
+                       <td>Brijesh Singh Bhadoriya </td>
+                       <td>Assistant manager sales</td>
+                       <td>01/03/2022</td>
+                       <td>8.33%</td>
+                       <td>1000000</td>
+                       <td>83300</td>
+                       <td>83300</td>
+                       <td></td>
+                       <td></td>
+                       <td>14994</td>
+                       <td>98294</td>
+                       <td>Ninety eight thousand two hundred and ninety eight</td>
                        
-                       <td><Button variant='success' as={Link} to='/invoice-edit' className='mx-2'><i className='fa fa-edit'></i> </Button></td>
+                       
+                       <td><Button variant='success' as={Link} to='/invoice-edit' ><i className='fa fa-edit'></i> </Button></td>
+                       
+                     <td>  <Button variant="warning"  as={Link} to="/view-invoice" className='mx-2'><i className='fa fa-eye'></i></Button></td>
                        </tr>
                       
                    <tr>
                        <td><Form.Check type='checkbox'></Form.Check></td>
-                       <td>A</td>
-                       <td>8</td>
-                       <td>yes</td>
-                       <td>yes</td>
-                       <td>657899</td>
-                       <td>NO</td>
-                       <td>na</td>
-                       <td>na</td>
-                       <td>na</td>
-                       <td>na</td>
-                       <td>na</td>
-                       <td>na</td>
-                       <td>na</td>
-                       <td>na</td>
-                       <td>na</td>
-                       <td>na</td>
-                       <td>na</td>
-                       <td>na</td>
-                       <td>na</td>
-                       <td>na</td>
-                       <td>na</td>
-                       <td>na</td>
+                       <td>AC/029/2022</td>
+                       <td>15/03/2022</td>
+                       <td>Ashiyana Housing Limited</td>
+                       <td>4th Floor,Ashiana village </td>
+                       <td>Vasundhara Nagar,Bhiwadi-301019</td>
+                       <td>Alwar Rajasthan</td>
+                       <td>India</td>
+                       <td>08AADCA9093</td>
+                       <td>Varsha</td>
+                       <td>Brijesh Singh Bhadoriya </td>
+                       <td>Assistant manager sales</td>
+                       <td>01/03/2022</td>
+                       <td>8.33%</td>
+                       <td>1000000</td>
+                       <td>83300</td>
+                       <td>83300</td>
+                       <td></td>
+                       <td></td>
+                       <td>14994</td>
+                       <td>98294</td>
+                       <td>Ninety eight thousand two hundred and ninety eight</td>
                        
-                       <td><Button variant='success' as={Link} to='/invoice-edit' className='mx-2'><i className='fa fa-edit'></i> </Button></td>
+                       
+                       <td><Button variant='success' as={Link} to='/invoice-edit' ><i className='fa fa-edit'></i> </Button></td>
+                       
+                     <td>  <Button variant="warning"  as={Link} to="/view-invoice" className='mx-2'><i className='fa fa-eye'></i></Button></td>
                        </tr>
                       
                    <tr>
                        <td><Form.Check type='checkbox'></Form.Check></td>
-                       <td>A</td>
-                       <td>8</td>
-                       <td>yes</td>
-                       <td>yes</td>
-                       <td>657899</td>
-                       <td>NO</td>
-                       <td>na</td>
-                       <td>na</td>
-                       <td>na</td>
-                       <td>na</td>
-                       <td>na</td>
-                       <td>na</td>
-                       <td>na</td>
-                       <td>na</td>
-                       <td>na</td>
-                       <td>na</td>
-                       <td>na</td>
-                       <td>na</td>
-                       <td>na</td>
-                       <td>na</td>
-                       <td>na</td>
-                       <td>na</td>
+                       <td>AC/029/2022</td>
+                       <td>15/03/2022</td>
+                       <td>Ashiyana Housing Limited</td>
+                       <td>4th Floor,Ashiana village </td>
+                       <td>Vasundhara Nagar,Bhiwadi-301019</td>
+                       <td>Alwar Rajasthan</td>
+                       <td>India</td>
+                       <td>08AADCA9093</td>
+                       <td>Varsha</td>
+                       <td>Brijesh Singh Bhadoriya </td>
+                       <td>Assistant manager sales</td>
+                       <td>01/03/2022</td>
+                       <td>8.33%</td>
+                       <td>1000000</td>
+                       <td>83300</td>
+                       <td>83300</td>
+                       <td></td>
+                       <td></td>
+                       <td>14994</td>
+                       <td>98294</td>
+                       <td>Ninety eight thousand two hundred and ninety eight</td>
+                       
                       
-                       <td><Button variant='success' as={Link} to='/invoice-edit' className='mx-2'><i className='fa fa-edit'></i> </Button></td>
+                       <td><Button variant='success' as={Link} to='/invoice-edit' ><i className='fa fa-edit'></i> </Button></td>
+                       
+                     <td>  <Button variant="warning"  as={Link} to="/view-invoice" className='mx-2'><i className='fa fa-eye'></i></Button></td>
                                             
                    
                    </tr>

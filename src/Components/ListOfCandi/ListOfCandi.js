@@ -51,7 +51,7 @@ const ListOfCandi = () => {
       <ToastContainer/>
       <Container className="jd-cont">
           <Button variant='success' as={Link} to='/filter-of-candidate' className='mx-5 mb-3'><i className='fa fa-filter'></i>Filter</Button>
-          <Button variant='danger' as={Link} to='/' className='mx-5 mb-3'><CSVLink {...csvReport} style={{textDecoration:"none", color:"white"}}><i className=' fa fa-download'></i></CSVLink></Button>
+          <Button variant='danger'  className='mx-5 mb-3'><CSVLink {...csvReport} style={{textDecoration:"none", color:"white"}}><i className=' fa fa-download'/></CSVLink></Button>
       </Container>
       <div className='jd-wraper' >
       <Container fluid className='table-data'>
@@ -75,6 +75,7 @@ const ListOfCandi = () => {
                 <th>Current location</th>
                 <th>Candidate mobile number</th>
                 <th>Notice period</th>
+                <th>Last Appraisal of the candidate</th>
                 <th>JD sent to candidate?</th>
                 <th>Candidate availability for the interview</th>
                 <th>Recuriter remarks</th>
@@ -95,6 +96,7 @@ const ListOfCandi = () => {
                        <td>YES</td>
                        <td>yes</td>
                        <td>A</td>
+                       <th>Na</th>
                        <td>8</td>
                        <td>yes</td>
                        <td>yes</td>

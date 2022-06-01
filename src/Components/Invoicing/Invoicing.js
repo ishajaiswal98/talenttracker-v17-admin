@@ -89,6 +89,7 @@ const csvReport = {
                 <th>IGST</th>
                 <th>Total invoice value </th>
                 <th>Amount in words </th>
+                <th>Create</th>
                 <th>Action</th>
                 <th></th>
               
@@ -118,6 +119,7 @@ const csvReport = {
                        <td>14994</td>
                        <td>98294</td>
                        <td>Ninety eight thousand two hundred and ninety eight</td>
+                      <td><Button variant='primary'  className='mb-2 '>create  </Button></td>
                        
                        
                        <td><Button variant='success' as={Link} to='/invoice-edit' ><i className='fa fa-edit'></i> </Button></td>
@@ -149,7 +151,7 @@ const csvReport = {
                        <td>14994</td>
                        <td>98294</td>
                        <td>Ninety eight thousand two hundred and ninety eight</td>
-                       
+                       <td><Button variant='primary'  className='mb-2 '>create  </Button></td>
                        
                        <td><Button variant='success' as={Link} to='/invoice-edit' ><i className='fa fa-edit'></i> </Button></td>
                        
@@ -180,37 +182,7 @@ const csvReport = {
                        <td>14994</td>
                        <td>98294</td>
                        <td>Ninety eight thousand two hundred and ninety eight</td>
-                       
-                       
-                       <td><Button variant='success' as={Link} to='/invoice-edit' ><i className='fa fa-edit'></i> </Button></td>
-                       
-                     <td>  <Button variant="warning"  as={Link} to="/view-invoice" className='mx-2'><i className='fa fa-eye'></i></Button></td>
-                       </tr>
-                      
-                   <tr>
-                       <td><Form.Check type='checkbox'></Form.Check></td>
-                       <td>AC/029/2022</td>
-                       <td>15/03/2022</td>
-                       <td>Ashiyana Housing Limited</td>
-                       <td>4th Floor,Ashiana village </td>
-                       <td>Vasundhara Nagar,Bhiwadi-301019</td>
-                       <td>Alwar Rajasthan</td>
-                       <td>India</td>
-                       <td>08AADCA9093</td>
-                       <td>Varsha</td>
-                       <td>Brijesh Singh Bhadoriya </td>
-                       <td>Assistant manager sales</td>
-                       <td>01/03/2022</td>
-                       <td>8.33%</td>
-                       <td>1000000</td>
-                       <td>83300</td>
-                       <td>83300</td>
-                       <td></td>
-                       <td></td>
-                       <td>14994</td>
-                       <td>98294</td>
-                       <td>Ninety eight thousand two hundred and ninety eight</td>
-                       
+                       <td><Button variant='primary'  className='mb-2 '>create  </Button></td>
                        
                        <td><Button variant='success' as={Link} to='/invoice-edit' ><i className='fa fa-edit'></i> </Button></td>
                        
@@ -240,7 +212,37 @@ const csvReport = {
                        <td>14994</td>
                        <td>98294</td>
                        <td>Ninety eight thousand two hundred and ninety eight</td>
+                       <td><Button variant='primary'  className='mb-2 '>create  </Button></td>
                        
+                       <td><Button variant='success' as={Link} to='/invoice-edit' ><i className='fa fa-edit'></i> </Button></td>
+                       
+                     <td>  <Button variant="warning"  as={Link} to="/view-invoice" className='mx-2'><i className='fa fa-eye'></i></Button></td>
+                       </tr>
+                      
+                   <tr>
+                       <td><Form.Check type='checkbox'></Form.Check></td>
+                       <td>AC/029/2022</td>
+                       <td>15/03/2022</td>
+                       <td>Ashiyana Housing Limited</td>
+                       <td>4th Floor,Ashiana village </td>
+                       <td>Vasundhara Nagar,Bhiwadi-301019</td>
+                       <td>Alwar Rajasthan</td>
+                       <td>India</td>
+                       <td>08AADCA9093</td>
+                       <td>Varsha</td>
+                       <td>Brijesh Singh Bhadoriya </td>
+                       <td>Assistant manager sales</td>
+                       <td>01/03/2022</td>
+                       <td>8.33%</td>
+                       <td>1000000</td>
+                       <td>83300</td>
+                       <td>83300</td>
+                       <td></td>
+                       <td></td>
+                       <td>14994</td>
+                       <td>98294</td>
+                       <td>Ninety eight thousand two hundred and ninety eight</td>
+                       <td><Button variant='primary'  className='mb-2 '>create  </Button></td>
                       
                        <td><Button variant='success' as={Link} to='/invoice-edit' ><i className='fa fa-edit'></i> </Button></td>
                        

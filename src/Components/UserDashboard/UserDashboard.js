@@ -1,4 +1,4 @@
-import React  from 'react'
+import React,{useState}  from 'react'
 import NavbarMenu from '../NavbarMenu/NavbarMenu'
 import Sidebar from '../Sidebar/Sidebar'
 import { ToastContainer } from 'react-toastify';
@@ -8,10 +8,10 @@ import './UserDashboard.css'
 
 const UserDashboard = () => {
     const Studentlist = [
-        {id:1, Date:"8765467898", Clientname:"prashant Kumar",JDtitle:"Automobile",JDlocation:"Patna",RecruiterID:"A",Candidatename:"yes", Currentdesignation:"n/a",Currentsalary:"null", LastAppraisal:"18-may-2022"},
-        {id:2, Date:"9876787654", Clientname:"neeraj Kumar", JDtitle:"Automobile",JDlocation:"Ranchi", RecruiterID:"B",Candidatename:"no", Currentdesignation:"n/a", Currentsalary:"null",LastAppraisal:"19-may-2022"},
-        {id:3, Date:"9834567633", Clientname:"prashant Kumar", JDtitle:"Automobile",JDlocation:"Haryana",RecruiterID:"C", Candidatename:"yes", Currentdesignation:"n/a", Currentsalary:"null", LastAppraisal:"20-may-2022"},
-        {id:4, Date:"8976542133", Clientname:"dd Kumar", JDtitle:"Automobile",JDlocation:"Delhi", RecruiterID:"in-house", Candidatename:"yes", Currentdesignation:"n/a",Currentsalary:"null",LastAppraisal:"21-may-2022"}
+        {id:2, Date:"8765467898", Clientname:"prashant Kumar",JDtitle:"Automobile",JDlocation:"Patna",RecruiterID:"A",Candidatename:"yes", Currentdesignation:"n/a",Currentsalary:"null", LastAppraisal:"18-may-2022"},
+        {id:1, Date:"9876787654", Clientname:"neeraj Kumar", JDtitle:"Automobile",JDlocation:"Ranchi", RecruiterID:"B",Candidatename:"no", Currentdesignation:"n/a", Currentsalary:"null",LastAppraisal:"19-may-2022"},
+        {id:4, Date:"9834567633", Clientname:"prashant Kumar", JDtitle:"Automobile",JDlocation:"Haryana",RecruiterID:"C", Candidatename:"yes", Currentdesignation:"n/a", Currentsalary:"null", LastAppraisal:"20-may-2022"},
+        {id:3, Date:"8976542133", Clientname:"dd Kumar", JDtitle:"Automobile",JDlocation:"Delhi", RecruiterID:"in-house", Candidatename:"yes", Currentdesignation:"n/a",Currentsalary:"null",LastAppraisal:"21-may-2022"}
     ]
     const headers = [
         {lable:"User Id ", key:"id"},
@@ -40,6 +40,26 @@ const UserDashboard = () => {
 
    const [hide, sethide] = React.useState(false);
    const HandleHide = () => sethide(!hide);
+
+   const [data, setdata] = useState([Studentlist]);
+   const [order,setorder] = useState("ASC");
+    const sorting =(col)=>{
+     if(order ==="ASC"){
+         const sorted = [...data].sort((a,b)=>
+         a[col]()>b[col]() ? 1 :-1
+    ) ;
+    setdata(sorted);
+    setorder("DSC")
+    if(order ==="DSC"){
+        const sorted = [...data].sort((a,b)=>
+        a[col]()<b[col]() ? 1 :-1
+   ) ;
+   setdata(sorted);
+   setorder("ASC")
+}
+     }
+    };
+
   return (
     <div>
          <Sidebar />
@@ -76,21 +96,21 @@ const UserDashboard = () => {
                 <Button variant='primary' onClick={HandleHide} className='mx-5 mb-3 mt-3'>Search</Button>
                 </Col><Col xs={4}>
                 <Button variant='danger' className='mx-5 mb-3 mt-3' ><CSVLink {...csvReport} style={{textDecoration:"none", color:"white"}}><i className='fa fa-download'></i></CSVLink></Button>
-                </Col><Col xs={4}>
-                <Button variant='primary'  className=' mb-3 mt-3'>Sort</Button></Col>
+                </Col>
+                
                 </Row>
                     </Form>
                     </Container>
                        
            <div className={hide? 'hide1': 'hide'}>
             <div className='jd-wraper' >
-            <Container  fluid className='table-data' >
-                <Table responsive className='data-table' hover>
+            <Container  fluid className='table-data ' >
+                <Table responsive className='data-table ' hover>
                     <thead>
                         <tr>
                             <th></th>
-                <th>User Id</th>
-                <th>User Name </th>
+                <th  onClick={()=> sorting("id")}><i className='fa fa-sort'>User Id</i></th>
+                <th> User Name </th>
                 <th>Location</th>
                 <th>Category</th>
                 <th>No. of mobile numbers/emails viewed /downloaded</th>
@@ -106,91 +126,27 @@ const UserDashboard = () => {
                </tr>
                </thead>
                <tbody>
-                   <tr>
+                   <>
+                   {Studentlist.map((Studentlist)=>{ return(
+                   <tr >
                    <td><Form.Check type='checkbox'></Form.Check></td>
-                       <td>1</td>
-                       <td>abc</td>
-                       <td>patna</td>
-                       <td>A</td>
-                       <td>7654387654</td>
-                       <td>ghasjg</td>
-                       <td>6</td>
-                       <td>yh</td>
-                       <td>8</td>
-                       <td>8 </td>
-                       <td>4</td>
-                       <td>6</td>
-                       <td>5</td>
+                       <td>{Studentlist.id}</td>
+                       <td>{Studentlist.Clientname}</td>
+                       <td>{Studentlist.JDlocation}</td>
+                       <td>{Studentlist.RecruiterID}</td>
+                       <td>{Studentlist.Date}</td>
+                       <td>{Studentlist.id}</td>
+                       <td>{Studentlist.id}</td>
+                       <td>{Studentlist.id}</td>
+                       <td>{Studentlist.id}</td>
+                       <td>{Studentlist.id} </td>
+                       <td>{Studentlist.id}</td>
+                       <td>{Studentlist.id}</td>
+                       <td>{Studentlist.id}</td>
                        
-                   </tr>
-                   <tr>
-                   <td><Form.Check type='checkbox'></Form.Check></td>
-                       <td>1</td>
-                       <td>abc</td>
-                       <td>patna</td>
-                       <td>A</td>
-                       <td>7654387654</td>
-                       <td>ghasjg</td>
-                       <td>6</td>
-                       <td>yh</td>
-                       <td>8</td>
-                       <td>8</td>
-                       <td>4</td>
-                       <td>6</td>
-                       <td>5</td>
-                       
-                   </tr>
-                   <tr>
-                   <td><Form.Check type='checkbox'></Form.Check></td>
-                       <td>1</td>
-                       <td>abc</td>
-                       <td>patna</td>
-                       <td>A</td>
-                       <td>7654387654</td>
-                       <td>ghasjg</td>
-                       <td>6</td>
-                       <td>yh</td>
-                       <td>8</td>
-                       <td>8</td>
-                       <td>4</td>
-                       <td>6</td>
-                       <td>5</td>
-                       
-                   </tr>
-                   <tr>
-                   <td><Form.Check type='checkbox'></Form.Check></td>
-                       <td>1</td>
-                       <td>abc</td>
-                       <td>patna</td>
-                       <td>A</td>
-                       <td>7654387654</td>
-                       <td>ghasjg</td>
-                       <td>6</td>
-                       <td>yh</td>
-                       <td>8</td>
-                       <td>8</td>
-                       <td>4</td>
-                       <td>6</td>
-                       <td>5</td>
-                       
-                   </tr>
-                   <tr>
-                   <td><Form.Check type='checkbox'></Form.Check></td>
-                       <td>1</td>
-                       <td>abc</td>
-                       <td>patna</td>
-                       <td>A</td>
-                       <td>7654387654</td>
-                       <td>ghasjg</td>
-                       <td>6</td>
-                       <td>yh</td>
-                       <td>8</td>
-                       <td>8</td>
-                       <td>4</td>
-                       <td>6</td>
-                       <td>5</td>
-                       
-                   </tr>
+                   </tr>)})}
+                   </>
+                  
                </tbody>
                </Table>
                </Container>

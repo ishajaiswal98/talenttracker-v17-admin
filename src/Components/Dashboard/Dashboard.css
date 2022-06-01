@@ -98,7 +98,7 @@
     padding-bottom: 0 !important;
     background-color:#eceff1;
 }
-.table>:not(caption)>> {
+.table>:not(caption)> {
     padding-bottom: 0 !important;
     border-bottom: 0.2px solid rgb(152, 152, 152) !important;
 }

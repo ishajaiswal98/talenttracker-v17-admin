@@ -1,7 +1,7 @@
 import React,{useState} from 'react'
 import Sidebar from '../Sidebar/Sidebar'
 import NavbarMenu from '../NavbarMenu/NavbarMenu'
-import { Container, Row, Col,Form , Button , InputGroup,Modal ,FormControl} from 'react-bootstrap'
+import { Container, Row, Col,Form , Button , InputGroup,Modal ,FormControl, Dropdown} from 'react-bootstrap'
 import { ToastContainer  } from 'react-toastify';
 import Select from 'react-select'
 import { Link } from 'react-router-dom';
@@ -21,6 +21,23 @@ const EditJd = () => {
     const handleCheck2 = () => Setchecked2(!checked2)
     const [checked3, Setchecked3]=useState(false)
     const handleCheck3 = () => Setchecked3(!checked3)
+    const [selected, Setselected]=useState(false)
+    const handleselected = () => Setselected(!selected)
+    const [selected1, Setselected1]=useState(false)
+    const handleselected1 = () => Setselected1(!selected1)
+    const [selected2, Setselected2]=useState(false)
+    const handleselected2 = () => Setselected2(!selected2)
+    const [selected3, Setselected3]=useState(false)
+    const handleselected3 = () => Setselected3(!selected3)
+    const [selected4, Setselected4]=useState(false)
+    const handleselected4 = () => Setselected4(!selected4)
+    const [selected5, Setselected5]=useState(false)
+    const handleselected5 = () => Setselected5(!selected5)
+    const [selected6, Setselected6]=useState(false)
+    const handleselected6 = () => Setselected6(!selected6)
+    const [selected7, Setselected7]=useState(false)
+    const handleselected7 = () => Setselected7(!selected7)
+  
     const options = [
       { value: 'Services', label: 'Services' },
       { value: 'Manufacturing', label: 'Manufacturing' },
@@ -215,6 +232,17 @@ const EditJd = () => {
                 </Col>
               </Row>
               <Row>
+                  <Col xs={6}>
+                  <Form.Label className='fw-bold mb-3 mt-3'>Today’s date-time</Form.Label>
+                  <Form.Control type="text" ></Form.Control>
+                  </Col>
+                  
+                  <Col xs={6}>
+                  <Form.Label className='fw-bold mb-3 mt-3'> Jd Number</Form.Label>
+                  <Form.Control type="text" placeholder='Remarks'></Form.Control>
+                  </Col>
+                  </Row>
+              <Row>
                 <Col xs={6}>
                   <Form.Group>
                 <Form.Label  className='fw-bold mb-3 mt-3'> Minimum Number of cvs submissions required  </Form.Label>
@@ -284,20 +312,77 @@ const EditJd = () => {
                 
               </Row>
               <Row>
-                <Col xs={6}>
-                <Form.Label  className='fw-bold mb-3 mt-3'>Client company spoc name</Form.Label>
-                <Form.Control type='text' value='john'/>
-                </Col>
-                <Col xs={6}>
-                <Form.Label  className='fw-bold mb-3 mt-3'>Client company spoc Email</Form.Label>
-                <Form.Control type='text' value=' jhinhg@gmail.com '/>
-                </Col>
-              </Row>
+            <Col xs={4}>
+               <Form.Label className='fw-bold mb-3 mt-3'>Client Spoc1 Name</Form.Label>  
+               <Form.Control type='text' />        
+                      
+            </Col>
+            <Col xs={4}>
+               <Form.Label className='fw-bold mb-3 mt-3'>Client Spoc2 Name</Form.Label>  
+               <Form.Control type='text' />        
+                      
+            </Col>
+            <Col xs={4}>
+               <Form.Label className='fw-bold mb-3 mt-3'>Client Spoc3 Name</Form.Label>  
+               <Form.Control type='text' />        
+                      
+            </Col>
+            </Row>
+            <Row>
+            <Col xs={4}>
+               <Form.Label className='fw-bold mb-3 mt-3'>Client Spoc1 Email</Form.Label>  
+               <Form.Control type='text' />        
+                      
+            </Col>
+            <Col xs={4}>
+               <Form.Label className='fw-bold mb-3 mt-3'>Client Spoc2 Email</Form.Label>  
+               <Form.Control type='text' />        
+                      
+            </Col>
+            <Col xs={4}>
+               <Form.Label className='fw-bold mb-3 mt-3'>Client Spoc3 Email</Form.Label>  
+               <Form.Control type='text' />        
+                      
+            </Col>
+            </Row>
+            <Row>
+            <Col xs={4}>
+               <Form.Label className='fw-bold mb-3 mt-3'>Client Spoc1 Mobile Number</Form.Label>  
+               <Form.Control type='text' />        
+          
+            
+            </Col>
+            <Col xs={4}>
+               <Form.Label className='fw-bold mb-3 mt-3'>Client Spoc2 Mobile Number</Form.Label>  
+               <Form.Control type='text' />        
+                      
+            </Col>
+            <Col xs={4}>
+               <Form.Label className='fw-bold mb-3 mt-3'>Client Spoc3 Mobile Number</Form.Label>  
+               <Form.Control type='text' />        
+          
+            
+            </Col>
+            </Row>
+            <Row>
+            <Col xs={4}>
+               <Form.Label className='fw-bold mb-3 mt-3'>Client Spoc1 Designation</Form.Label>  
+               <Form.Control type='text' />        
+          
+            
+            </Col>
+            <Col xs={4}>
+               <Form.Label className='fw-bold mb-3 mt-3'>Client Spoc2 Designation</Form.Label>  
+               <Form.Control type='text' />        
+          
+            
+            </Col>
+            <Col xs={4}>
+               <Form.Label className='fw-bold mb-3 mt-3'>Client Spoc3 Designation</Form.Label>  
+               <Form.Control type='text' />
+               </Col>
+               </Row>
               <Row>
-                <Col xs={6}>
-                <Form.Label  className='fw-bold mb-3 mt-3'>Client company spoc mobile number </Form.Label>
-                <Form.Control type='text' value='8767876545'/>
-                </Col>
                 <Col xs={6}>
                 <Form.Label  className='fw-bold mb-3 mt-3'>List of preferred companies to source candidate  </Form.Label>
                 <Form.Control type='text' value='talenttracker'/>
@@ -408,18 +493,93 @@ const EditJd = () => {
                   </Col>
                 </Row>
                 <Row>
-                  <Col xs={6}>
+                <Col xs={6}>
                   <Form.Label className='fw-bold mb-3 mt-3'>Your Payout</Form.Label>
                   <Form.Check type="checkbox" label="% payout If you use Talent Tracker’s database. " onClick={handleCheck} />
-                  {checked?<Form.Select className="mt-2 mb-2"><option value="if consultancy">if consultancy</option><option value="If individual">If individual</option></Form.Select>: <></>}
+                  {checked? <div>
+                   <Dropdown>
+  <Dropdown.Toggle variant="light" id="dropdown-basic">
+    Select
+  </Dropdown.Toggle>
+
+  <Dropdown.Menu>
+    <Dropdown.Item  onClick={handleselected}>If consultancy</Dropdown.Item>
+    <Dropdown.Item  onClick={handleselected1} >If Individual</Dropdown.Item>
+    
+  </Dropdown.Menu>
+</Dropdown>
+                   </div>:<></>}
+                  {selected? <div>
+                    <Form.Control type='text'></Form.Control>
+                    </div>:<></>}
+                    
+                  {selected1? <div>
+                    <Form.Control type='text'></Form.Control>
+                    </div>:<></>}
                     <Form.Check type="checkbox" label=" % payout if you use your own portal- naukri/monster/times job etc " onClick={handleCheck1} />
-                    {checked1?<Form.Select className="mt-2 mb-2"><option value="if consultancy">if consultancy</option><option value="If individual">If individual</option></Form.Select>: <></>}
+                    {checked1? <div>
+                   <Dropdown>
+  <Dropdown.Toggle variant="light" id="dropdown-basic">
+    Select
+  </Dropdown.Toggle>
+
+  <Dropdown.Menu>
+    <Dropdown.Item  onClick={handleselected2}>If consultancy</Dropdown.Item>
+    <Dropdown.Item  onClick={handleselected3} >If Individual</Dropdown.Item>
+    
+  </Dropdown.Menu>
+</Dropdown>
+                   </div>:<></>}
+                  {selected2? <div>
+                    <Form.Control type='text'></Form.Control>
+                    </div>:<></>}
+                    
+                  {selected3? <div>
+                    <Form.Control type='text'></Form.Control>
+                    </div>:<></>}
+
                     <Form.Check type="checkbox" label=" absolute value payout if use your own portal (Naukri/Monster/Timesjob etc) " onClick={handleCheck2} />
-                    {checked2?<Form.Select className="mt-2 mb-2"><option value="if consultancy">if consultancy</option><option value="If individual">If individual</option></Form.Select>: <></>}
+                    {checked2? <div>
+                   <Dropdown>
+  <Dropdown.Toggle variant="light" id="dropdown-basic">
+    Select
+  </Dropdown.Toggle>
 
+  <Dropdown.Menu>
+    <Dropdown.Item  onClick={handleselected4}>If consultancy</Dropdown.Item>
+    <Dropdown.Item  onClick={handleselected5} >If Individual</Dropdown.Item>
+    
+  </Dropdown.Menu>
+</Dropdown>
+                   </div>:<></>}
+                  {selected4? <div>
+                    <Form.Control type='text'></Form.Control>
+                    </div>:<></>}
+                    
+                  {selected5? <div>
+                    <Form.Control type='text'></Form.Control>
+                    </div>:<></>}
                     <Form.Check type="checkbox" label=" absolute value payout---if use Talent Trackers database. " onClick={handleCheck3}/>
-                    {checked3?<Form.Select className="mt-2 mb-2"><option value="if consultancy">if consultancy</option><option value="If individual">If individual</option></Form.Select>: <></>}
+                    {checked3? <div>
+                   <Dropdown>
+  <Dropdown.Toggle variant="light" id="dropdown-basic">
+    Select
+  </Dropdown.Toggle>
 
+  <Dropdown.Menu>
+    <Dropdown.Item  onClick={handleselected6}>If consultancy</Dropdown.Item>
+    <Dropdown.Item  onClick={handleselected7} >If Individual</Dropdown.Item>
+    
+  </Dropdown.Menu>
+</Dropdown>
+                   </div>:<></>}
+                  {selected6? <div>
+                    <Form.Control type='text'></Form.Control>
+                    </div>:<></>}
+                    
+                  {selected7? <div>
+                    <Form.Control type='text'></Form.Control>
+                    </div>:<></>}
                   </Col>
                   <Col xs={6}>
                   <Form.Label className='fw-bold mb-3 mt-3'> Industries  </Form.Label>
@@ -481,6 +641,7 @@ const EditJd = () => {
             
             </Col>
             </Row>
+            
             </Form>
         </Modal.Body>
         <Modal.Footer>

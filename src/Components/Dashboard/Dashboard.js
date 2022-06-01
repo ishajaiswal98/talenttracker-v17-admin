@@ -1,10 +1,10 @@
 import React, {useState} from 'react'
 import Sidebar from '../Sidebar/Sidebar'
 import NavbarMenu from '../NavbarMenu/NavbarMenu'
-import { Container, Row, Col,Form , Button} from 'react-bootstrap'
+import { Container, Row, Col,Form , Button, InputGroup,FormControl,Dropdown} from 'react-bootstrap'
 import { ToastContainer  } from 'react-toastify';
-import Select from 'react-select'
-import {Link} from 'react-router-dom'
+// import Select from 'react-select'
+// import {Link} from 'react-router-dom'
 
 import "./Dashboard.css";
 const Dashboard = () => {
@@ -16,26 +16,46 @@ const Dashboard = () => {
   const handleCheck2 = () => Setchecked2(!checked2)
   const [checked3, Setchecked3]=useState(false)
   const handleCheck3 = () => Setchecked3(!checked3)
-  const options = [
-    { value: 'Services', label: 'Services' },
-    { value: 'Manufacturing', label: 'Manufacturing' },
-    { value: 'IT- Information Technology', label: 'IT- Information Technology' },
-    { value: 'Education', label: 'Education' },
-    { value: 'Real estate/Construction', label: 'Real estate/Construction' },
-    { value: 'Finance/BFSI', label: 'Finance/BFSI' },
-    { value: 'Healthcare/Pharm', label: 'Healthcare/Pharm' },
-    { value: 'Retail', label: 'Retail' },
-    { value: 'Hospitality', label: 'Hospitality' },
-    { value: 'Public Sector/Philonthropy/Associations', label: 'Public Sector/Philonthropy/Associations' },
-    { value: 'FMCG', label: 'FMCG' },
-    { value: 'Textile', label: 'Textile' },
-    { value: 'Telecom', label: 'Telecom' },
-    { value: 'logistics/supply chain', label: 'logistics/supply chain' },
-    { value: 'Media/Publishing/Entertainment', label: 'Media/Publishing/Entertainment' },
-    { value: 'Others', label: 'Others' },
-    { value: 'Create', label: 'Create' }
+
+  const [selected, Setselected]=useState(false)
+  const handleselected = () => Setselected(!selected)
+  const [selected1, Setselected1]=useState(false)
+  const handleselected1 = () => Setselected1(!selected1)
+  const [selected2, Setselected2]=useState(false)
+  const handleselected2 = () => Setselected2(!selected2)
+  const [selected3, Setselected3]=useState(false)
+  const handleselected3 = () => Setselected3(!selected3)
+  const [selected4, Setselected4]=useState(false)
+  const handleselected4 = () => Setselected4(!selected4)
+  const [selected5, Setselected5]=useState(false)
+  const handleselected5 = () => Setselected5(!selected5)
+  const [selected6, Setselected6]=useState(false)
+  const handleselected6 = () => Setselected6(!selected6)
+  const [selected7, Setselected7]=useState(false)
+  const handleselected7 = () => Setselected7(!selected7)
+  const [selected8, Setselected8]=useState(false)
+  const handleselected8 = () => Setselected8(!selected8)
   
-  ]
+  // const options = [
+  //   { value: 'Services', label: 'Services' },
+  //   { value: 'Manufacturing', label: 'Manufacturing' },
+  //   { value: 'IT- Information Technology', label: 'IT- Information Technology' },
+  //   { value: 'Education', label: 'Education' },
+  //   { value: 'Real estate/Construction', label: 'Real estate/Construction' },
+  //   { value: 'Finance/BFSI', label: 'Finance/BFSI' },
+  //   { value: 'Healthcare/Pharm', label: 'Healthcare/Pharm' },
+  //   { value: 'Retail', label: 'Retail' },
+  //   { value: 'Hospitality', label: 'Hospitality' },
+  //   { value: 'Public Sector/Philonthropy/Associations', label: 'Public Sector/Philonthropy/Associations' },
+  //   { value: 'FMCG', label: 'FMCG' },
+  //   { value: 'Textile', label: 'Textile' },
+  //   { value: 'Telecom', label: 'Telecom' },
+  //   { value: 'logistics/supply chain', label: 'logistics/supply chain' },
+  //   { value: 'Media/Publishing/Entertainment', label: 'Media/Publishing/Entertainment' },
+  //   { value: 'Others', label: 'Others' },
+  //   { value: 'Create', label: 'Create' }
+  
+  // ]
   
   return (
     <div className='dashboard'>
@@ -50,19 +70,21 @@ const Dashboard = () => {
                 <Form.Control type='text' placeholder='   '/>
                 </Col>
                 <Col xs={6}>
+                <Form.Label  className='fw-bold mb-3 mt-3'>JD number  </Form.Label>
+                <Form.Control type='text' placeholder=' Number  '/>
+                </Col>
+               
+              </Row>
+              <Row>
+              <Col xs={6}>
                 <Form.Label  className='fw-bold mb-3 mt-3'>Company Name </Form.Label>
                 <Form.Control type='text' value=' pvt ltd  '/>
                 </Col>
-              </Row>
-              <Row>
                 <Col xs={6}>
                 <Form.Label  className='fw-bold mb-3 mt-3'>List of preferred companies to source candidate  </Form.Label>
                 <Form.Control type='text' value='talenttracker'/>
                 </Col>
-                <Col xs={6}>
-                <Form.Label  className='fw-bold mb-3 mt-3'>Client company website</Form.Label>
-                <Form.Control type='text' value=' www.talenttracker.com '/>
-                </Col>
+               
               </Row>
               <Row>
                 <Col xs={6}>
@@ -105,27 +127,91 @@ const Dashboard = () => {
                 </Col>
               </Row>
               <Row>
+            <Col xs={4}>
+               <Form.Label className=''>Client Spoc1 Name</Form.Label>  
+               <Form.Control type='text' value='isha'/>        
+                      
+            </Col>
+            <Col xs={4}>
+               <Form.Label className=''>Client Spoc2 Name</Form.Label>  
+               <Form.Control type='text' value='isha'/>        
+                      
+            </Col>
+            <Col xs={4}>
+               <Form.Label className=''>Client Spoc3 Name</Form.Label>  
+               <Form.Control type='text' value='isha'/>        
+                      
+            </Col>
+            </Row>
+            <Row>
+            <Col xs={4}>
+               <Form.Label className=''>Client Spoc1 Email</Form.Label>  
+               <Form.Control type='text' value='bhgfjdh@gmail.com'/>        
+                      
+            </Col>
+            <Col xs={4}>
+               <Form.Label className=''>Client Spoc2 Email</Form.Label>  
+               <Form.Control type='text' value='bhgfjdh@gmail.com'/>        
+                      
+            </Col>
+            <Col xs={4}>
+               <Form.Label className=''>Client Spoc3 Email</Form.Label>  
+               <Form.Control type='text' value='bhgfjdh@gmail.com'/>        
+                      
+            </Col>
+            </Row>
+            <Row>
+            <Col xs={4}>
+               <Form.Label className=''>Client Spoc1 Mobile Number</Form.Label>  
+               <Form.Control type='text' value='7865432234'/>        
+          
+            
+            </Col>
+            <Col xs={4}>
+               <Form.Label className=''>Client Spoc2 Mobile Number</Form.Label>  
+               <Form.Control type='text' value='7865432234'/>        
+                      
+            </Col>
+            <Col xs={4}>
+               <Form.Label className=''>Client Spoc3 Mobile Number</Form.Label>  
+               <Form.Control type='text' value='7865432234'/>        
+          
+            
+            </Col>
+            </Row>
+            <Row>
+            <Col xs={4}>
+               <Form.Label className=''>Client Spoc1 Designation</Form.Label>  
+               <Form.Control type='text' value='na'/>        
+          
+            
+            </Col>
+            <Col xs={4}>
+               <Form.Label className=''>Client Spoc2 Designation</Form.Label>  
+               <Form.Control type='text' value='na'/>        
+          
+            
+            </Col>
+            <Col xs={4}>
+               <Form.Label className=''>Client Spoc3 Designation</Form.Label>  
+               <Form.Control type='text' value='na'/>        
+          
+            
+            </Col>
+            </Row>
+                <Row>
                 <Col xs={6}>
-                <Form.Label  className='fw-bold mb-3 mt-3'>Client company spoc name</Form.Label>
-                <Form.Control type='text' value='john'/>
+                <Form.Label  className='fw-bold mb-3 mt-3'>Client spoc mobile number to be disclosed to user for this JD? (Y/N)</Form.Label>
+                <Form.Control type='text' value='yes'/>
                 </Col>
                 <Col xs={6}>
-                <Form.Label  className='fw-bold mb-3 mt-3'>Client company spoc Email</Form.Label>
-                <Form.Control type='text' value=' jhinhg@gmail.com '/>
-                </Col>
-              </Row>
-              <Row>
-                <Col xs={6}>
-                <Form.Label  className='fw-bold mb-3 mt-3'>Client company spoc mobile number </Form.Label>
-                <Form.Control type='text' value='8767876545'/>
+                <Form.Label  className='fw-bold mb-3 mt-3'>Client company website</Form.Label>
+                <Form.Control type='text' value=' www.talenttracker.com '/>
                 </Col>
                
               </Row>
             <Row>
-                <Col xs={6}>
-                <Form.Label  className='fw-bold mb-3 mt-3'>JD number  </Form.Label>
-                <Form.Control type='text' placeholder=' Number  '/>
-                </Col>
+                
                 <Col xs={6}>
                 <Form.Label  className='fw-bold mb-3 mt-3'>Client company name to be disclosed to the candidate? </Form.Label>
                 <Form.Control type='text' placeholder=' 1'/>
@@ -209,23 +295,9 @@ const Dashboard = () => {
                 <Form.Control type='text' placeholder='  '/>
                 </Col>
               </Row>
+            
               <Row>
-                <Col xs={6}>
-                <Form.Label  className='fw-bold mb-3 mt-3'>Client name </Form.Label>
-                <Form.Control type='text' placeholder='  '/>
-                </Col>
-                <Col xs={6}>
-                <Form.Label  className='fw-bold mb-3 mt-3'>Client company Website </Form.Label>
-                <i class="fa fa-globe" aria-hidden="true" as={Link} to='/www.talenttracker.com'></i>
-                <Form.Control type='text' placeholder='  '/>
-                </Col>
-              </Row>
-              <Row>
-                <Col xs={6}>
-                <Form.Label  className='fw-bold mb-3 mt-3'>Client company Linkedin URL </Form.Label>
-                <i class="fa fa-linkedin" aria-hidden="true"></i>
-                <Form.Control type='text' placeholder='  '/>
-                </Col>
+               
                 <Col xs={6}>
                 <Form.Label  className='fw-bold mb-3 mt-3'>Salary Budget -Lacs per annum </Form.Label>
                 <Form.Control type='text' placeholder=' '/>
@@ -286,14 +358,14 @@ const Dashboard = () => {
                     <option value="6">3 months</option>
                     </Form.Select>
                 </Col>
-                <Col xs={6}>
+                {/* <Col xs={6}>
                 <Form.Label  className='fw-bold mb-3 mt-3'>Replacement period  </Form.Label>
                 <Form.Select aria-label="Default select example">
                     <option>3 months</option>
                     <option value="1">3 months</option>
                     <option value="2">6 months</option>
                     </Form.Select>
-                </Col>
+                </Col> */}
               </Row>
               <Row>
                 <Col xs={6}>
@@ -312,13 +384,13 @@ const Dashboard = () => {
                   <option value="15">15</option>
                 </Form.Select>
                 </Form.Group>
-                <Form.Group className='mt-3'>
+                {/* <Form.Group className='mt-3'>
                   <Form.Label className="fw-bold">Client Company name to disclosed to candidate</Form.Label>
                   <Form.Select name="disclosedtocandidate">
                     <option values="yes">Yes</option>
                     <option value='no'>No</option>
                   </Form.Select>
-                </Form.Group>
+                </Form.Group> */}
                 </Col>
                 <Col xs={6}>
                 <Form.Label  className='fw-bold mb-3 mt-3'>Allow one candidate submission by user? </Form.Label>
@@ -329,10 +401,24 @@ const Dashboard = () => {
                     </Form.Select>
                     <Form.Group className='mt-3'>
                   <Form.Label className="fw-bold">Number of working days</Form.Label>
-                  <Form.Select name="numberofworkingday">
-                    <option values="5">5</option>
-                    <option value='6'>6</option>
-                  </Form.Select>
+                  <Dropdown>
+  <Dropdown.Toggle variant="light" id="dropdown-basic">
+    Select
+  </Dropdown.Toggle>
+
+  <Dropdown.Menu>
+    <Dropdown.Item  >5</Dropdown.Item>
+    <Dropdown.Item   >6</Dropdown.Item>
+    <Dropdown.Item  onClick={handleselected8} >Create</Dropdown.Item>
+    
+  </Dropdown.Menu>
+</Dropdown>
+                   
+                  {selected8? <div>
+                    <Form.Control type='text'></Form.Control>
+                    </div>:<></>}
+                    
+                 
                 </Form.Group>
                 </Col>
               </Row>
@@ -362,10 +448,9 @@ const Dashboard = () => {
                     <Button variant='primary'>Create</Button>
                     </Col>
                     <Col xs={6}>
-                    <Form.Label className='fw-bold mb-3 mt-3'>  Admin spoc (single point of contact)</Form.Label>
-                    <Form.Control type='text' placeholder=' Name of the spoc '/>
-                    <Form.Control type='text' placeholder=' Email ID '/>
-                    <Form.Control type='text' placeholder=' Mobile Number '/>
+                    <Form.Label className='fw-bold mb-3 mt-3'>Number of vacancies </Form.Label>
+                    <Form.Control type='text' placeholder=' 1 '/>
+                  
                     </Col>
                 </Row>
                 <Row>
@@ -389,7 +474,28 @@ const Dashboard = () => {
                     <Form.Label className='fw-bold mb-3 mt-3'> Remarks/comments</Form.Label>
                     <Form.Control type="text" placeholder='Remarks'></Form.Control>
                     </Col>
+                    
                     <Col xs={6}>
+
+
+<Form.Label className='fw-bold mb-3 mt-3'>client Email list</Form.Label>  
+<Row>
+  <Col xs={6}>
+<InputGroup className="mb-2">
+<InputGroup.Text>To</InputGroup.Text>
+<FormControl id="inlineFormInputGroup" placeholder=" Email" />
+</InputGroup>
+</Col>
+<Col xs={6}>
+<InputGroup className="mb-2">
+<InputGroup.Text>CC</InputGroup.Text>
+<FormControl id="inlineFormInputGroup" placeholder=" Email" />
+</InputGroup>
+</Col>
+</Row>
+</Col>
+</Row>
+                    {/* <Col xs={6}>
                     <Form.Label className='fw-bold mb-3 mt-3'> Payment Terms</Form.Label>
                     <Form.Select aria-label="Default 30days example">
                     <option>select</option>
@@ -401,7 +507,7 @@ const Dashboard = () => {
                     </Form.Select>
 
                     </Col>
-                </Row>
+                
                 <Row>
                  
                   <Col xs={6}>
@@ -416,7 +522,8 @@ const Dashboard = () => {
                     <option value="6">12%</option>
                     </Form.Select>
                     </Col>
-                    </Row>
+                    </Row> */}
+                    
                     <Row>
                       
                   <Col xs={6}>
@@ -430,20 +537,95 @@ const Dashboard = () => {
                   <Col xs={6}>
                   <Form.Label className='fw-bold mb-3 mt-3'>Your Payout</Form.Label>
                   <Form.Check type="checkbox" label="% payout If you use Talent Tracker’s database. " onClick={handleCheck} />
-                  {checked?<Form.Select className="mt-2 mb-2"><option value="if consultancy">if consultancy</option><option value="If individual">If individual</option></Form.Select>: <></>}
+                  {checked? <div>
+                   <Dropdown>
+  <Dropdown.Toggle variant="light" id="dropdown-basic">
+    Select
+  </Dropdown.Toggle>
+
+  <Dropdown.Menu>
+    <Dropdown.Item  onClick={handleselected}>If consultancy</Dropdown.Item>
+    <Dropdown.Item  onClick={handleselected1} >If Individual</Dropdown.Item>
+    
+  </Dropdown.Menu>
+</Dropdown>
+                   </div>:<></>}
+                  {selected? <div>
+                    <Form.Control type='text'></Form.Control>
+                    </div>:<></>}
+                    
+                  {selected1? <div>
+                    <Form.Control type='text'></Form.Control>
+                    </div>:<></>}
                     <Form.Check type="checkbox" label=" % payout if you use your own portal- naukri/monster/times job etc " onClick={handleCheck1} />
-                    {checked1?<Form.Select className="mt-2 mb-2"><option value="if consultancy">if consultancy</option><option value="If individual">If individual</option></Form.Select>: <></>}
+                    {checked1? <div>
+                   <Dropdown>
+  <Dropdown.Toggle variant="light" id="dropdown-basic">
+    Select
+  </Dropdown.Toggle>
+
+  <Dropdown.Menu>
+    <Dropdown.Item  onClick={handleselected2}>If consultancy</Dropdown.Item>
+    <Dropdown.Item  onClick={handleselected3} >If Individual</Dropdown.Item>
+    
+  </Dropdown.Menu>
+</Dropdown>
+                   </div>:<></>}
+                  {selected2? <div>
+                    <Form.Control type='text'></Form.Control>
+                    </div>:<></>}
+                    
+                  {selected3? <div>
+                    <Form.Control type='text'></Form.Control>
+                    </div>:<></>}
+
                     <Form.Check type="checkbox" label=" absolute value payout if use your own portal (Naukri/Monster/Timesjob etc) " onClick={handleCheck2} />
-                    {checked2?<Form.Select className="mt-2 mb-2"><option value="if consultancy">if consultancy</option><option value="If individual">If individual</option></Form.Select>: <></>}
+                    {checked2? <div>
+                   <Dropdown>
+  <Dropdown.Toggle variant="light" id="dropdown-basic">
+    Select
+  </Dropdown.Toggle>
 
+  <Dropdown.Menu>
+    <Dropdown.Item  onClick={handleselected4}>If consultancy</Dropdown.Item>
+    <Dropdown.Item  onClick={handleselected5} >If Individual</Dropdown.Item>
+    
+  </Dropdown.Menu>
+</Dropdown>
+                   </div>:<></>}
+                  {selected4? <div>
+                    <Form.Control type='text'></Form.Control>
+                    </div>:<></>}
+                    
+                  {selected5? <div>
+                    <Form.Control type='text'></Form.Control>
+                    </div>:<></>}
                     <Form.Check type="checkbox" label=" absolute value payout---if use Talent Trackers database. " onClick={handleCheck3}/>
-                    {checked3?<Form.Select className="mt-2 mb-2"><option value="if consultancy">if consultancy</option><option value="If individual">If individual</option></Form.Select>: <></>}
+                    {checked3? <div>
+                   <Dropdown>
+  <Dropdown.Toggle variant="light" id="dropdown-basic">
+    Select
+  </Dropdown.Toggle>
 
+  <Dropdown.Menu>
+    <Dropdown.Item  onClick={handleselected6}>If consultancy</Dropdown.Item>
+    <Dropdown.Item  onClick={handleselected7} >If Individual</Dropdown.Item>
+    
+  </Dropdown.Menu>
+</Dropdown>
+                   </div>:<></>}
+                  {selected6? <div>
+                    <Form.Control type='text'></Form.Control>
+                    </div>:<></>}
+                    
+                  {selected7? <div>
+                    <Form.Control type='text'></Form.Control>
+                    </div>:<></>}
                   </Col>
-                  <Col xs={6}>
+                  {/* <Col xs={6}>
                   <Form.Label className='fw-bold mb-3 mt-3'> Industries  </Form.Label>
                   <Select isMulti options={options} />
-                  </Col>
+                  </Col> */}
                 </Row>
                 <Row>
                   <Col xs={12}>
@@ -453,9 +635,9 @@ const Dashboard = () => {
                     </Form.Group>
                   </Col>
                 </Row>
-                <Button variant="primary" className="mt-3">Add a JD</Button>
-                <Button variant="primary" className="mt-3">Reset</Button>
-                <Button variant="primary" className="mt-3">
+                <Button variant="success" className="mt-3 ">Add a JD</Button>
+                <Button variant="warning" className="mt-3 mx-5">Reset</Button>
+                <Button variant="primary" className="mt-3 mx-5">
             <i className="fas fa-save me-3"></i>Save 
           &nbsp;&nbsp;</Button> 
 

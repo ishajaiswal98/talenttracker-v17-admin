@@ -79,6 +79,14 @@ const UserIdChang = () => {
                 <th>Allow user to write special remarks, comments in the tracker shee</th>
                 <th>Admin can make it compulsory for user to use own / our database</th>
                 <th>Don't allow user to edit the status</th>
+                <th>Payout</th>
+                <th>Designation</th>
+                <th>System generated Official email ID of user </th>
+                <th>Allow one candidate submission by user? </th>
+                <th>Client Spoc mobile number to be shown to this user? </th>
+                <th>The user is a consultancy or individual?</th>
+                <th>Allow user to update the “status” field in “My Workspace</th>
+                <th>Client coordination</th>
                 <th>Action</th>
                </tr>
                </thead>
@@ -92,6 +100,14 @@ const UserIdChang = () => {
                        <td>657899</td>
                        <td  >yes</td>
                        <td>YES</td>
+                       <td>yes</td>
+                       <td>na</td>
+                       <td>Na</td>
+                       <td>657899</td>
+                       <td  >yes</td>
+                       <td>YES</td>
+                       <td>yes</td>
+                       <td>na</td>
                        <td>yes</td>
                        <td>na</td>
                        <td>Na</td>

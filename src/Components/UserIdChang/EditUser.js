@@ -3,7 +3,7 @@ import React,{useState} from 'react'
 import NavbarMenu from '../NavbarMenu/NavbarMenu'
 import Sidebar from '../Sidebar/Sidebar'
 import { ToastContainer ,toast} from 'react-toastify';
-import { Form  , Container , Row , Col , Button ,Modal} from 'react-bootstrap';
+import { Form  , Container , Row , Col , Button ,Modal,Dropdown} from 'react-bootstrap';
 
 const EditUser = () => {
     const [checked, Setchecked]=useState(false)
@@ -16,10 +16,30 @@ const EditUser = () => {
     const handleCheck3 = () => Setchecked3(!checked3)
     const [show, setShow] = useState(false);
 
+    const [selected, Setselected]=useState(false)
+    const handleselected = () => Setselected(!selected)
+    const [selected1, Setselected1]=useState(false)
+    const handleselected1 = () => Setselected1(!selected1)
+    const [selected2, Setselected2]=useState(false)
+    const handleselected2 = () => Setselected2(!selected2)
+    const [selected3, Setselected3]=useState(false)
+    const handleselected3 = () => Setselected3(!selected3)
+    const [selected4, Setselected4]=useState(false)
+    const handleselected4 = () => Setselected4(!selected4)
+    const [selected5, Setselected5]=useState(false)
+    const handleselected5 = () => Setselected5(!selected5)
+    const [selected6, Setselected6]=useState(false)
+    const handleselected6 = () => Setselected6(!selected6)
+    const [selected7, Setselected7]=useState(false)
+    const handleselected7 = () => Setselected7(!selected7)
+  
+
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
     const notify = () => toast.success("Based on your request, we have allowed you to remove candidate mobile number from the tracker sheet. However, this is not the best practice we follow with our clients");
     const notify1 = () => toast.success("You are allowed to add special comments/remarks in the tracker sheet.");
+
+
     return (
     <div>
           <Sidebar />
@@ -79,7 +99,24 @@ const EditUser = () => {
                     <option value="No">NO</option>                   
                     </Form.Select>                
                 </Col>
+               
 
+                </Row>
+                <Row>
+                <Col xs={6}>
+                <Form.Label  className='fw-bold mb-3 mt-3'>Client Spoc mobile number to be shown to this user? </Form.Label>
+                <Form.Select aria-label="Default example">                    
+                    <option value="Yes">Yes</option>
+                    <option value="No">NO</option>                   
+                    </Form.Select>                
+                </Col>
+                <Col xs={6}>
+                <Form.Label  className='fw-bold mb-3 mt-3'>The user is a consultancy or individual?  </Form.Label>
+                <Form.Select aria-label="Default example">                    
+                    <option value="Yes">Consultancy</option>
+                    <option value="No">Individual</option>                   
+                    </Form.Select>                
+                </Col>
                 </Row>
                 <Row>
                 <Col xs={6}>
@@ -133,16 +170,127 @@ const EditUser = () => {
                 <Col xs={6}>
                   <Form.Label className='fw-bold mb-3 mt-3'>Your Payout</Form.Label>
                   <Form.Check type="checkbox" label="% payout If you use Talent Tracker’s database. " onClick={handleCheck} />
-                  {checked?<Form.Select className="mt-2 mb-2"><option value="if consultancy">if consultancy</option><option value="If individual">If individual</option></Form.Select>: <></>}
+                  {checked? <div>
+                   <Dropdown>
+  <Dropdown.Toggle variant="light" id="dropdown-basic">
+    Select
+  </Dropdown.Toggle>
+
+  <Dropdown.Menu>
+    <Dropdown.Item  onClick={handleselected}>If consultancy</Dropdown.Item>
+    <Dropdown.Item  onClick={handleselected1} >If Individual</Dropdown.Item>
+    
+  </Dropdown.Menu>
+</Dropdown>
+                   </div>:<></>}
+                  {selected? <div>
+                    <Form.Control type='text'></Form.Control>
+                    </div>:<></>}
+                    
+                  {selected1? <div>
+                    <Form.Control type='text'></Form.Control>
+                    </div>:<></>}
                     <Form.Check type="checkbox" label=" % payout if you use your own portal- naukri/monster/times job etc " onClick={handleCheck1} />
-                    {checked1?<Form.Select className="mt-2 mb-2"><option value="if consultancy">if consultancy</option><option value="If individual">If individual</option></Form.Select>: <></>}
+                    {checked1? <div>
+                   <Dropdown>
+  <Dropdown.Toggle variant="light" id="dropdown-basic">
+    Select
+  </Dropdown.Toggle>
+
+  <Dropdown.Menu>
+    <Dropdown.Item  onClick={handleselected2}>If consultancy</Dropdown.Item>
+    <Dropdown.Item  onClick={handleselected3} >If Individual</Dropdown.Item>
+    
+  </Dropdown.Menu>
+</Dropdown>
+                   </div>:<></>}
+                  {selected2? <div>
+                    <Form.Control type='text'></Form.Control>
+                    </div>:<></>}
+                    
+                  {selected3? <div>
+                    <Form.Control type='text'></Form.Control>
+                    </div>:<></>}
+
                     <Form.Check type="checkbox" label=" absolute value payout if use your own portal (Naukri/Monster/Timesjob etc) " onClick={handleCheck2} />
-                    {checked2?<Form.Select className="mt-2 mb-2"><option value="if consultancy">if consultancy</option><option value="If individual">If individual</option></Form.Select>: <></>}
+                    {checked2? <div>
+                   <Dropdown>
+  <Dropdown.Toggle variant="light" id="dropdown-basic">
+    Select
+  </Dropdown.Toggle>
 
+  <Dropdown.Menu>
+    <Dropdown.Item  onClick={handleselected4}>If consultancy</Dropdown.Item>
+    <Dropdown.Item  onClick={handleselected5} >If Individual</Dropdown.Item>
+    
+  </Dropdown.Menu>
+</Dropdown>
+                   </div>:<></>}
+                  {selected4? <div>
+                    <Form.Control type='text'></Form.Control>
+                    </div>:<></>}
+                    
+                  {selected5? <div>
+                    <Form.Control type='text'></Form.Control>
+                    </div>:<></>}
                     <Form.Check type="checkbox" label=" absolute value payout---if use Talent Trackers database. " onClick={handleCheck3}/>
-                    {checked3?<Form.Select className="mt-2 mb-2"><option value="if consultancy">if consultancy</option><option value="If individual">If individual</option></Form.Select>: <></>}
+                    {checked3? <div>
+                   <Dropdown>
+  <Dropdown.Toggle variant="light" id="dropdown-basic">
+    Select
+  </Dropdown.Toggle>
 
+  <Dropdown.Menu>
+    <Dropdown.Item  onClick={handleselected6}>If consultancy</Dropdown.Item>
+    <Dropdown.Item  onClick={handleselected7} >If Individual</Dropdown.Item>
+    
+  </Dropdown.Menu>
+</Dropdown>
+                   </div>:<></>}
+                  {selected6? <div>
+                    <Form.Control type='text'></Form.Control>
+                    </div>:<></>}
+                    
+                  {selected7? <div>
+                    <Form.Control type='text'></Form.Control>
+                    </div>:<></>}
                   </Col>
+                </Row>
+                <Row>
+                    <Col xs={6}>
+                    <Form.Label className='fw-bold mb-3 mt-3'>Designation</Form.Label>
+                    <Form.Control type='text'></Form.Control>
+                    </Col>
+                    <Col xs={6}>
+                    <Form.Label className='fw-bold mb-3 mt-3'>System generated Official email ID of user </Form.Label>
+                    <Form.Control type='email'></Form.Control>
+                    </Col>
+                </Row>
+                <Row>
+                    <Col xs={6}>
+                    <Form.Label className='fw-bold mb-3 mt-3'>Allow one candidate submission by user?</Form.Label>
+                    <Form.Select aria-label="Default example">                    
+                    <option value="Yes">Yes</option>
+                    <option value="No">NO</option>                   
+                    </Form.Select>  
+                    </Col>
+                    <Col xs={6}>
+                    <Form.Label className='fw-bold mb-3 mt-3'>Allow user to update the “status” field in “My Workspace </Form.Label>
+                    <Form.Select aria-label="Default example">                    
+                    <option value="Yes">Yes</option>
+                    <option value="No">NO</option>                   
+                    </Form.Select>  
+                    </Col>
+                    <Row>
+                    <Col xs={6}>
+                    <Form.Label className='fw-bold mb-3 mt-3'>Client Coordination</Form.Label>
+                    <Form.Select aria-label="Default example">                    
+                    <option value="User">User</option>
+                    <option value="Admin">Admin</option>                   
+                    </Form.Select>  
+                    </Col>
+                   
+                </Row>
                 </Row>
             </Form>
         </Container>

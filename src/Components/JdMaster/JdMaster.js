@@ -2,7 +2,7 @@ import React, {useState} from 'react'
 import { Container, Table,Row,Col,Button,Modal, Form } from 'react-bootstrap'
 import NavbarMenu from '../NavbarMenu/NavbarMenu'
 import Sidebar from '../Sidebar/Sidebar'
-import { ToastContainer } from 'react-toastify';
+import { ToastContainer,toast } from 'react-toastify';
 import { Link } from 'react-router-dom';
 
 import {CSVLink} from "react-csv"
@@ -55,7 +55,7 @@ const csvReport = {
 
   const handleClose1 = () => setShow1(false);
   const handleShow1 = () => setShow1(true);
-  
+  const notify = () => toast.success("saved");
   const [show2, setShow2] = useState(false);
 
   const handleClose2 = () => setShow2(false);
@@ -77,6 +77,14 @@ const csvReport = {
 
   const handleClose6 = () => setShow6(false);
   const handleShow6 = () => setShow6(true);
+  const [show7, setShow7] = useState(false);
+
+  const handleClose7 = () => setShow7(false);
+  const handleShow7 = () => setShow7(true);
+  const [show8, setShow8] = useState(false);
+
+  const handleClose8 = () => setShow8(false);
+  const handleShow8 = () => setShow8(true);
   return (
     <div>
         <Sidebar />
@@ -96,10 +104,13 @@ const csvReport = {
                 <tr>
                   <th></th>
                 <th>JD number</th>
+                <th>Company</th>
                             <th>Assured Delivery Date-Time </th>
                             <th>Client details</th>
-                            <th>JD status </th>
                             <th>User name who accepted the JD</th>
+                            <th>User ID who accepted the JD</th>
+                            <th>JD status </th>
+                            
                             <th>Category</th>
                             <th>Force to use our database? </th>
                             <th>Exclusivity</th>
@@ -107,23 +118,26 @@ const csvReport = {
                           
                             <th>priority tag(P) </th>
                             <th>JD details</th>
-                           
-                            <th>Company</th>
+                           <th>Client ID</th>
+                            
                             
                             <th>Job description </th>
                             <th>Terms of JD</th>
                             <th>remarks/comments</th>
                             <th>Client Coordination </th>
                             <th>Admin spoc </th>
-                            
+                            <th>Client Spoc</th>
+                            <th>Client Email List</th>
+                          
                             <th>Allow one candidate submission by user?  </th>
                             <th>JD Acceptance</th>
                             <th>Submission Date</th>
-                            <th>Feedback from client updated by user</th>
+                            <th>Exchange notes with admin</th>
                             <th>Feedback from admin </th>
                             <th>Cvs quality approval</th>
                             <th>Status as per User</th>
                             <th>Offer</th>
+                            <th>Payout</th>
                             <th>JD upload date-time</th>
                             <th>Action</th>
                     
@@ -133,8 +147,13 @@ const csvReport = {
             <tr>
                <td><Form.Check type='checkbox'></Form.Check></td>
                     <td>1</td>
+                    <td   className='position'> company Name<td className='absolute'> <span className='d-flex'> 
+            
+            <i className="fas fa-globe me-2" as={Link} to="'/www.talenttracker.com" ></i> | <i className="fab fa-linkedin ms-2 me-2" as={Link} to='/'></i> | <i className="fas fa-info-circle ms-2" onClick={handleShow4}></i>  </span></td></td>
                     <td>Prashant</td>
                     <td>2</td>
+                    <td>na</td>
+                    
                     <td>Na</td>
                     <td>4</td>
                     <td>n/a</td>
@@ -143,10 +162,8 @@ const csvReport = {
                       <td>na</td>
                       <td>Na</td>
                     <td  onClick={handleShow1} style={{color:'green', textDecoration:'underline'}}><i className='fa fa-briefcase'></i></td>
-                    <td   className='position'> company Name<td className='absolute'> <span className='d-flex'> 
-            
-            <i className="fas fa-globe me-2" as={Link} to="'/www.talenttracker.com" ></i> | <i className="fab fa-linkedin ms-2 me-2" as={Link} to='/'></i> | <i className="fas fa-info-circle ms-2" onClick={handleShow4}></i>  </span></td></td>
-                    
+                    <td>na</td>
+                                      
                    
                     <td >n/a</td>
                     <td onClick={handleShow5} style={{color:'orange', textDecoration:'underline'}}><i className='fa fa-eye'></i></td>
@@ -156,237 +173,24 @@ const csvReport = {
                     
                     <td>Indivisual</td>
                     <td onClick={handleShow6} style={{color:'brown' ,textDecoration:'underline'}}><i className='fa fa-user'></i></td>
+                    <td onClick={handleShow7} style={{color:'black' ,textDecoration:'underline'}}><i className='fas fa-user-circle'></i></td>
+                    <td>na</td>
                     <td>patna</td>
                     <td  onClick={handleShow3} style={{color:'red', textDecoration:'underline'}}><i className='fa fa-info-circle'></i></td>
                     <td >n/a</td>
-                    <td >n/a</td>
+                    <td ><Button variant='success' onClick={handleShow8} >Add Text</Button></td>
                     <td >na</td>
-                    <td >n/a</td>
+                    <td ><Button variant='warning' as={Link} to="/">Approve</Button></td>
                     <td>na</td>
                     <td  onClick={handleShow2} style={{color:'blue', textDecoration:'underline'}}><i className='fa fa-info-circle'></i></td>
+                    <td>na</td>
                     <td>Na</td>
                     <td>  <Button variant='primary' as={Link} to='/edit-jd-master'><i className='fa fa-edit'></i></Button></td>
                     
                    <td> <Button variant='danger'><i className='fa fa-trash'></i></Button></td>    
                 </tr>
-                <tr>
-                   <td><Form.Check type='checkbox'></Form.Check></td>
-                    <td>1</td>
-                    <td>Prashant</td>
-                    <td>2</td>
-                    <td>Na</td>
-                    <td>4</td>
-                    <td>n/a</td>
-                    <td >n/a</td>
-                    <td>na</td>
-                      <td>na</td>
-                      <td>Na</td>
-                    <td  onClick={handleShow1} style={{color:'green', textDecoration:'underline'}}><i className='fa fa-briefcase'></i></td>
-                    <td  onClick={handleShow4} style={{color:'blue', textDecoration:'underline'}}><i className='fa fa-briefcase'></i></td>
-                   
-                    <td >n/a</td>
-                    <td onClick={handleShow5} style={{color:'orange', textDecoration:'underline'}}><i className='fa fa-eye'></i></td>
-                   
-                    <td>n/a</td>
-                    
-                    
-                    <td>Indivisual</td>
-                    <td onClick={handleShow6} style={{color:'brown' ,textDecoration:'underline'}}><i className='fa fa-user'></i></td>
-                    <td>patna</td>
-                    <td  onClick={handleShow3} style={{color:'red', textDecoration:'underline'}}><i className='fa fa-info-circle'></i></td>
-                    <td >n/a</td>
-                    <td >n/a</td>
-                    <td >na</td>
-                    <td >n/a</td>
-                    <td>na</td>
-                    <td  onClick={handleShow2} style={{color:'blue', textDecoration:'underline'}}><i className='fa fa-info-circle'></i></td>
-                    <td>Na</td>
-                    <td><Button variant='primary' as={Link} to='/edit-jd-master'><i className='fa fa-edit'></i></Button></td>
-                    
-                    <td><Button variant='danger'><i className='fa fa-trash'></i></Button></td>               
-                </tr>
-                <tr>
-                   <td><Form.Check type='checkbox'></Form.Check></td>
-                    <td>1</td>
-                    <td>Prashant</td>
-                    <td>2</td>
-                    <td>Na</td>
-                    <td>4</td>
-                    <td>n/a</td>
-                    <td >n/a</td>
-                    <td>na</td>
-                      <td>na</td>
-                      <td>Na</td>
-                    <td  onClick={handleShow1} style={{color:'green', textDecoration:'underline'}}><i className='fa fa-briefcase'></i></td>
-                    <td  onClick={handleShow4} style={{color:'blue', textDecoration:'underline'}}><i className='fa fa-briefcase'></i></td>
-                   
-                    <td >n/a</td>
-                    <td onClick={handleShow5} style={{color:'orange', textDecoration:'underline'}}><i className='fa fa-eye'></i></td>
-                   
-                    <td>n/a</td>
-                    
-                    
-                    <td>Indivisual</td>
-                    <td onClick={handleShow6} style={{color:'brown' ,textDecoration:'underline'}}><i className='fa fa-user'></i></td>
-                    <td>patna</td>
-                    <td  onClick={handleShow3} style={{color:'red', textDecoration:'underline'}}><i className='fa fa-info-circle'></i></td>
-                    <td >n/a</td>
-                    <td >n/a</td>
-                    <td >na</td>
-                    <td >n/a</td>
-                    <td>na</td>
-                    <td  onClick={handleShow2} style={{color:'blue', textDecoration:'underline'}}><i className='fa fa-info-circle'></i></td>
-                    <td>Na</td>
-                    <td><Button variant='primary' as={Link} to='/edit-jd-master'><i className='fa fa-edit'></i></Button></td>
-                    
-                    <td><Button variant='danger'><i className='fa fa-trash'></i></Button></td>               
-                </tr>
-                <tr>
-                   <td><Form.Check type='checkbox'></Form.Check></td>
-                    <td>1</td>
-                    <td>Prashant</td>
-                    <td>2</td>
-                    <td>Na</td>
-                    <td>4</td>
-                    <td>n/a</td>
-                    <td >n/a</td>
-                    <td>na</td>
-                      <td>na</td>
-                      <td>Na</td>
-                    <td  onClick={handleShow1} style={{color:'green', textDecoration:'underline'}}><i className='fa fa-briefcase'></i></td>
-                    <td  onClick={handleShow4} style={{color:'blue', textDecoration:'underline'}}><i className='fa fa-briefcase'></i></td>
-                   
-                    <td >n/a</td>
-                    <td onClick={handleShow5} style={{color:'orange', textDecoration:'underline'}}><i className='fa fa-eye'></i></td>
-                   
-                    <td>n/a</td>
-                    
-                    
-                    <td>Indivisual</td>
-                    <td onClick={handleShow6} style={{color:'brown' ,textDecoration:'underline'}}><i className='fa fa-user'></i></td>
-                    <td>patna</td>
-                    <td  onClick={handleShow3} style={{color:'red', textDecoration:'underline'}}><i className='fa fa-info-circle'></i></td>
-                    <td >n/a</td>
-                    <td >n/a</td>
-                    <td >na</td>
-                    <td >n/a</td>
-                    <td>na</td>
-                    <td  onClick={handleShow2} style={{color:'blue', textDecoration:'underline'}}><i className='fa fa-info-circle'></i></td>
-                    <td>Na</td>
-                    <td><Button variant='primary' as={Link} to='/edit-jd-master'><i className='fa fa-edit'></i></Button></td>
-                    
-                    <td><Button variant='danger'><i className='fa fa-trash'></i></Button></td>               
-                </tr>
-                <tr>
-                   <td><Form.Check type='checkbox'></Form.Check></td>
-                    <td>1</td>
-                    <td>Prashant</td>
-                    <td>2</td>
-                    <td>Na</td>
-                    <td>4</td>
-                    <td>n/a</td>
-                    <td >n/a</td>
-                    <td>na</td>
-                      <td>na</td>
-                      <td>Na</td>
-                    <td  onClick={handleShow1} style={{color:'green', textDecoration:'underline'}}><i className='fa fa-briefcase'></i></td>
-                    <td  onClick={handleShow4} style={{color:'blue', textDecoration:'underline'}}><i className='fa fa-briefcase'></i></td>
-                   
-                    <td >n/a</td>
-                    <td onClick={handleShow5} style={{color:'orange', textDecoration:'underline'}}><i className='fa fa-eye'></i></td>
-                   
-                    <td>n/a</td>
-                    
-                    
-                    <td>Indivisual</td>
-                    <td onClick={handleShow6} style={{color:'brown' ,textDecoration:'underline'}}><i className='fa fa-user'></i></td>
-                    <td>patna</td>
-                    <td  onClick={handleShow3} style={{color:'red', textDecoration:'underline'}}><i className='fa fa-info-circle'></i></td>
-                    <td >n/a</td>
-                    <td >n/a</td>
-                    <td >na</td>
-                    <td >n/a</td>
-                    <td>na</td>
-                    <td  onClick={handleShow2} style={{color:'blue', textDecoration:'underline'}}><i className='fa fa-info-circle'></i></td>
-                    <td>Na</td>
-                    <td><Button variant='primary' as={Link} to='/edit-jd-master'><i className='fa fa-edit'></i></Button></td>
-                    
-                    <td><Button variant='danger'><i className='fa fa-trash'></i></Button></td>               
-                </tr>
-                <tr>
-                   <td><Form.Check type='checkbox'></Form.Check></td>
-                    <td>1</td>
-                    <td>Prashant</td>
-                    <td>2</td>
-                    <td>Na</td>
-                    <td>4</td>
-                    <td>n/a</td>
-                    <td >n/a</td>
-                    <td>na</td>
-                      <td>na</td>
-                      <td>Na</td>
-                    <td  onClick={handleShow1} style={{color:'green', textDecoration:'underline'}}><i className='fa fa-briefcase'></i></td>
-                    <td  onClick={handleShow4} style={{color:'blue', textDecoration:'underline'}}><i className='fa fa-briefcase'></i></td>
-                   
-                    <td >n/a</td>
-                    <td onClick={handleShow5} style={{color:'orange', textDecoration:'underline'}}><i className='fa fa-eye'></i></td>
-                   
-                    <td>n/a</td>
-                    
-                    
-                    <td>Indivisual</td>
-                    <td onClick={handleShow6} style={{color:'brown' ,textDecoration:'underline'}}><i className='fa fa-user'></i></td>
-                    <td>patna</td>
-                    <td  onClick={handleShow3} style={{color:'red', textDecoration:'underline'}}><i className='fa fa-info-circle'></i></td>
-                    <td >n/a</td>
-                    <td >n/a</td>
-                    <td >na</td>
-                    <td >n/a</td>
-                    <td>na</td>
-                    <td  onClick={handleShow2} style={{color:'blue', textDecoration:'underline'}}><i className='fa fa-info-circle'></i></td>
-                    <td>Na</td>
-                    <td><Button variant='primary' as={Link} to='/edit-jd-master'><i className='fa fa-edit'></i>
-                    </Button></td>
-                    
-                    <td><Button variant='danger'><i className='fa fa-trash'></i></Button></td>               
-                </tr>
-                <tr>
-                   <td><Form.Check type='checkbox'></Form.Check></td>
-                    <td>1</td>
-                    <td>Prashant</td>
-                    <td>2</td>
-                    <td>Na</td>
-                    <td>4</td>
-                    <td>n/a</td>
-                    <td >n/a</td>
-                    <td>na</td>
-                      <td>na</td>
-                      <td>Na</td>
-                    <td  onClick={handleShow1} style={{color:'green', textDecoration:'underline'}}><i className='fa fa-briefcase'></i></td>
-                    <td  onClick={handleShow4} style={{color:'blue', textDecoration:'underline'}}><i className='fa fa-briefcase'></i></td>
-                   
-                    <td >n/a</td>
-                    <td onClick={handleShow5} style={{color:'orange', textDecoration:'underline'}}><i className='fa fa-eye'></i></td>
-                   
-                    <td>n/a</td>
-                    
-                    
-                    <td>Indivisual</td>
-                    <td onClick={handleShow6} style={{color:'brown' ,textDecoration:'underline'}}><i className='fa fa-user'></i></td>
-                    <td>patna</td>
-                    <td  onClick={handleShow3} style={{color:'red', textDecoration:'underline'}}><i className='fa fa-info-circle'></i></td>
-                    <td >n/a</td>
-                    <td >n/a</td>
-                    <td >na</td>
-                    <td >n/a</td>
-                    <td>na</td>
-                    <td  onClick={handleShow2} style={{color:'blue', textDecoration:'underline'}}><i className='fa fa-info-circle'></i></td>
-                    <td>Na</td>
-                    <td><Button variant='primary' as={Link} to='/edit-jd-master'><i className='fa fa-edit'></i></Button></td>
-                    
-                    <td><Button variant='danger'><i className='fa fa-trash'></i></Button></td>               
-                </tr>
-            </tbody>
+                
+                </tbody>
             </Table>
             
             
@@ -412,7 +216,9 @@ const csvReport = {
             </Col>
             <Col xs={6}>
             <h6 className='fw-bold mt-5 mb-5'> <i className="fab fa-intercom"></i> Rounds of an interview: <span className='text-muted'> 13</span></h6>
-
+            <h6 className='fw-bold mt-5 mb-5'> <i className="fab fa-home"></i> Industry: <span className='text-muted'> services</span></h6>
+            <h6 className='fw-bold mt-5 mb-5'> <i className="	far fa-address-card"></i> list of preferred companies to source candidates: <span className='text-muted'> services</span></h6>
+            
             <h6 className='fw-bold mt-5 mb-5'> <i className="fas fa-book me-2"></i> JD Tittle: <span className='text-muted'> n/a</span></h6>
             <h6 className='fw-bold mt-5 mb-5'> <i className="fas fa-map-marked-alt"></i> Mininum number of submissions required: <span className='text-muted'> Patna, Bihar , India</span></h6>
             <h6 className='fw-bold mt-5 mb-5'> <i className="fab fa-intercom"></i>Audio JD: <span className='text-muted'> 13</span></h6>
@@ -435,10 +241,14 @@ const csvReport = {
         <Modal.Body>
             <Row>
                 <Col xs={6}>
-                <h6 className='fw-bold mt-5 mx-3'> Candidate ID </h6>
+                <h6 className='fw-bold mt-5 mx-3'> Todays Date Time :<span className='text-muted'> 22/05/2022  12:00pm</span> </h6>
+                <h6 className='fw-bold mt-5 mx-3'> Jd Number :<span className='text-muted'> 10065432</span> </h6>
+                <h6 className='fw-bold mt-5 mx-3'> User ID :<span className='text-muted'> 100765</span></h6>
+                <h6 className='fw-bold mt-5 mx-3'> Candidate ID :<span className='text-muted'> 100765432</span> </h6>
             
-            <h6 className='fw-bold mt-5 mx-3'>  Offer Candidate Name </h6>
+            <h6 className='fw-bold mt-5 mx-3'>  Client ID :<span className='text-muted'> 1007654rui</span></h6>
             
+            <h6 className='fw-bold mt-5 mx-3'>  Offer Candidate Name :<span className='text-muted'> john</span></h6>
             <h6 className='fw-bold mt-5 mb-5 mx-3'> <i className="fas fa-file-csv me-2"></i> Offered Designation :<span className='text-muted'> 100</span></h6>
             <h6 className='fw-bold mt-5 mb-5 mx-3'> <i className="fas fa-calendar-alt me-2"></i> Candidate Work Location: <span className='text-muted'> Delhi</span></h6>
             <h6 className='fw-bold mt-5 mb-5 mx-3'> <i className="fas fa-money-bill-alt me-2"></i> Offered CTC: <span className='text-muted'> 20,000</span></h6>
@@ -475,11 +285,10 @@ const csvReport = {
             <h6 className='fw-bold mt-5 mb-5 mx-3'> <i className="fas fa-user me-2"></i>  User name who accepted the JD: <span className='text-muted'> Delhi</span></h6>
             <h6 className='fw-bold mt-5 mb-5 mx-3'> <i className="fas fa-money-bill-alt me-2"></i>Date time of accepting : <span className='text-muted'> 20,000</span></h6>
             <h6 className='fw-bold mt-5 mb-5 mx-3'> <i className="fas fa-file-csv me-2"></i> Assured delivery date-time :<span className='text-muted'> 20%</span></h6>
-            <h6 className='fw-bold mt-5 mb-5 mx-3'> <i className="fas fa-calendar-alt me-2"></i>Own portal/our portal : <span className='text-muted'> 6788</span></h6>
             
             </Col>
             <Col xs={6}>
-            <h6 className='fw-bold mt-5 mb-5 mx-3'> <i className="fas fa-file-csv me-2"></i> Assured delivery date-time :<span className='text-muted'> 20%</span></h6>
+            <h6 className='fw-bold mt-5 mb-5 mx-3'> <i className="fas fa-file-csv me-2"></i> payout :<span className='text-muted'> 20%</span></h6>
             <h6 className='fw-bold mt-5 mb-5 mx-3'> <i className="fas fa-calendar-alt me-2"></i>User has chosen to use Own portal/our portal : <span className='text-muted'> 6788</span></h6>
            
             </Col>
@@ -497,14 +306,159 @@ const csvReport = {
         </Modal.Header>
         <Modal.Body>
             <Row>
-                <Col xs={6}>
+                {/* <Col xs={6}>
                          
             <h6 className='fw-bold mt-5 mb-5 mx-3'> <i className="fas fa-file-csv me-2"></i> Tittle :<span className='text-muted'> Talent</span></h6>
             <h6 className='fw-bold mt-5 mb-5 mx-3'> <i className="fas fa-user me-2"></i>  Industry: <span className='text-muted'> Services</span></h6>
             <h6 className='fw-bold mt-5 mb-5 mx-3'> <i className="fas fa-browser me-2"></i>Client Name : <span className='text-muted'> Isha</span></h6>
             
+            </Col> */}
+
+            </Row>
+            <Row>
+                <Col xs={6}>
+                <Form.Label  className='fw-bold mb-3 mt-3'>Client ID  </Form.Label>
+                <Form.Control type='text' placeholder='   '/>
+                </Col>
+                
+               
+              </Row>
+              <Row>
+              <Col xs={6}>
+                <Form.Label  className='fw-bold mb-3 mt-3'>Company Name </Form.Label>
+                <Form.Control type='text' value=' pvt ltd  '/>
+                </Col>
+                <Col xs={6}>
+                <Form.Label  className='fw-bold mb-3 mt-3'>List of preferred companies to source candidate  </Form.Label>
+                <Form.Control type='text' value='talenttracker'/>
+                </Col>
+               
+              </Row>
+              <Row>
+                <Col xs={6}>
+                <Form.Label  className='fw-bold mb-3 mt-3'>Client company linkedin URL </Form.Label>
+                <Form.Control type='text' value='https://talenttracker.linkedin'/>
+                </Col>
+                <Col xs={6}>
+                <Form.Label  className='fw-bold mb-3 mt-3'>sign up rate with client</Form.Label>
+                <Form.Control type='text' value=' 8% '/>
+                </Col>
+              </Row>
+              <Row>
+                <Col xs={6}>
+                <Form.Label  className='fw-bold mb-3 mt-3'> Replacement period</Form.Label>
+                <Form.Control type='text' value='30 days'/>
+                </Col>
+                <Col xs={6}>
+                <Form.Label  className='fw-bold mb-3 mt-3'>Payment Terms</Form.Label>
+                <Form.Control type='text' value=' 30 days '/>
+                </Col>
+              </Row>
+              <Row>
+                <Col xs={6}>
+                <Form.Label  className='fw-bold mb-3 mt-3'>client company address </Form.Label>
+                <Form.Control type='text' value='patna'/>
+                </Col>
+                <Col xs={6}>
+                <Form.Label  className='fw-bold mb-3 mt-3'>Industry</Form.Label>
+                <Form.Control type='text' value=' services '/>
+                </Col>
+              </Row>
+              <Row>
+                <Col xs={6}>
+                <Form.Label  className='fw-bold mb-3 mt-3'> Company type</Form.Label>
+                <Form.Control type='text' value='Startup'/>
+                </Col>
+                <Col xs={6}>
+                <Form.Label  className='fw-bold mb-3 mt-3'>Company Size</Form.Label>
+                <Form.Control type='text' value=' Na'/>
+                </Col>
+              </Row>
+              <Row>
+            <Col xs={4}>
+               <Form.Label className=''>Client Spoc1 Name</Form.Label>  
+               <Form.Control type='text' value='isha'/>        
+                      
+            </Col>
+            <Col xs={4}>
+               <Form.Label className=''>Client Spoc2 Name</Form.Label>  
+               <Form.Control type='text' value='isha'/>        
+                      
+            </Col>
+            <Col xs={4}>
+               <Form.Label className=''>Client Spoc3 Name</Form.Label>  
+               <Form.Control type='text' value='isha'/>        
+                      
             </Col>
             </Row>
+            <Row>
+            <Col xs={4}>
+               <Form.Label className=''>Client Spoc1 Email</Form.Label>  
+               <Form.Control type='text' value='bhgfjdh@gmail.com'/>        
+                      
+            </Col>
+            <Col xs={4}>
+               <Form.Label className=''>Client Spoc2 Email</Form.Label>  
+               <Form.Control type='text' value='bhgfjdh@gmail.com'/>        
+                      
+            </Col>
+            <Col xs={4}>
+               <Form.Label className=''>Client Spoc3 Email</Form.Label>  
+               <Form.Control type='text' value='bhgfjdh@gmail.com'/>        
+                      
+            </Col>
+            </Row>
+            <Row>
+            <Col xs={4}>
+               <Form.Label className=''>Client Spoc1 Mobile Number</Form.Label>  
+               <Form.Control type='text' value='7865432234'/>        
+          
+            
+            </Col>
+            <Col xs={4}>
+               <Form.Label className=''>Client Spoc2 Mobile Number</Form.Label>  
+               <Form.Control type='text' value='7865432234'/>        
+                      
+            </Col>
+            <Col xs={4}>
+               <Form.Label className=''>Client Spoc3 Mobile Number</Form.Label>  
+               <Form.Control type='text' value='7865432234'/>        
+          
+            
+            </Col>
+            </Row>
+            <Row>
+            <Col xs={4}>
+               <Form.Label className=''>Client Spoc1 Designation</Form.Label>  
+               <Form.Control type='text' value='na'/>        
+          
+            
+            </Col>
+            <Col xs={8}>
+               <Form.Label className=''>Client Spoc2 Designation</Form.Label>  
+               <Form.Control type='text' value='na'/>        
+          
+            
+            </Col>
+            <Col xs={4}>
+               <Form.Label className=''>Client Spoc3 Designation</Form.Label>  
+               <Form.Control type='text' value='na'/>        
+          
+            
+            </Col>
+            </Row>
+                <Row>
+                <Col xs={6}>
+                <Form.Label  className='fw-bold mb-3 mt-3'>Client spoc mobile number to be disclosed to user for this JD? (Y/N)</Form.Label>
+                <Form.Control type='text' value='yes'/>
+                </Col>
+                <Col xs={6}>
+                <Form.Label  className='fw-bold mb-3 mt-3'>Client company website</Form.Label>
+                <Form.Control type='text' value=' www.talenttracker.com '/>
+                </Col>
+               
+              </Row>
+           
         </Modal.Body>
         <Modal.Footer>
           <Button variant="secondary" onClick={handleClose4}>
@@ -551,7 +505,7 @@ const csvReport = {
             <Row>
             <Col xs={6}>
                <Form.Label className=''>Admin Spoc Name</Form.Label>  
-               <Form.Control type='text'/>        
+               <Form.Control type='text' value='isha'/>        
           
             
             </Col>
@@ -559,7 +513,7 @@ const csvReport = {
             <Row>
             <Col xs={6}>
                <Form.Label className=''>Admin Spoc Email</Form.Label>  
-               <Form.Control type='text'/>        
+               <Form.Control type='text' value='isha.jai@gmail.com'/>        
           
             
             </Col>
@@ -567,7 +521,7 @@ const csvReport = {
             <Row>
             <Col xs={6}>
                <Form.Label className=''>Admin Spoc Mobile Number</Form.Label>  
-               <Form.Control type='text'/>        
+               <Form.Control type='text' value='8796543234'/>        
           
             
             </Col>
@@ -578,6 +532,115 @@ const csvReport = {
           <Button variant="secondary" onClick={handleClose6}>
             Close
           </Button>
+        </Modal.Footer>
+      </Modal>
+
+      <Modal show={show7} onHide={handleClose7} size='lg'>
+        <Modal.Header closeButton>
+          <Modal.Title> <i className="fas fa-info-circle me-3" ></i>Admin Spoc</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>
+          <Form>
+            <Row>
+            <Col xs={4}>
+               <Form.Label className=''>Client Spoc1 Name</Form.Label>  
+               <Form.Control type='text' value='isha'/>        
+                      
+            </Col>
+            <Col xs={4}>
+               <Form.Label className=''>Client Spoc2 Name</Form.Label>  
+               <Form.Control type='text' value='isha'/>        
+                      
+            </Col>
+            <Col xs={4}>
+               <Form.Label className=''>Client Spoc3 Name</Form.Label>  
+               <Form.Control type='text' value='isha'/>        
+                      
+            </Col>
+            </Row>
+            <Row>
+            <Col xs={4}>
+               <Form.Label className=''>Client Spoc1 Email</Form.Label>  
+               <Form.Control type='text' value='bhgfjdh@gmail.com'/>        
+                      
+            </Col>
+            <Col xs={4}>
+               <Form.Label className=''>Client Spoc2 Email</Form.Label>  
+               <Form.Control type='text' value='bhgfjdh@gmail.com'/>        
+                      
+            </Col>
+            <Col xs={4}>
+               <Form.Label className=''>Client Spoc3 Email</Form.Label>  
+               <Form.Control type='text' value='bhgfjdh@gmail.com'/>        
+                      
+            </Col>
+            </Row>
+            <Row>
+            <Col xs={4}>
+               <Form.Label className=''>Client Spoc1 Mobile Number</Form.Label>  
+               <Form.Control type='text' value='7865432234'/>        
+          
+            
+            </Col>
+            <Col xs={4}>
+               <Form.Label className=''>Client Spoc2 Mobile Number</Form.Label>  
+               <Form.Control type='text' value='7865432234'/>        
+                      
+            </Col>
+            <Col xs={4}>
+               <Form.Label className=''>Client Spoc3 Mobile Number</Form.Label>  
+               <Form.Control type='text' value='7865432234'/>        
+          
+            
+            </Col>
+            </Row>
+            <Row>
+            <Col xs={4}>
+               <Form.Label className=''>Client Spoc1 Designation</Form.Label>  
+               <Form.Control type='text' value='na'/>        
+          
+            
+            </Col>
+            <Col xs={8}>
+               <Form.Label className=''>Client Spoc2 Designation</Form.Label>  
+               <Form.Control type='text' value='na'/>        
+          
+            
+            </Col>
+            <Col xs={4}>
+               <Form.Label className=''>Client Spoc3 Designation</Form.Label>  
+               <Form.Control type='text' value='na'/>        
+          
+            
+            </Col>
+            </Row>
+            </Form>
+        </Modal.Body>
+        <Modal.Footer>
+          <Button variant="secondary" onClick={handleClose7}>
+            Close
+          </Button>
+        </Modal.Footer>
+      </Modal>
+      <Modal
+            show={show8}
+            size="lg"
+            onHide={handleClose8}
+            backdrop="static"
+            keyboard={false} >
+            <Modal.Header closeButton>
+              <Modal.Title>Exchange notes with admin</Modal.Title>
+            </Modal.Header>
+            <Modal.Body>
+                <Form>
+                <Form.Control as="textarea" rows={3} />
+                </Form>
+            </Modal.Body>
+        <Modal.Footer>
+          <Button variant="secondary" onClick={handleClose8}>
+            Close
+          </Button>
+          <Button variant="primary" onClick={notify}>Save</Button>
         </Modal.Footer>
       </Modal>
 

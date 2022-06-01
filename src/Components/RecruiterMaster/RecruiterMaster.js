@@ -80,7 +80,7 @@ const csvReport = {
             <div className='mb-2'>
             
           <ButtonGroup>
-            <Button variant='success'  as={Link} to='/Filter' className='mx-5 mb-3 mt-3'><i className="fa fa-filter me-2" style={{color:'#fff'}} ></i>Filter</Button>
+            <Button variant='success'  as={Link} to='/Filter' className=' mb-3 mt-3'><i className="fa fa-filter me-2" style={{color:'#fff'}} ></i>Filter</Button>
             
           </ButtonGroup>
          
@@ -311,26 +311,27 @@ const csvReport = {
             <Row>
                 <Col xs={6}>
                     <Form.Label className='fw-bold mb-3'>Category</Form.Label>
-                <Form.Select aria-label="Default select example">
+                    <Form.Control type="text" value=" A " />
+                {/* <Form.Select aria-label="Default select example">
                     <option>Select</option>
                     <option value="1">A</option>
                     <option value="2">B</option>
                     <option value="3">C</option>
                     <option value="4">in-house</option>
-                    </Form.Select>
+                    </Form.Select> */}
                 </Col>
                 <Col xs={6}>
                 <Form.Label className='fw-bold mb-3 '>CV Quality Check</Form.Label>
-                <Form.Select aria-label="Default select example">
+                {/* <Form.Select aria-label="Default select example">
                     <option>Select</option>
                     <option value="1">YES</option>
                     <option value="2">NO</option>
-                    </Form.Select>
-                    
+                    </Form.Select> */}
+                    <Form.Control type="text" value=" no " />
                     </Col>
                     <Col xs={6}>
-                    <Form.Label className='fw-bold mb-3 mt-3'>c.	How many JDs a user can unlock in a day</Form.Label>
-                <Form.Select aria-label="Default select example">
+                    <Form.Label className='fw-bold mb-3 mt-3'>How many JDs a user can unlock in a day?</Form.Label>
+                {/* <Form.Select aria-label="Default select example">
                     <option>Select</option>
                     <option value="1">1</option>
                     <option value="2">2</option>
@@ -338,51 +339,65 @@ const csvReport = {
                     <option value="4">8</option>
                     <option value="5">16</option>
                     <option value="6">unlimited</option>
-                    </Form.Select>
+                    </Form.Select> */}
+                    <Form.Control type="text" value=" 5 " />
                 </Col>
                 <Col xs={6}>
-                <Form.Label className='fw-bold mb-3 mt-3'>JD to be shown to user? </Form.Label>
-                <Form.Select aria-label="Default select example">
+                 <Form.Label className='fw-bold mb-3 mt-3'>JD to be shown to user? </Form.Label>
+                {/* <Form.Select aria-label="Default select example">
                     <option>Select</option>
                     <option value="1">YES</option>
                     <option value="2">NO</option>
-                    </Form.Select>
-                    
+                    </Form.Select> */} 
+                     <Form.Control type="text" value=" na " />
                     </Col>
             </Row>
             <Row>
                 <Col xs={6}>
                 <Form.Label className='fw-bold mb-3 mt-3'>Designation</Form.Label>
-                <Form.Control type="text" placeholder="  " />
+                <Form.Control type="text" value=" na " />
                 </Col>
                 <Col xs={6}>
                 <Form.Label className='fw-bold mb-3 mt-3'>System generated Official email ID of user </Form.Label>
-                <Form.Control type="email" placeholder="Enter Email" />
+                <Form.Control type="email" value="abc87@gmail.com" />
                 </Col>
             </Row>
             <Row>
                 <Col xs={6}>
                 <Form.Label className='fw-bold mb-3 mt-3'>Compulsion</Form.Label>
-                <Form.Check type="checkbox" label="Compulsory Use Our Database" />
-                <Form.Check type="checkbox" label=". Compulsory Use Own Database (Naukri, Monster, Timesjobs etc)" />
+                <Form.Control type="text" value=" Compulsory use our database " />
+                {/* <Form.Check type="checkbox" label="Compulsory Use Our Database" />
+                <Form.Check type="checkbox" label=". Compulsory Use Own Database (Naukri, Monster, Timesjobs etc)" /> */}
                 </Col>
                 <Col xs={6}>
                 <Form.Label className='fw-bold mb-3 mt-3'>Candidate mobile number </Form.Label>
-                <Form.Check type="checkbox" label="Allow user to remove candidate mobile number from the tracker sheet" />
+                <Form.Check type="checkbox" label="Allow user to remove candidate mobile number from the tracker sheet" value='checked' />
                 </Col>
             </Row>
             <Row>
             <Col xs={6}>
                 <Form.Label className='fw-bold mb-3 mt-3'>Special remarks by user </Form.Label>
-                <Form.Check type="checkbox" label="Allow user to write special remarks, comments in the tracker sheet" />
+                <Form.Control type="text" value=" na " />
+                {/* <Form.Check type="checkbox" label="Allow user to write special remarks, comments in the tracker sheet"  /> */}
                 </Col>
                 <Col xs={6}>
                 <Form.Label className='fw-bold mb-3 mt-3'>Allow one candidate submission by user?  </Form.Label>
-                <Form.Select aria-label="Default select example">
+                {/* <Form.Select aria-label="Default select example">
                     <option>Select</option>
                     <option value="1">YES</option>
                     <option value="2">NO</option>
-                    </Form.Select>
+                    </Form.Select> */}
+                    <Form.Control type="text" value=" yes " />
+                </Col>
+            </Row>
+            <Row>
+            <Col xs={6}>
+                <Form.Label className='fw-bold mb-3 mt-3'>Based on my KYC, I am assigned as a  </Form.Label>
+                <Form.Control type="text" value=" Consultancy " />
+                </Col>
+                <Col xs={6}>
+                <Form.Label className='fw-bold mb-3 mt-3'>Am I assigned a fixed payout irrespective of the JD I handle?   </Form.Label>
+                <Form.Control type="text" value=" Yes" />
                 </Col>
             </Row>
         </form>
@@ -489,13 +504,13 @@ const csvReport = {
         <Form.Control type='text' value='Individual'/>
               </Col>
               <Col xs={6}>
-              <Form.Label className='fw-bold mb-3 mt-3'>Own portal available? (Naukri, Monsterkkb  Times jobs etc)</Form.Label>
+              <Form.Label className='fw-bold mb-3 mt-3'>Do you have Own portal for candidate sourcing? (Naukri, Monster,  Times jobs, shine etc?)</Form.Label>
         <Form.Control type='text' value='yes'/>
               </Col>
             </Row>
             <Row>
               <Col xs={6}>
-              <Form.Label className='fw-bold mb-3 mt-3'>preferred industries to take JDs? (dropdown of industry sectors)
+              <Form.Label className='fw-bold mb-3 mt-3'>preferred industries to take JDs? 
 </Form.Label>
         <Form.Control type='text' value='services'/>
               </Col>

@@ -46,13 +46,13 @@ const UserDashboard = () => {
     const sorting =(col)=>{
      if(order ==="ASC"){
          const sorted = [...data].sort((a,b)=>
-         a[col]()>b[col]() ? 1 :-1
+         a[col]>b[col] ? 1 :-1
     ) ;
     setdata(sorted);
     setorder("DSC")
     if(order ==="DSC"){
         const sorted = [...data].sort((a,b)=>
-        a[col]()<b[col]() ? 1 :-1
+        a[col]<b[col] ? 1 :-1
    ) ;
    setdata(sorted);
    setorder("ASC")

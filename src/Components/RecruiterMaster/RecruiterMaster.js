@@ -103,7 +103,7 @@ const csvReport = {
                     <th>Cv Quality Check</th>
                     <th>Admin Assigned Information</th>
                     <th>Rating</th>
-                    <th>Consultancy or Indivisual</th>
+                    <th>Consultancy or Individual</th>
                     <th>Mobile No.</th>
                     <th>Current Location</th>
                     <th>Prefrence IT/NON-IT</th>
@@ -125,7 +125,7 @@ const csvReport = {
                     <td>n/a</td>
                     <td  onClick={handleShow} style={{color:'blue', textDecoration:'underline'}}><i class="fa fa-user" aria-hidden="true"></i></td>
                     <td  onClick={handleShow4} style={{color:'yellow', textDecoration:'underline'}}><i class="fa fa-star" aria-hidden="true"></i></td>
-                    <td>Indivisual</td>
+                    <td>Individual</td>
                     <td>82827272828</td>
                     <td>patna</td>
                     <td>n/a</td>
@@ -145,7 +145,7 @@ const csvReport = {
                     <td>n/a</td>
                     <td  onClick={handleShow} style={{color:'blue', textDecoration:'underline'}}><i class="fa fa-user" aria-hidden="true"></i></td>
                     <td  onClick={handleShow4} style={{color:'yellow', textDecoration:'underline'}}><i class="fa fa-star" aria-hidden="true"></i></td>
-                    <td>Indivisual</td>
+                    <td>Individual</td>
                     <td>82827272828</td>
                     <td>patna</td>
                     <td>n/a</td>
@@ -164,7 +164,7 @@ const csvReport = {
                     <td>n/a</td>
                     <td  onClick={handleShow} style={{color:'blue', textDecoration:'underline'}}><i class="fa fa-user" aria-hidden="true"></i></td>
                     <td  onClick={handleShow4} style={{color:'yellow', textDecoration:'underline'}}><i class="fa fa-star" aria-hidden="true"></i></td>
-                    <td>Indivisual</td>
+                    <td>Individual</td>
                     <td>82827272828</td>
                     <td>patna</td>
                     <td>n/a</td>
@@ -183,7 +183,7 @@ const csvReport = {
                     <td>n/a</td>
                     <td  onClick={handleShow} style={{color:'blue', textDecoration:'underline'}}><i class="fa fa-user" aria-hidden="true"></i></td>
                     <td onClick={handleShow4} style={{color:'yellow', textDecoration:'underline'}}><i class="fa fa-star" aria-hidden="true"></i></td>
-                    <td>Indivisual</td>
+                    <td>Individual</td>
                     <td>82827272828</td>
                     <td>patna</td>
                     <td>n/a</td>
@@ -202,7 +202,7 @@ const csvReport = {
                     <td>n/a</td>
                     <td  onClick={handleShow} style={{color:'blue', textDecoration:'underline'}}><i class="fa fa-user" aria-hidden="true"></i></td>
                     <td onClick={handleShow4} style={{color:'yellow', textDecoration:'underline'}}><i class="fa fa-star" aria-hidden="true"></i></td>
-                    <td>Indivisual</td>
+                    <td>Individual</td>
                     <td>82827272828</td>
                     <td>patna</td>
                     <td>n/a</td>
@@ -221,7 +221,7 @@ const csvReport = {
                     <td>n/a</td>
                     <td  onClick={handleShow} style={{color:'blue', textDecoration:'underline'}}>n/a</td>
                     <td onClick={handleShow4} style={{color:'blue', textDecoration:'underline'}}>5</td>
-                    <td>Indivisual</td>
+                    <td>Individual</td>
                     <td>82827272828</td>
                     <td>patna</td>
                     <td>n/a</td>
@@ -240,7 +240,7 @@ const csvReport = {
                     <td>n/a</td>
                     <td  onClick={handleShow} style={{color:'blue', textDecoration:'underline'}}>n/a</td>
                     <td  onClick={handleShow4} style={{color:'blue', textDecoration:'underline'}}>5</td>
-                    <td>Indivisual</td>
+                    <td>Individual</td>
                     <td>82827272828</td>
                     <td>patna</td>
                     <td>n/a</td>
@@ -259,7 +259,7 @@ const csvReport = {
                     <td>n/a</td>
                     <td  onClick={handleShow} style={{color:'blue', textDecoration:'underline'}}>n/a</td>
                     <td  onClick={handleShow4} style={{color:'blue', textDecoration:'underline'}}>5</td>
-                    <td>Indivisual</td>
+                    <td>Individual</td>
                     <td>82827272828</td>
                     <td>patna</td>
                     <td>n/a</td>
@@ -278,7 +278,7 @@ const csvReport = {
                     <td>n/a</td>
                     <td  onClick={handleShow} style={{color:'blue', textDecoration:'underline'}}>n/a</td>
                     <td  onClick={handleShow4} style={{color:'blue', textDecoration:'underline'}}>5</td>
-                    <td>Indivisual</td>
+                    <td>Individual</td>
                     <td>82827272828</td>
                     <td>patna</td>
                     <td>n/a</td>
@@ -309,97 +309,27 @@ const csvReport = {
         <Modal.Body>
         <form>
             <Row>
-                <Col xs={6}>
-                    <Form.Label className='fw-bold mb-3'>Category</Form.Label>
-                    <Form.Control type="text" value=" A " />
-                {/* <Form.Select aria-label="Default select example">
-                    <option>Select</option>
-                    <option value="1">A</option>
-                    <option value="2">B</option>
-                    <option value="3">C</option>
-                    <option value="4">in-house</option>
-                    </Form.Select> */}
-                </Col>
-                <Col xs={6}>
-                <Form.Label className='fw-bold mb-3 '>CV Quality Check</Form.Label>
-                {/* <Form.Select aria-label="Default select example">
-                    <option>Select</option>
-                    <option value="1">YES</option>
-                    <option value="2">NO</option>
-                    </Form.Select> */}
-                    <Form.Control type="text" value=" no " />
-                    </Col>
-                    <Col xs={6}>
-                    <Form.Label className='fw-bold mb-3 mt-3'>How many JDs a user can unlock in a day?</Form.Label>
-                {/* <Form.Select aria-label="Default select example">
-                    <option>Select</option>
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">4</option>
-                    <option value="4">8</option>
-                    <option value="5">16</option>
-                    <option value="6">unlimited</option>
-                    </Form.Select> */}
-                    <Form.Control type="text" value=" 5 " />
-                </Col>
-                <Col xs={6}>
-                 <Form.Label className='fw-bold mb-3 mt-3'>JD to be shown to user? </Form.Label>
-                {/* <Form.Select aria-label="Default select example">
-                    <option>Select</option>
-                    <option value="1">YES</option>
-                    <option value="2">NO</option>
-                    </Form.Select> */} 
-                     <Form.Control type="text" value=" na " />
-                    </Col>
-            </Row>
-            <Row>
-                <Col xs={6}>
-                <Form.Label className='fw-bold mb-3 mt-3'>Designation</Form.Label>
-                <Form.Control type="text" value=" na " />
-                </Col>
-                <Col xs={6}>
-                <Form.Label className='fw-bold mb-3 mt-3'>System generated Official email ID of user </Form.Label>
-                <Form.Control type="email" value="abc87@gmail.com" />
-                </Col>
-            </Row>
-            <Row>
-                <Col xs={6}>
-                <Form.Label className='fw-bold mb-3 mt-3'>Compulsion</Form.Label>
-                <Form.Control type="text" value=" Compulsory use our database " />
-                {/* <Form.Check type="checkbox" label="Compulsory Use Our Database" />
-                <Form.Check type="checkbox" label=". Compulsory Use Own Database (Naukri, Monster, Timesjobs etc)" /> */}
-                </Col>
-                <Col xs={6}>
-                <Form.Label className='fw-bold mb-3 mt-3'>Candidate mobile number </Form.Label>
-                <Form.Check type="checkbox" label="Allow user to remove candidate mobile number from the tracker sheet" value='checked' />
-                </Col>
-            </Row>
-            <Row>
-            <Col xs={6}>
-                <Form.Label className='fw-bold mb-3 mt-3'>Special remarks by user </Form.Label>
-                <Form.Control type="text" value=" na " />
-                {/* <Form.Check type="checkbox" label="Allow user to write special remarks, comments in the tracker sheet"  /> */}
-                </Col>
-                <Col xs={6}>
-                <Form.Label className='fw-bold mb-3 mt-3'>Allow one candidate submission by user?  </Form.Label>
-                {/* <Form.Select aria-label="Default select example">
-                    <option>Select</option>
-                    <option value="1">YES</option>
-                    <option value="2">NO</option>
-                    </Form.Select> */}
-                    <Form.Control type="text" value=" yes " />
-                </Col>
-            </Row>
-            <Row>
-            <Col xs={6}>
-                <Form.Label className='fw-bold mb-3 mt-3'>Based on my KYC, I am assigned as a  </Form.Label>
-                <Form.Control type="text" value=" Consultancy " />
-                </Col>
-                <Col xs={6}>
-                <Form.Label className='fw-bold mb-3 mt-3'>Am I assigned a fixed payout irrespective of the JD I handle?   </Form.Label>
-                <Form.Control type="text" value=" Yes" />
-                </Col>
-            </Row>
+              <Col xs={6}>
+            <h6 className='fw-bold mt-5 mb-5 mx-3' >User Category :<span className='text-muted'> A</span></h6 >
+                
+                <h6 className='fw-bold mt-5 mb-5 mx-3'>How many JDs a user can unlock in a day? :<span className='text-muted'> 20</span></h6 >
+                <h6 className='fw-bold mt-5 mb-5 mx-3'>CVs quality check required for this user ID? :<span className='text-muted'> 20%</span></h6 >
+                <h6 className='fw-bold mt-5 mb-5 mx-3'>Detail JD (doc, pdf file sent by client) to be shown to a particular user even if he or she is  accepting the JD?  :<span className='text-muted'> na</span></h6 >
+                <h6 className='fw-bold mt-5 mb-5 mx-3' >Password :<span className='text-muted'> Na</span></h6 >
+                <h6 className='fw-bold mt-5 mb-5 mx-3'>Suspension of user account :<span className='text-muted'> 20%</span></h6 >
+                <h6 className='fw-bold mt-5 mb-5 mx-3'>Allow user to remove candidate’s mobile number from the tracker sheet :<span className='text-muted'> 20%</span></h6 >
+                <h6 className='fw-bold mt-5 mb-5 mx-3'>Allow user to write special remarks, comments in the tracker sheet :<span className='text-muted'> 20%</span></h6 >
+                </Col><Col xs={6}><h6 className='fw-bold mt-5 mb-5 mx-3'>Admin can make it compulsory for user to use own / our database :<span className='text-muted'> 20%</span></h6 >
+                <h6 className='fw-bold mt-5 mb-5 mx-3'>Don't allow user to edit the status :<span className='text-muted'> 20%</span></h6 >
+                <h6 className='fw-bold mt-5 mb-5 mx-3'>Payout :<span className='text-muted'> 20%</span></h6 >
+                <h6 className='fw-bold mt-5 mb-5 mx-3'>Designation :<span className='text-muted'> 20%</span></h6 >
+                <h6 className='fw-bold mt-5 mb-5 mx-3'>System generated Official email ID of user :<span className='text-muted'> 20%</span></h6 >
+                <h6 className='fw-bold mt-5 mb-5 mx-3'>Allow one candidate submission by user? :<span className='text-muted'> yes</span></h6 >
+                <h6 className='fw-bold mt-5 mb-5 mx-3'>Client Spoc mobile number to be shown to this user? :<span className='text-muted'> yess</span></h6 >
+                <h6 className='fw-bold mt-5 mb-5 mx-3'>The user is a consultancy or individual?:<span className='text-muted'> individual</span></h6 >
+                <h6 className='fw-bold mt-5 mb-5 mx-3'>Allow user to update the “status” field in “My Workspace :<span className='text-muted'> yes</span></h6 >
+                <h6 className='fw-bold mt-5 mb-5 mx-3'>Client coordination :<span className='text-muted'> 20%</span></h6 >
+                </Col></Row>
         </form>
         </Modal.Body>
         <Modal.Footer>

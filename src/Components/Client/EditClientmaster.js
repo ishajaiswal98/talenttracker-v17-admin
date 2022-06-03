@@ -1,9 +1,10 @@
 import React from 'react'
-import { Container,Row,Col,Form} from 'react-bootstrap'
+import { Container,Row,Col,Form,Button} from 'react-bootstrap'
 import Sidebar from '../Sidebar/Sidebar'
 import NavbarMenu from '../NavbarMenu/NavbarMenu'
 import { ToastContainer } from 'react-toastify'
 import Select from 'react-select'
+import {Link} from 'react-router-dom'
 const EditClientmaster = () => {
     const options = [
         { value: 'Services', label: 'Services' },
@@ -53,21 +54,7 @@ const EditClientmaster = () => {
                 <Select isMulti options={options} />
                 </Col>
                 </Row>
-                <Row>
-                <Col xs={6}>
-                <Form.Label  className='fw-bold mb-3 mt-3'>Client spoc </Form.Label>
-                <Form.Control type='text' placeholder=''/>
-                </Col>
-                <Col xs={6}>
-                <Form.Label  className='fw-bold mb-3 mt-3'>Client spoc mobile number  </Form.Label>
-                <Form.Control type='text' placeholder=''/>
-                </Col>
-                </Row>
-                <Row>
-                <Col xs={6}>
-                <Form.Label  className='fw-bold mb-3 mt-3'>Client spoc email ID </Form.Label>
-                <Form.Control type='text' placeholder=''/>
-                </Col>
+               <Row>
                 <Col xs={6}>
                 <Form.Label  className='fw-bold mb-3 mt-3'>Client GST   </Form.Label>
                 <Form.Control type='text' placeholder=''/>
@@ -90,6 +77,7 @@ const EditClientmaster = () => {
                 </Col>
                 <Col xs={6}>
                 <Form.Label  className='fw-bold mb-3 mt-3'>Date/month/year of adding client</Form.Label>
+                <Form.Control type='date'/>
                 </Col>
                 </Row>
                 <Row>
@@ -169,6 +157,8 @@ const EditClientmaster = () => {
                     </Form.Select>
                     </Col>
                 </Row>
+                <Button variant='info' as={Link} to='/' className='mt-3 mx-5'>Save</Button>
+                <Button variant='dark' as={Link} to='/' className='mt-3 mx-5'>Reaet</Button>
                 </Form>
       </Container>
     </div>

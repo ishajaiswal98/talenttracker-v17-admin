@@ -107,8 +107,8 @@ const csvReport = {
                 <th>Company</th>
                             <th>Assured Delivery Date-Time </th>
                             <th>Client details</th>
-                            <th>User name who accepted the JD</th>
-                            <th>User ID who accepted the JD</th>
+                            <th>Username who accepted the JD</th>
+                            <th>UserID who accepted the JD</th>
                             <th>JD status </th>
                             
                             <th>Category</th>
@@ -136,9 +136,11 @@ const csvReport = {
                             <th>Feedback from admin </th>
                             <th>Cvs quality approval</th>
                             <th>Status as per User</th>
+                            <th>Submit</th>
                             <th>Offer</th>
                             <th>Payout</th>
                             <th>JD upload date-time</th>
+                            <th>Clientspoc mobile,number to be disclosed to user for this JD?</th>
                             <th>Action</th>
                     
                 </tr>
@@ -152,9 +154,9 @@ const csvReport = {
             <i className="fas fa-globe me-2" as={Link} to="'/www.talenttracker.com" ></i> | <i className="fab fa-linkedin ms-2 me-2" as={Link} to='/'></i> | <i className="fas fa-info-circle ms-2" onClick={handleShow4}></i>  </span></td></td>
                     <td>Prashant</td>
                     <td>2</td>
-                    <td>na</td>
+                    <td>Talenttracker</td>
                     
-                    <td>Na</td>
+                    <td>76543456</td>
                     <td>4</td>
                     <td>n/a</td>
                     <td >n/a</td>
@@ -175,16 +177,18 @@ const csvReport = {
                     <td onClick={handleShow6} style={{color:'brown' ,textDecoration:'underline'}}><i className='fa fa-user'></i></td>
                     <td onClick={handleShow7} style={{color:'black' ,textDecoration:'underline'}}><i className='fas fa-user-circle'></i></td>
                     <td>na</td>
-                    <td>patna</td>
+                    <td>YES&nbsp;/&nbsp;NO&nbsp;</td>
                     <td  onClick={handleShow3} style={{color:'red', textDecoration:'underline'}}><i className='fa fa-info-circle'></i></td>
                     <td >n/a</td>
-                    <td ><Button variant='success' onClick={handleShow8} >Add Text</Button></td>
+                    <td ><Button variant='success' onClick={handleShow8} >AddText</Button></td>
                     <td >na</td>
                     <td ><Button variant='warning' as={Link} to="/">Approve</Button></td>
                     <td>na</td>
+                    <td><Button variant='warning' as={Link} to='/jd-template'><i className='fa fa-paper-plane'></i></Button></td>
                     <td  onClick={handleShow2} style={{color:'blue', textDecoration:'underline'}}><i className='fa fa-info-circle'></i></td>
                     <td>na</td>
-                    <td>Na</td>
+                    <td>02/06/2022 12pm</td>
+                    <td>yes</td>
                     <td>  <Button variant='primary' as={Link} to='/edit-jd-master'><i className='fa fa-edit'></i></Button></td>
                     
                    <td> <Button variant='danger'><i className='fa fa-trash'></i></Button></td>    

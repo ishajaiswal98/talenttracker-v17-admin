@@ -3,6 +3,7 @@ import Sidebar from '../Sidebar/Sidebar'
 import NavbarMenu from '../NavbarMenu/NavbarMenu'
 import { Container, Row, Col,Form ,Button} from 'react-bootstrap'
 import { ToastContainer  } from 'react-toastify'
+import { Link } from 'react-router-dom'
 
 const Freelance = () => {
   return (
@@ -33,10 +34,10 @@ const Freelance = () => {
                 <Form.Control type='text' placeholder='Talent Trackers'/>
                 </Col>
                 </Row>
-                <Button Variant='primary' className='mr-3 my-3 mx-3'>Save</Button>
-                    <Button Variant='primary' className='ml-3 my-3 mx-3'>Close</Button>
+                <Button variant='info' className='mr-3 my-3 mx-3'>Save</Button>
+                    <Button variant='dark' className='ml-3 my-3 mx-3'>Close</Button>
                     <Button variant='danger' ><i className=' ml-3 fa fa-download'></i></Button>
-                    
+                    <Button variant='warning' className='mr-3 my-3 mx-3' as={Link} to='/'>Create</Button>
                 </form>
                 </Container>
     </div>

@@ -1,7 +1,7 @@
 import React,{useState} from 'react'
 import Sidebar from '../Sidebar/Sidebar'
 import NavbarMenu from '../NavbarMenu/NavbarMenu'
-import { Container, Row, Col,Form , Button , InputGroup,Modal ,FormControl, Dropdown} from 'react-bootstrap'
+import { Container, Row, Col,Form , Button , InputGroup,Modal ,FormControl} from 'react-bootstrap'
 import { ToastContainer  } from 'react-toastify';
 import Select from 'react-select'
 import { Link } from 'react-router-dom';
@@ -21,22 +21,23 @@ const EditJd = () => {
     const handleCheck2 = () => Setchecked2(!checked2)
     const [checked3, Setchecked3]=useState(false)
     const handleCheck3 = () => Setchecked3(!checked3)
-    const [selected, Setselected]=useState(false)
-    const handleselected = () => Setselected(!selected)
-    const [selected1, Setselected1]=useState(false)
-    const handleselected1 = () => Setselected1(!selected1)
-    const [selected2, Setselected2]=useState(false)
-    const handleselected2 = () => Setselected2(!selected2)
-    const [selected3, Setselected3]=useState(false)
-    const handleselected3 = () => Setselected3(!selected3)
-    const [selected4, Setselected4]=useState(false)
-    const handleselected4 = () => Setselected4(!selected4)
-    const [selected5, Setselected5]=useState(false)
-    const handleselected5 = () => Setselected5(!selected5)
-    const [selected6, Setselected6]=useState(false)
-    const handleselected6 = () => Setselected6(!selected6)
-    const [selected7, Setselected7]=useState(false)
-    const handleselected7 = () => Setselected7(!selected7)
+    const [checked4, Setchecked4]=useState(false)
+  const handleCheck4 = () => Setchecked4(!checked4)
+  const [checked5, Setchecked5]=useState(false)
+  const handleCheck5 = () => Setchecked5(!checked5)
+  const [checked6, Setchecked6]=useState(false)
+  const handleCheck6 = () => Setchecked6(!checked6)
+  const [checked7, Setchecked7]=useState(false)
+  const handleCheck7 = () => Setchecked7(!checked7)
+  const [checked8, Setchecked8]=useState(false)
+  const handleCheck8 = () => Setchecked8(!checked8)
+  const [checked9, Setchecked9]=useState(false)
+  const handleCheck9 = () => Setchecked9(!checked9)
+  const [checked10, Setchecked10]=useState(false)
+  const handleCheck10 = () => Setchecked10(!checked10)
+  const [checked11, Setchecked11]=useState(false)
+  const handleCheck11 = () => Setchecked11(!checked11)
+
   
     const options = [
       { value: 'Services', label: 'Services' },
@@ -308,7 +309,14 @@ const EditJd = () => {
                     </Form.Select> 
                     <Button variant='primary'>Create</Button>
                     </Col>
-                   
+                    <Col xs={6}>
+                <Form.Label  className='fw-bold mb-3 mt-3'>Client spoc mobile number to be disclosed to user for this JD?  </Form.Label>
+                <Form.Select aria-label="Default yes example">
+                    
+                    <option value="1">Yes</option>
+                    <option value="2">No</option>
+                    </Form.Select>
+                    </Col>
                 
               </Row>
               <Row>
@@ -494,90 +502,63 @@ const EditJd = () => {
                 </Row>
                 <Row>
                 <Col xs={6}>
-                  <Form.Label className='fw-bold mb-3 mt-3'>Your Payout</Form.Label>
+                <Form.Label className='fw-bold mb-3 mt-3'>Your Payout</Form.Label>
                   <Form.Check type="checkbox" label="% payout If you use Talent Tracker’s database. " onClick={handleCheck} />
                   {checked? <div>
-                   <Dropdown>
-  <Dropdown.Toggle variant="light" id="dropdown-basic">
-    Select
-  </Dropdown.Toggle>
-
-  <Dropdown.Menu>
-    <Dropdown.Item  onClick={handleselected}>If consultancy</Dropdown.Item>
-    <Dropdown.Item  onClick={handleselected1} >If Individual</Dropdown.Item>
+                  
+                    <Form.Check type="checkbox" label=" If consultancy"  onClick={handleCheck4}/>
+                    <Form.Check type="checkbox" label=" If Individual"  onClick={handleCheck5}/>
     
-  </Dropdown.Menu>
-</Dropdown>
+  
                    </div>:<></>}
-                  {selected? <div>
+                  {checked4? <div>
                     <Form.Control type='text'></Form.Control>
                     </div>:<></>}
                     
-                  {selected1? <div>
+                  {checked5? <div>
                     <Form.Control type='text'></Form.Control>
                     </div>:<></>}
                     <Form.Check type="checkbox" label=" % payout if you use your own portal- naukri/monster/times job etc " onClick={handleCheck1} />
                     {checked1? <div>
-                   <Dropdown>
-  <Dropdown.Toggle variant="light" id="dropdown-basic">
-    Select
-  </Dropdown.Toggle>
-
-  <Dropdown.Menu>
-    <Dropdown.Item  onClick={handleselected2}>If consultancy</Dropdown.Item>
-    <Dropdown.Item  onClick={handleselected3} >If Individual</Dropdown.Item>
+                      <Form.Check type="checkbox" label=" If consultancy"  onClick={handleCheck6}/>
+                    <Form.Check type="checkbox" label=" If Individual"  onClick={handleCheck7}/>
     
-  </Dropdown.Menu>
-</Dropdown>
+  
                    </div>:<></>}
-                  {selected2? <div>
+                  {checked6? <div>
                     <Form.Control type='text'></Form.Control>
                     </div>:<></>}
                     
-                  {selected3? <div>
+                  {checked7? <div>
                     <Form.Control type='text'></Form.Control>
                     </div>:<></>}
 
                     <Form.Check type="checkbox" label=" absolute value payout if use your own portal (Naukri/Monster/Timesjob etc) " onClick={handleCheck2} />
                     {checked2? <div>
-                   <Dropdown>
-  <Dropdown.Toggle variant="light" id="dropdown-basic">
-    Select
-  </Dropdown.Toggle>
-
-  <Dropdown.Menu>
-    <Dropdown.Item  onClick={handleselected4}>If consultancy</Dropdown.Item>
-    <Dropdown.Item  onClick={handleselected5} >If Individual</Dropdown.Item>
+                      <Form.Check type="checkbox" label=" If consultancy"  onClick={handleCheck8}/>
+                    <Form.Check type="checkbox" label=" If Individual"  onClick={handleCheck9}/>
     
-  </Dropdown.Menu>
-</Dropdown>
+  
                    </div>:<></>}
-                  {selected4? <div>
+                  {checked8? <div>
                     <Form.Control type='text'></Form.Control>
                     </div>:<></>}
                     
-                  {selected5? <div>
+                  {checked9? <div>
                     <Form.Control type='text'></Form.Control>
                     </div>:<></>}
                     <Form.Check type="checkbox" label=" absolute value payout---if use Talent Trackers database. " onClick={handleCheck3}/>
                     {checked3? <div>
-                   <Dropdown>
-  <Dropdown.Toggle variant="light" id="dropdown-basic">
-    Select
-  </Dropdown.Toggle>
-
-  <Dropdown.Menu>
-    <Dropdown.Item  onClick={handleselected6}>If consultancy</Dropdown.Item>
-    <Dropdown.Item  onClick={handleselected7} >If Individual</Dropdown.Item>
+                      <Form.Check type="checkbox" label=" If consultancy"  onClick={handleCheck10}/>
+                    <Form.Check type="checkbox" label=" If Individual"  onClick={handleCheck11}/>
     
-  </Dropdown.Menu>
-</Dropdown>
+  
                    </div>:<></>}
-                  {selected6? <div>
+                  {checked10? <div>
                     <Form.Control type='text'></Form.Control>
                     </div>:<></>}
                     
-                  {selected7? <div>
+                  {checked11? <div>
                     <Form.Control type='text'></Form.Control>
                     </div>:<></>}
                   </Col>
